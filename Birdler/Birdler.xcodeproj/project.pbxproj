@@ -13,6 +13,26 @@
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
+		E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404102BB79F5700226BDC /* LoginScreen.swift */; };
+		E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404152BB8015200226BDC /* DMSans-Bold.ttf */; };
+		E8C404282BB8015300226BDC /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404162BB8015200226BDC /* DMSans-BoldItalic.ttf */; };
+		E8C404292BB8015300226BDC /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404172BB8015200226BDC /* DMSans-Regular.ttf */; };
+		E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404182BB8015200226BDC /* DMSans-SemiBold.ttf */; };
+		E8C4042B2BB8015300226BDC /* DMSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404192BB8015200226BDC /* DMSans-SemiBoldItalic.ttf */; };
+		E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041A2BB8015200226BDC /* DMSans-ThinItalic.ttf */; };
+		E8C4042D2BB8015300226BDC /* DMSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041B2BB8015200226BDC /* DMSans-ExtraBold.ttf */; };
+		E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041C2BB8015200226BDC /* DMSans-MediumItalic.ttf */; };
+		E8C4042F2BB8015300226BDC /* DMSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041D2BB8015200226BDC /* DMSans-LightItalic.ttf */; };
+		E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041E2BB8015200226BDC /* DMSans-Medium.ttf */; };
+		E8C404312BB8015300226BDC /* DMSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C4041F2BB8015200226BDC /* DMSans-ExtraLight.ttf */; };
+		E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404202BB8015200226BDC /* DMSans-Light.ttf */; };
+		E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404212BB8015200226BDC /* DMSans-ExtraBoldItalic.ttf */; };
+		E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404222BB8015200226BDC /* DMSans-BlackItalic.ttf */; };
+		E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404232BB8015200226BDC /* DMSans-Italic.ttf */; };
+		E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404242BB8015200226BDC /* DMSans-ExtraLightItalic.ttf */; };
+		E8C404372BB8015300226BDC /* DMSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404252BB8015200226BDC /* DMSans-Black.ttf */; };
+		E8C404382BB8015300226BDC /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404262BB8015300226BDC /* DMSans-Thin.ttf */; };
+		E8C4043A2BB8103E00226BDC /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404392BB8103E00226BDC /* CustomFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +44,26 @@
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8C404102BB79F5700226BDC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		E8C404152BB8015200226BDC /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		E8C404162BB8015200226BDC /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E8C404172BB8015200226BDC /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		E8C404182BB8015200226BDC /* DMSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E8C404192BB8015200226BDC /* DMSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E8C4041A2BB8015200226BDC /* DMSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		E8C4041B2BB8015200226BDC /* DMSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E8C4041C2BB8015200226BDC /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E8C4041D2BB8015200226BDC /* DMSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E8C4041E2BB8015200226BDC /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		E8C4041F2BB8015200226BDC /* DMSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E8C404202BB8015200226BDC /* DMSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Light.ttf"; sourceTree = "<group>"; };
+		E8C404212BB8015200226BDC /* DMSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E8C404222BB8015200226BDC /* DMSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E8C404232BB8015200226BDC /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		E8C404242BB8015200226BDC /* DMSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E8C404252BB8015200226BDC /* DMSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Black.ttf"; sourceTree = "<group>"; };
+		E8C404262BB8015300226BDC /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
+		E8C404392BB8103E00226BDC /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +110,37 @@
 		E8C4040D2BB799A900226BDC /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E8C404122BB7FD6100226BDC /* Font */,
 				E8C4040E2BB799F800226BDC /* LoginViewController.swift */,
+				E8C404102BB79F5700226BDC /* LoginScreen.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E8C404122BB7FD6100226BDC /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E8C404252BB8015200226BDC /* DMSans-Black.ttf */,
+				E8C404222BB8015200226BDC /* DMSans-BlackItalic.ttf */,
+				E8C404152BB8015200226BDC /* DMSans-Bold.ttf */,
+				E8C404162BB8015200226BDC /* DMSans-BoldItalic.ttf */,
+				E8C4041B2BB8015200226BDC /* DMSans-ExtraBold.ttf */,
+				E8C404212BB8015200226BDC /* DMSans-ExtraBoldItalic.ttf */,
+				E8C4041F2BB8015200226BDC /* DMSans-ExtraLight.ttf */,
+				E8C404242BB8015200226BDC /* DMSans-ExtraLightItalic.ttf */,
+				E8C404232BB8015200226BDC /* DMSans-Italic.ttf */,
+				E8C404202BB8015200226BDC /* DMSans-Light.ttf */,
+				E8C4041D2BB8015200226BDC /* DMSans-LightItalic.ttf */,
+				E8C4041E2BB8015200226BDC /* DMSans-Medium.ttf */,
+				E8C4041C2BB8015200226BDC /* DMSans-MediumItalic.ttf */,
+				E8C404172BB8015200226BDC /* DMSans-Regular.ttf */,
+				E8C404182BB8015200226BDC /* DMSans-SemiBold.ttf */,
+				E8C404192BB8015200226BDC /* DMSans-SemiBoldItalic.ttf */,
+				E8C404262BB8015300226BDC /* DMSans-Thin.ttf */,
+				E8C4041A2BB8015200226BDC /* DMSans-ThinItalic.ttf */,
+				E8C404392BB8103E00226BDC /* CustomFont.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +201,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C4042D2BB8015300226BDC /* DMSans-ExtraBold.ttf in Resources */,
+				E8C404312BB8015300226BDC /* DMSans-ExtraLight.ttf in Resources */,
+				E8C404292BB8015300226BDC /* DMSans-Regular.ttf in Resources */,
 				A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */,
+				E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */,
+				E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */,
+				E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */,
+				E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */,
+				E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */,
+				E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */,
+				E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */,
 				A313672C2BB788A000F0CF5A /* Base in Resources */,
+				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
+				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
+				E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */,
+				E8C4042F2BB8015300226BDC /* DMSans-LightItalic.ttf in Resources */,
+				E8C404282BB8015300226BDC /* DMSans-BoldItalic.ttf in Resources */,
+				E8C404382BB8015300226BDC /* DMSans-Thin.ttf in Resources */,
+				E8C404372BB8015300226BDC /* DMSans-Black.ttf in Resources */,
+				E8C4042B2BB8015300226BDC /* DMSans-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +234,9 @@
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
+				E8C4043A2BB8103E00226BDC /* CustomFont.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,
+				E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

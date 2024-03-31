@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DMSans-Black</string>
+		<string>DMSans-BlackItalic</string>
+		<string>DMSans-Bold</string>
+		<string>DMSans-ExtraBold</string>
+		<string>DMSans-ExtraBoldItalic</string>
+		<string>DMSans-ExtraLight</string>
+		<string>DMSans-ExtraLightItalic</string>
+		<string>DMSans-Italic</string>
+		<string>DMSans-Light</string>
+		<string>DMSans-LightItalic</string>
+		<string>DMSans-Medium</string>
+		<string>DMSans-MediumItalic</string>
+		<string>DMSans-Regular</string>
+		<string>DMSans-SemiBold</string>
+		<string>DMSans-SemiBoldItalic</string>
+		<string>DMSans-Thin</string>
+		<string>DMSans-ThinItalic</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
