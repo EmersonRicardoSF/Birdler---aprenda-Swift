@@ -29,7 +29,11 @@ extension LoginViewController: LoginScreenProtocol {
     }
     
     func tappedLoginButton() {
-        print("Chegou na ViewController")
+        print("Entrar")
         
+    }
+    
+    func tappedCriarCadastroButton(){
+        print("Criar Cadastro")
     }
 }

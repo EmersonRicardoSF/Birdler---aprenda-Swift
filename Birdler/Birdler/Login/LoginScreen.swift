@@ -10,6 +10,7 @@ import UIKit
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
     func tappedRecuperarSenhaButton()
+    func tappedCriarCadastroButton()
     
 }
 
@@ -177,7 +178,7 @@ class LoginScreen: UIView {
     
     @objc func tappedCriarCadastroButton(_ sender: UIButton) {
         print("Botão funcionando")
-        delegate?.tappedRecuperarSenhaButton()
+        delegate?.tappedCriarCadastroButton()
         
     }
     
