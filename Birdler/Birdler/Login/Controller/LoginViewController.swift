@@ -30,7 +30,8 @@ extension LoginViewController: LoginScreenProtocol {
     
     func tappedLoginButton() {
         print("Entrar")
-        
+        let vc: HomeVC = HomeVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tappedCriarCadastroButton(){
