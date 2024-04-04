@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
+    func tappedRecuperarSenhaButton()
     
 }
 
@@ -24,27 +25,26 @@ class LoginScreen: UIView {
     func getGradientLayer(bounds : CGRect) -> CAGradientLayer{
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        //order of gradient colors
         gradient.colors = [UIColor(red: 0.47, green: 0.05, blue: 0.98, alpha: 1).cgColor, UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1).cgColor]
-        // start and end points
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
         return gradient
     }
     
     func gradientColor(bounds: CGRect, gradientLayer :CAGradientLayer) -> UIColor? {
         UIGraphicsBeginImageContext(gradientLayer.bounds.size)
-        //create UIImage by rendering gradient layer.
         gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        //get gradient UIcolor from gradient UIImage
+        
         return UIColor(patternImage: image!)
         
     }
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
+        
         return imageView
         
     }()
@@ -52,28 +52,41 @@ class LoginScreen: UIView {
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.customFont(type: .bold, size: 60)
+        label.font = UIFont.dmsansFont(type: .bold, size: 60)
         label.text = "Birdler"
-       
+        
         return label
-
+        
     }()
     
-    lazy var emailTextField: UITextField = {
+    lazy var usuarioTextField: UITextField = {
         let textField = UITextField()
+        textField.leftViewMode = .always
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.autocorrectionType = .no
         textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
         textField.keyboardType = .emailAddress
-        textField.placeholder = "Usuário"
-        textField.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+        textField.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        textField.font = UIFont.boldSystemFont(ofSize: 20)
         textField.layer.cornerRadius = 8
         textField.layer.masksToBounds = false
         textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         textField.layer.borderWidth = 1
-
-       
+        
+        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
+        textField.leftView = leftPaddingView
+        textField.leftViewMode = .always
+        
         return textField
+        
+    }()
+    
+    lazy var usuarioImageView: UIImageView = {
+            let image = UIImageView()
+            image.translatesAutoresizingMaskIntoConstraints = false
+            image.image = UIImage(named: "Person")
+        
+            return image
     }()
     
     lazy var passwordTextField: UITextField = {
@@ -83,15 +96,40 @@ class LoginScreen: UIView {
         textField.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
         textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
         textField.keyboardType = .alphabet
-        textField.placeholder = "Senha"
+        textField.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
         textField.isSecureTextEntry = true
-        textField.textColor = .white
+        textField.font = UIFont.boldSystemFont(ofSize: 20)
         textField.layer.cornerRadius = 8
         textField.layer.masksToBounds = false
         textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         textField.layer.borderWidth = 1
-
+        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
+        textField.leftView = leftPaddingView
+        textField.leftViewMode = .always
+        
         return textField
+        
+    }()
+    
+    lazy var passwordImageView: UIImageView = {
+            let image = UIImageView()
+            image.translatesAutoresizingMaskIntoConstraints = false
+            image.image = UIImage(named: "Key")
+        
+            return image
+        
+        }()
+    
+    lazy var recuperarSenhaButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Recuperar Senha", for: .normal)
+        button.titleLabel?.font = UIFont.urbanistFont(type: .medium, size: 15)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tappedRecuperarSenhaButton), for: .touchUpInside)
+        
+        return button
         
     }()
     
@@ -99,18 +137,47 @@ class LoginScreen: UIView {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = UIFont.customFont(type: .bold, size: 19)
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .darkGray
         button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        
         return button
+        
+    }()
+    
+    lazy var criarCadastroButton: UIButton = {
+        let button: UIButton = UIButton()
+        let attributedString = NSMutableAttributedString(string: "Não possui cadastro? Crie aqui")
+        let range = NSRange(location: 21, length: 9)
+        attributedString.addAttribute(.foregroundColor, value: UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1), range: range)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setAttributedTitle(attributedString, for: .normal)
+        button.titleLabel?.font = UIFont.dmsansFont(type: .regular, size: 19)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tappedCriarCadastroButton), for: .touchUpInside)
+        
+        return button
+        
     }()
     
     @objc func tappedLoginButton(_ sender: UIButton) {
         print("Botão funcionando")
         delegate?.tappedLoginButton()
+        
+    }
+    
+    @objc func tappedRecuperarSenhaButton(_ sender: UIButton) {
+        print("Botão funcionando")
+        delegate?.tappedRecuperarSenhaButton()
+        
+    }
+    
+    @objc func tappedCriarCadastroButton(_ sender: UIButton) {
+        print("Botão funcionando")
+        delegate?.tappedRecuperarSenhaButton()
         
     }
     
@@ -129,18 +196,24 @@ class LoginScreen: UIView {
     private func addElements() {
         addSubview(backgroundImageView)
         addSubview(loginLabel)
-        addSubview(emailTextField)
+        addSubview(usuarioTextField)
+        addSubview(usuarioImageView)
         addSubview(passwordTextField)
+        addSubview(passwordImageView)
+        addSubview(recuperarSenhaButton)
         addSubview(loginButton)
-        //        addSubview(passwordImageView)
+        addSubview(criarCadastroButton)
+        
         DispatchQueue.main.async {
             let gradient = self.getGradientLayer(bounds: self.loginLabel.bounds)
             self.loginLabel.textColor = self.gradientColor(bounds: self.loginLabel.bounds, gradientLayer: gradient)
             
         }
+        
         DispatchQueue.main.async {
             let gradient = self.getGradientLayer(bounds: self.loginButton.bounds)
             self.loginButton.backgroundColor = self.gradientColor(bounds: self.loginButton.bounds, gradientLayer: gradient)
+            
         }
     }
     
@@ -152,28 +225,43 @@ class LoginScreen: UIView {
             backgroundImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150),
+            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            emailTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 10),
-            emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
-            emailTextField.heightAnchor.constraint(equalToConstant: 50),
+            usuarioTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 30),
+            usuarioTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            usuarioTextField.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
+            usuarioTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 0),
-            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            usuarioImageView.centerYAnchor.constraint(equalTo: usuarioTextField.centerYAnchor),
+            usuarioImageView.leadingAnchor.constraint(equalTo: usuarioTextField.leadingAnchor, constant: 15),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
+            passwordTextField.topAnchor.constraint(equalTo: usuarioTextField.bottomAnchor, constant: 0),
+            passwordTextField.leadingAnchor.constraint(equalTo: usuarioTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: usuarioTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: usuarioTextField.heightAnchor),
+            
+            passwordImageView.centerYAnchor.constraint(equalTo: passwordTextField.centerYAnchor),
+            passwordImageView.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor, constant: 15),
+            
+            recuperarSenhaButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 0),
+            recuperarSenhaButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 220),
+            recuperarSenhaButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
+            recuperarSenhaButton.heightAnchor.constraint(equalToConstant: 45),
+            
+            loginButton.topAnchor.constraint(equalTo: recuperarSenhaButton.bottomAnchor, constant: 0),
             loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             loginButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
             loginButton.heightAnchor.constraint(equalToConstant: 45),
             
+            criarCadastroButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 30),
+            criarCadastroButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            criarCadastroButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
+            criarCadastroButton.heightAnchor.constraint(equalToConstant: 45),
+            
         ])
     }
-    
 }
-    
-    
-            
+
+
+

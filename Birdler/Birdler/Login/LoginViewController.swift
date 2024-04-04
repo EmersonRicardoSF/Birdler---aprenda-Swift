@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginScreenProtocol {
+    func tappedRecuperarSenhaButton() {
+        print("Recuperar Senha")
+    }
+    
     func tappedLoginButton() {
         print("Chegou na ViewController")
         
