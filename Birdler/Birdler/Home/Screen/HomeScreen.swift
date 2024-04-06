@@ -20,11 +20,12 @@ class HomeScreen: UIView {
     }
     
     lazy var tableView: UITableView = {
-        let tv = UITableView()
+        let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.showsVerticalScrollIndicator = false
-        tv.backgroundColor = .white
-        tv.layer.cornerRadius = 12
+        tv.backgroundColor = .clear
+        //tv.layer.cornerRadius = 12
+        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
         tv.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         
         return tv
@@ -63,12 +64,15 @@ class HomeScreen: UIView {
             imageBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageBackGround.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            tableView.widthAnchor.constraint(equalToConstant: 340),
-            tableView.heightAnchor.constraint(equalToConstant: 300),
+//            tableView.widthAnchor.constraint(equalToConstant: 340),
+//            tableView.heightAnchor.constraint(equalToConstant: 300),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 200),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
     
 }
+
+// MARK: Para sempre acompanhar o dark mode e o light mode, existem três cores para cada tipo .systemBackground & .secondarySystemBackground & .terniaryBackground
