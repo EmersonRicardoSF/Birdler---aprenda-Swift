@@ -2,6 +2,41 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DMSans-Black.ttf</string>
+		<string>DMSans-BlackItalic.ttf</string>
+		<string>DMSans-Bold.ttf</string>
+		<string>DMSans-ExtraBold.ttf</string>
+		<string>DMSans-ExtraBoldItalic.ttf</string>
+		<string>DMSans-ExtraLight.ttf</string>
+		<string>DMSans-ExtraLightItalic.ttf</string>
+		<string>DMSans-Italic.ttf</string>
+		<string>DMSans-Light.ttf</string>
+		<string>DMSans-LightItalic.ttf</string>
+		<string>DMSans-Medium.ttf</string>
+		<string>DMSans-MediumItalic.ttf</string>
+		<string>DMSans-Regular.ttf</string>
+		<string>DMSans-SemiBold.ttf</string>
+		<string>DMSans-SemiBoldItalic.ttf</string>
+		<string>DMSans-Thin.ttf</string>
+		<string>DMSans-ThinItalic.ttf</string>
+		<string>Urbanist-Black.ttf</string>
+		<string>Urbanist-BlackItalic.ttf</string>
+		<string>Urbanist-Bold.ttf</string>
+		<string>Urbanist-BoldItalic.ttf</string>
+		<string>Urbanist-ExtraBold.ttf</string>
+		<string>Urbanist-ExtraLight.ttf</string>
+		<string>Urbanist-ExtraLightItalic.ttf</string>
+		<string>Urbanist-Italic.ttf</string>
+		<string>Urbanist-Medium.ttf</string>
+		<string>Urbanist-MediumItalic.ttf</string>
+		<string>Urbanist-Regular.ttf</string>
+		<string>Urbanist-SemiBold.ttf</string>
+		<string>Urbanist-SemiBoldItalic.ttf</string>
+		<string>Urbanist-Thin.ttf</string>
+		<string>Urbanist-ThinItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
