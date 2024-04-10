@@ -132,8 +132,8 @@
 		63BEAC402BC6347D002F3B42 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				63BEAC442BC63503002F3B42 /* Controller */,
 				63BEAC412BC634D4002F3B42 /* Screen */,
+				63BEAC442BC63503002F3B42 /* Controller */,
 			);
 			path = Register;
 			sourceTree = "<group>";
