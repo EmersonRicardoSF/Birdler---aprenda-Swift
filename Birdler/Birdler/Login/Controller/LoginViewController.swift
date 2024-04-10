@@ -36,5 +36,7 @@ extension LoginViewController: LoginScreenProtocol {
     
     func tappedCriarCadastroButton(){
         print("Criar Cadastro")
+        let vc: RegisterController = RegisterController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
