@@ -17,30 +17,10 @@ class RegisterScreen: UIView {
     }()
     
     
-    func getGradientLayer(bounds : CGRect) -> CAGradientLayer{
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.colors = [UIColor(red: 0.47, green: 0.05, blue: 0.98, alpha: 1).cgColor, UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1).cgColor]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        
-        return gradient
-    }
-    
-    func gradientColor(bounds: CGRect, gradientLayer :CAGradientLayer) -> UIColor? {
-        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
-        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return UIColor(patternImage: image!)
-        
-    }
-    
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.dmsansFont(type: .bold, size: 60)
+        label.font = UIFont.systemFont(ofSize: 60, weight: .bold)
         label.text = "Birdler"
         
         return label
@@ -49,7 +29,7 @@ class RegisterScreen: UIView {
     
     lazy var viewRegister: UIView = {
         
-        let view = UIView(frame: .zero)
+        let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 28
         
@@ -57,18 +37,6 @@ class RegisterScreen: UIView {
         return view
         
     }()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     override init(frame: CGRect) {
@@ -85,20 +53,10 @@ class RegisterScreen: UIView {
     
     
     private func addElements() {
+        
         addSubview(backgroundImageView)
         addSubview(loginLabel)
         addSubview(viewRegister)
-        
-        DispatchQueue.main.async {
-            let gradient = self.getGradientLayer(bounds: self.loginLabel.bounds)
-            self.loginLabel.textColor = self.gradientColor(bounds: self.loginLabel.bounds, gradientLayer: gradient)
-        }
-        
-//        DispatchQueue.main.async {
-//            let gradient = self.getGradientLayer(bounds: self.loginButton.bounds)
-//            self.loginButton.backgroundColor = self.gradientColor(bounds: self.loginButton.bounds, gradientLayer: gradient)
-//        }
-        
         
     }
     
