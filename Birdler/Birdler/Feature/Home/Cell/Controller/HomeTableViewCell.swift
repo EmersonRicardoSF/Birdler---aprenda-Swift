@@ -15,6 +15,7 @@ class HomeTableViewCell: UITableViewCell {
         let view = HomeTableViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+        
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -22,21 +23,22 @@ class HomeTableViewCell: UITableViewCell {
         selectionStyle = .none
         addSubView()
         setupConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+        
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-    
-  
     
     private func addSubView() {
         contentView.addSubview(screen)
+        
     }
     
     private func setupConstraints() {
@@ -45,15 +47,8 @@ class HomeTableViewCell: UITableViewCell {
             screen.topAnchor.constraint(equalTo: contentView.topAnchor),
             screen.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             screen.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            screen.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
         ])
     }
-    
-    public func setupHomeCell() {
-        screen.nameLabel.text = "Nome: "
-        screen.qtdLabel.text = "Quantidade: "
-        screen.phoneLabel.text = "Telefone: "
-        screen.timeLabel.text = "Horário: "
-    }
-
 }

@@ -61,24 +61,24 @@ class LoginScreen: UIView {
     }()
     
     lazy var usuarioTextField: UITextField = {
-        let textField = UITextField()
-        textField.leftViewMode = .always
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
-        textField.keyboardType = .emailAddress
-        textField.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.layer.cornerRadius = 8
-        textField.layer.masksToBounds = false
-        textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
-        textField.layer.borderWidth = 1
+        let tf = UITextField()
+        tf.leftViewMode = .always
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        tf.keyboardType = .emailAddress
+        tf.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.font = UIFont.boldSystemFont(ofSize: 20)
+        tf.layer.cornerRadius = 8
+        tf.layer.masksToBounds = false
+        tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
+        tf.layer.borderWidth = 1
         
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
-        textField.leftView = leftPaddingView
-        textField.leftViewMode = .always
+        tf.leftView = leftPaddingView
+        tf.leftViewMode = .always
         
-        return textField
+        return tf
         
     }()
     
@@ -91,24 +91,24 @@ class LoginScreen: UIView {
     }()
     
     lazy var passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
-        textField.keyboardType = .alphabet
-        textField.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
-        textField.isSecureTextEntry = true
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.layer.cornerRadius = 8
-        textField.layer.masksToBounds = false
-        textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
-        textField.layer.borderWidth = 1
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
+        tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        tf.keyboardType = .alphabet
+        tf.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.isSecureTextEntry = true
+        tf.font = UIFont.boldSystemFont(ofSize: 20)
+        tf.layer.cornerRadius = 8
+        tf.layer.masksToBounds = false
+        tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
+        tf.layer.borderWidth = 1
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
-        textField.leftView = leftPaddingView
-        textField.leftViewMode = .always
+        tf.leftView = leftPaddingView
+        tf.leftViewMode = .always
         
-        return textField
+        return tf
         
     }()
     

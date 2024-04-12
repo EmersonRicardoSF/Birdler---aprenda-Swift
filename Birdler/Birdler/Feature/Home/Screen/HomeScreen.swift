@@ -24,7 +24,6 @@ class HomeScreen: UIView {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.showsVerticalScrollIndicator = false
         tv.backgroundColor = .clear
-        //tv.layer.cornerRadius = 12
         tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
         tv.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         
@@ -54,6 +53,7 @@ class HomeScreen: UIView {
     private func addElements() {
         addSubview(imageBackGround)
         addSubview(tableView)
+        
     }
     
     private func configConstraints() {
@@ -64,8 +64,6 @@ class HomeScreen: UIView {
             imageBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageBackGround.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-//            tableView.widthAnchor.constraint(equalToConstant: 340),
-//            tableView.heightAnchor.constraint(equalToConstant: 300),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),

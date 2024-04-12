@@ -17,6 +17,9 @@
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
+		E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C59D22BC64901001226FB /* TabBarVC.swift */; };
+		E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */; };
+		E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C59D72BC68882001226FB /* PoppinsFont.swift */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
 		E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404102BB79F5700226BDC /* LoginScreen.swift */; };
 		E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404152BB8015200226BDC /* DMSans-Bold.ttf */; };
@@ -72,6 +75,9 @@
 		A31367282BB788A000F0CF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84C59D22BC64901001226FB /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E84C59D72BC68882001226FB /* PoppinsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppinsFont.swift; sourceTree = "<group>"; };
 		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8C404102BB79F5700226BDC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E8C404152BB8015200226BDC /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -220,8 +226,8 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
-				859012082BBF584C0046283C /* Home */,
-				E8C4040D2BB799A900226BDC /* Login */,
+				E84C59D42BC64976001226FB /* Feature */,
+				E84C59D12BC6489D001226FB /* TabBarController */,
 				A313671F2BB7889F00F0CF5A /* AppDelegate.swift */,
 				A31367212BB7889F00F0CF5A /* SceneDelegate.swift */,
 				A31367232BB7889F00F0CF5A /* ViewController.swift */,
@@ -230,6 +236,23 @@
 				A313672D2BB788A000F0CF5A /* Info.plist */,
 			);
 			path = Birdler;
+			sourceTree = "<group>";
+		};
+		E84C59D12BC6489D001226FB /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E84C59D22BC64901001226FB /* TabBarVC.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		E84C59D42BC64976001226FB /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				859012082BBF584C0046283C /* Home */,
+				E8C4040D2BB799A900226BDC /* Login */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
@@ -281,8 +304,10 @@
 				E8C404192BB8015200226BDC /* DMSans-SemiBoldItalic.ttf */,
 				E8C404262BB8015300226BDC /* DMSans-Thin.ttf */,
 				E8C4041A2BB8015200226BDC /* DMSans-ThinItalic.ttf */,
-				E8C4045F2BBBFEEA00226BDC /* UrbanistFont.swift */,
+				E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */,
 				E8C404612BBC013500226BDC /* DMSansFont.swift */,
+				E8C4045F2BBBFEEA00226BDC /* UrbanistFont.swift */,
+				E84C59D72BC68882001226FB /* PoppinsFont.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -375,6 +400,7 @@
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
 				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
 				E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */,
+				E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */,
 				E8C404542BBBFD1E00226BDC /* Urbanist-Thin.ttf in Resources */,
 				E8C4042F2BB8015300226BDC /* DMSans-LightItalic.ttf in Resources */,
 				E8C404502BBBFD1E00226BDC /* Urbanist-Light.ttf in Resources */,
@@ -397,10 +423,12 @@
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
+				E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
+				E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */,
 				859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */,
 				E8C404622BBC013500226BDC /* DMSansFont.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,

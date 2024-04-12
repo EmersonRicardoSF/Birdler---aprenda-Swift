@@ -1,41 +1,38 @@
 //
-//  DMSansFont.swift
+//  PoppinsFont.swift
 //  Birdler
 //
-//  Created by Nayla on 2/4/2024.
+//  Created by Nayla on 10/4/2024.
 //
 
 import UIKit
 
+
 extension UIFont {
     
-    enum FontType {
+    enum FontType3 {
         
-        case bold
-        case regular
+        case semiBold
         
         func getFontName() -> String {
             switch self {
-            case .bold:
-                return "DMSans-bold"
-            case .regular:
-                return "DMSans-regular"
+            case .semiBold:
+                return "Poppins-SemiBold"
                 
             }
         }
         
         func getWeight() -> UIFont.Weight {
             switch self {
-            case .bold:
+            case .semiBold:
                 return .bold
-            case .regular:
-                return . regular
+           
             }
         }
         
     }
     
-    static func  dmsansFont(type: FontType, size: CGFloat) -> UIFont{
+    static func  poppinsFont(type: FontType, size: CGFloat) -> UIFont{
         guard let font = UIFont(name: type.getFontName(), size: size) else{
             return UIFont.systemFont(ofSize: size)
         }

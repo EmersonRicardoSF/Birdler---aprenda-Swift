@@ -37,7 +37,7 @@ class HomeVC: UIViewController {
     
     // MARK: IMPORTANTE (configura a navBar)
     func configNavigation() {
-        title = "Birdler"
+        navigationItem.title = "Birdler"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -136,3 +136,4 @@ struct sectionStudy {
     let options: [String]
     var opened: Bool = false
 }
+
