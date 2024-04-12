@@ -112,7 +112,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? HomeTableViewCell else { return }
+        guard tableView.cellForRow(at: indexPath) is HomeTableViewCell else { return }
         tableView.deselectRow(at: indexPath, animated: true)
         sections[indexPath.section].opened = !sections[indexPath.section].opened
         tableView.reloadSections([indexPath.section], with: .automatic)

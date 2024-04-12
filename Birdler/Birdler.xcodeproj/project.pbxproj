@@ -17,6 +17,8 @@
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
+		A3662CF02BC832FF000EC721 /* RecoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3662CEF2BC832FF000EC721 /* RecoverScreen.swift */; };
+		A38AB3BC2BC890DB00FFA0B5 /* RecoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AB3BB2BC890DB00FFA0B5 /* RecoverVC.swift */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
 		E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404102BB79F5700226BDC /* LoginScreen.swift */; };
 		E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404152BB8015200226BDC /* DMSans-Bold.ttf */; };
@@ -72,6 +74,8 @@
 		A31367282BB788A000F0CF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3662CEF2BC832FF000EC721 /* RecoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverScreen.swift; sourceTree = "<group>"; };
+		A38AB3BB2BC890DB00FFA0B5 /* RecoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverVC.swift; sourceTree = "<group>"; };
 		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8C404102BB79F5700226BDC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E8C404152BB8015200226BDC /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				A37A4AD02BC831D200DA66BE /* Recover */,
 				859012082BBF584C0046283C /* Home */,
 				E8C4040D2BB799A900226BDC /* Login */,
 				A313671F2BB7889F00F0CF5A /* AppDelegate.swift */,
@@ -230,6 +235,39 @@
 				A313672D2BB788A000F0CF5A /* Info.plist */,
 			);
 			path = Birdler;
+			sourceTree = "<group>";
+		};
+		A3662CEC2BC832C1000EC721 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A38AB3BB2BC890DB00FFA0B5 /* RecoverVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A3662CED2BC832CB000EC721 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A3662CEF2BC832FF000EC721 /* RecoverScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		A3662CEE2BC832D6000EC721 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A37A4AD02BC831D200DA66BE /* Recover */ = {
+			isa = PBXGroup;
+			children = (
+				A3662CEE2BC832D6000EC721 /* Cell */,
+				A3662CED2BC832CB000EC721 /* Screen */,
+				A3662CEC2BC832C1000EC721 /* Controller */,
+			);
+			path = Recover;
 			sourceTree = "<group>";
 		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
@@ -395,8 +433,10 @@
 			files = (
 				852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */,
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
+				A3662CF02BC832FF000EC721 /* RecoverScreen.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
+				A38AB3BC2BC890DB00FFA0B5 /* RecoverVC.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
