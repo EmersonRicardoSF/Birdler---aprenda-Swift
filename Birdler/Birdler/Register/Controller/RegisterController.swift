@@ -21,7 +21,6 @@ class RegisterController: UIViewController {
         registerScreen?.delegate(delegate: self)
 
     }
-
 }
 
 extension RegisterController: RegisterScreenProtocol {
@@ -30,6 +29,4 @@ extension RegisterController: RegisterScreenProtocol {
         let vc: HomeVC = HomeVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-  
 }
