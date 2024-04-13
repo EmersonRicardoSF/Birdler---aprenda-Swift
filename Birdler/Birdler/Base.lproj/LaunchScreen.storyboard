@@ -16,15 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-dQ-4iV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-dQ-4iV">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6fZ-dQ-4iV" secondAttribute="bottom" id="N1T-LE-FmA"/>
+                            <constraint firstItem="6fZ-dQ-4iV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dZp-Ya-NyB"/>
+                            <constraint firstItem="6fZ-dQ-4iV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nzc-9S-RE3"/>
+                            <constraint firstItem="6fZ-dQ-4iV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vTm-Xu-cg7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen" width="390" height="844"/>
+        <image name="LaunchScreen" width="538" height="1164"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
