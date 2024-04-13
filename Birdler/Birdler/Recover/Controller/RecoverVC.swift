@@ -9,6 +9,12 @@ import UIKit
 
 class RecoverVC: UIViewController {
     
+    var recoverScreen: RecoverScreen?
+    override func loadView() {
+        recoverScreen = RecoverScreen()
+        self.view = recoverScreen
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
