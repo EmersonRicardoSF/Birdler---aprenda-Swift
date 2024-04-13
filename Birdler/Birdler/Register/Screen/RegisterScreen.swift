@@ -61,6 +61,13 @@ class RegisterScreen: UIView {
         
     }()
     
+    lazy var profilePhoto: UIImageView = {
+    
+        let imageView = UIImageView(image: UIImage(named: "photoProfile"))
+        return imageView
+        
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,6 +85,7 @@ class RegisterScreen: UIView {
         addSubview(backgroundImageView)
         addSubview(loginLabel)
         addSubview(viewRegister)
+        viewRegister.addSubview(profilePhoto)
         
         DispatchQueue.main.async {
             
@@ -99,6 +107,10 @@ class RegisterScreen: UIView {
             
             loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            profilePhoto.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 57),
+            profilePhoto.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 134),
+            profilePhoto.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 134)
             
            // viewRegister.topAnchor.constraint(equalTo: loginLabel.bottomAnchor,constant: 37),
                    
