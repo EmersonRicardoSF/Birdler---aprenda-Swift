@@ -39,7 +39,7 @@ class RegisterScreen: UIView {
     }
     
     
-    lazy var loginLabel: UILabel = {
+    lazy var logoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 60, weight: .bold)
@@ -51,7 +51,7 @@ class RegisterScreen: UIView {
     
     lazy var viewRegister: UIView = {
         
-        let view = UIView(frame: .init(x: 0, y: 300, width: 393, height: 629))
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         view.layer.cornerRadius = 28
@@ -83,14 +83,14 @@ class RegisterScreen: UIView {
     private func addElements() {
         
         addSubview(backgroundImageView)
-        addSubview(loginLabel)
+        addSubview(logoLabel)
         addSubview(viewRegister)
         viewRegister.addSubview(profilePhoto)
         
         DispatchQueue.main.async {
             
-            let gradient = self.getGradientLayer(bounds: self.loginLabel.bounds)
-            self.loginLabel.textColor = self.gradientColor(bounds: self.loginLabel.bounds, gradientLayer: gradient)
+            let gradient = self.getGradientLayer(bounds: self.logoLabel.bounds)
+            self.logoLabel.textColor = self.gradientColor(bounds: self.logoLabel.bounds, gradientLayer: gradient)
             
         }
         
@@ -105,14 +105,17 @@ class RegisterScreen: UIView {
             backgroundImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
-            loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            viewRegister.leadingAnchor.constraint(equalTo: leadingAnchor),
+            viewRegister.trailingAnchor.constraint(equalTo: trailingAnchor),
+            viewRegister.bottomAnchor.constraint(equalTo: bottomAnchor),
+            viewRegister.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 50),
             
-            profilePhoto.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 57),
-            profilePhoto.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 134),
-            profilePhoto.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 134)
+            logoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
+            logoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-           // viewRegister.topAnchor.constraint(equalTo: loginLabel.bottomAnchor,constant: 37),
+            profilePhoto.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 57),
+            profilePhoto.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
                    
             ])
                 
