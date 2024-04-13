@@ -16,13 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let vc: LoginViewController = LoginViewController()
-        let tabBar: TabBarVC = TabBarVC()
+//        let tabBar: TabBarVC = TabBarVC()
         let nav = UINavigationController(rootViewController: vc)
-        window.rootViewController = tabBar
+        window.rootViewController = nav
+//        MARK: DEIXAR ESSA DE BAIXO E APAGAR A DE CIMA.
+//        window.rootViewController = tabBar
         window.makeKeyAndVisible()
         self.window = window
-        
-//        let TabBarVC = UITabBarController()
         
     }
     

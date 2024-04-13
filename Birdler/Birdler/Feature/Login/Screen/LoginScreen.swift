@@ -135,32 +135,32 @@ class LoginScreen: UIView {
     }()
     
     lazy var loginButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        let btn: UIButton = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Entrar", for: .normal)
+        btn.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 7.5
+        btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     
     lazy var criarCadastroButton: UIButton = {
-        let button: UIButton = UIButton()
+        let btn: UIButton = UIButton()
         let attributedString = NSMutableAttributedString(string: "Não possui cadastro? Crie aqui")
         let range = NSRange(location: 21, length: 9)
         attributedString.addAttribute(.foregroundColor, value: UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1), range: range)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setAttributedTitle(attributedString, for: .normal)
-        button.titleLabel?.font = UIFont.dmsansFont(type: .regular, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(tappedCriarCadastroButton), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setAttributedTitle(attributedString, for: .normal)
+        btn.titleLabel?.font = UIFont.dmsansFont(type: .regular, size: 19)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.addTarget(self, action: #selector(tappedCriarCadastroButton), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     
