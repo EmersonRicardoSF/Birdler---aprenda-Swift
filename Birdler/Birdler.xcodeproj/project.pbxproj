@@ -19,6 +19,8 @@
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
+		E8A65C562BCFC2DA0051B8D2 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A65C552BCFC2DA0051B8D2 /* NewsScreen.swift */; };
+		E8A65C5A2BCFC3210051B8D2 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A65C592BCFC3210051B8D2 /* NewsVC.swift */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
 		E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404102BB79F5700226BDC /* LoginScreen.swift */; };
 		E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404152BB8015200226BDC /* DMSans-Bold.ttf */; };
@@ -76,6 +78,8 @@
 		A31367282BB788A000F0CF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A65C552BCFC2DA0051B8D2 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		E8A65C592BCFC3210051B8D2 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E8C404102BB79F5700226BDC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E8C404152BB8015200226BDC /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				E8A65C502BCFC1FA0051B8D2 /* Novidades */,
 				63BEAC402BC6347D002F3B42 /* Register */,
 				859012082BBF584C0046283C /* Home */,
 				E8C4040D2BB799A900226BDC /* Login */,
@@ -260,6 +265,31 @@
 				A313672D2BB788A000F0CF5A /* Info.plist */,
 			);
 			path = Birdler;
+			sourceTree = "<group>";
+		};
+		E8A65C502BCFC1FA0051B8D2 /* Novidades */ = {
+			isa = PBXGroup;
+			children = (
+				E8A65C512BCFC2280051B8D2 /* Screen */,
+				E8A65C522BCFC2430051B8D2 /* Controller */,
+			);
+			path = Novidades;
+			sourceTree = "<group>";
+		};
+		E8A65C512BCFC2280051B8D2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E8A65C552BCFC2DA0051B8D2 /* NewsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E8A65C522BCFC2430051B8D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8A65C592BCFC3210051B8D2 /* NewsVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
@@ -428,6 +458,7 @@
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
+				E8A65C562BCFC2DA0051B8D2 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
@@ -435,6 +466,7 @@
 				859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */,
 				63BEAC462BC63525002F3B42 /* RegisterController.swift in Sources */,
 				E8C404622BBC013500226BDC /* DMSansFont.swift in Sources */,
+				E8A65C5A2BCFC3210051B8D2 /* NewsVC.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,
 				E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */,
 			);
