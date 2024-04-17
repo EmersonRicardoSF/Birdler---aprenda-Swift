@@ -122,6 +122,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeVC: HomeScreenProtocol {
+    func tappedEnviarButton() {
+        
+    }
+    
     func customNavigation() {
         
     }

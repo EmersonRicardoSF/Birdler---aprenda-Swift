@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeScreenProtocol: AnyObject {
     func customNavigation()
+    func tappedEnviarButton()
 }
 
 class HomeScreen: UIView {

@@ -9,6 +9,8 @@ import UIKit
 
 protocol RecoverScreenProtocol: AnyObject {
     func customNavigation()
+    func tappedEnviarButton()
+    
 }
 
 class RecoverScreen: UIView {
@@ -66,7 +68,7 @@ class RecoverScreen: UIView {
     lazy var textRecover: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Confirme o email abaixo e você recebera um, email para configurar nova senha."
+        label.text = "Digite novamente o email abaixo e você receberá um email para configurar uma nova senha."
         label.textAlignment = .center
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -74,10 +76,10 @@ class RecoverScreen: UIView {
         return label
     }()
     
-    lazy var loginButton: UIButton = {
+    lazy var enviarButton: UIButton = {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle("Enviar", for: .normal)
         button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .red
@@ -99,10 +101,44 @@ class RecoverScreen: UIView {
         
     }()
     
+    lazy var emailImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Email")
+        
+        return image
+        
+    }()
+    
+    lazy var emailTextField: UITextField = {
+        let textField = UITextField()
+        textField.leftViewMode = .always
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no
+        textField.layer.backgroundColor = .none
+        textField.keyboardType = .emailAddress
+        textField.attributedPlaceholder = NSAttributedString(string: "exemplo@gmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.secondaryLabel])
+        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.layer.cornerRadius = 10
+        textField.layer.masksToBounds = false
+        
+        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
+        textField.leftView = leftPaddingView
+        textField.leftViewMode = .always
+        
+        return textField
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
         configConstraints()
+    }
+    
+    @objc func tappedEnviarButton(sender: UIButton) {
+        print("Botão funcionando")
+        delegate?.tappedEnviarButton()
     }
     
     required init?(coder: NSCoder) {
@@ -115,7 +151,9 @@ class RecoverScreen: UIView {
         addSubview(retangleView)
         retangleView.addSubview(recoverPass)
         retangleView.addSubview(textRecover)
-        retangleView.addSubview(loginButton)
+        retangleView.addSubview(emailImageView)
+        retangleView.addSubview(emailTextField)
+        retangleView.addSubview(enviarButton)
         
         DispatchQueue.main.async {
             let gradient = self.getGradientLayer(bounds: self.loginLabel.bounds)
@@ -124,9 +162,8 @@ class RecoverScreen: UIView {
         }
         
         DispatchQueue.main.async {
-            let gradient = self.getGradientLayer(bounds: self.loginButton.bounds)
-            self.loginButton.backgroundColor = self.gradientColor(bounds: self.loginButton.bounds, gradientLayer: gradient)
-            
+            let gradient = self.getGradientLayer(bounds: self.enviarButton.bounds)
+            self.enviarButton.backgroundColor = self.gradientColor(bounds: self.enviarButton.bounds, gradientLayer: gradient)
         }
     }
     
@@ -138,7 +175,7 @@ class RecoverScreen: UIView {
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
+            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 130),
             loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             retangleView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -155,10 +192,19 @@ class RecoverScreen: UIView {
             textRecover.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 25),
             textRecover.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -25),
             
-            loginButton.heightAnchor.constraint(equalToConstant: 45),
-            loginButton.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
-            loginButton.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -30),
-            loginButton.topAnchor.constraint(equalTo: textRecover.bottomAnchor, constant: 30)
+            emailImageView.topAnchor.constraint(equalTo: textRecover.bottomAnchor, constant: 32),
+            emailImageView.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
+            emailImageView.heightAnchor.constraint(equalToConstant: 20),
+            emailImageView.widthAnchor.constraint(equalToConstant: 25),
+            
+            emailTextField.topAnchor.constraint(equalTo: textRecover.bottomAnchor, constant: 28),
+            emailTextField.trailingAnchor.constraint(equalTo: enviarButton.trailingAnchor),
+            emailTextField.leadingAnchor.constraint(equalTo: emailImageView.trailingAnchor, constant: 5),
+            
+            enviarButton.heightAnchor.constraint(equalToConstant: 45),
+            enviarButton.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
+            enviarButton.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -30),
+            enviarButton.topAnchor.constraint(equalTo: emailImageView.bottomAnchor, constant: 45)
         ])
     }
 }
