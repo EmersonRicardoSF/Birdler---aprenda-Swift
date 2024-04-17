@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginVC: UIViewController {
 
     var loginScreen: LoginScreen?
     
@@ -23,15 +23,17 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginScreenProtocol {
+extension LoginVC: LoginScreenProtocol {
     func tappedRecuperarSenhaButton() {
         print("Recuperar Senha")
     }
     
     func tappedLoginButton() {
         print("Entrar")
-        let vc: HomeVC = HomeVC()
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc: HomeVC = HomeVC()
+//        navigationController?.pushViewController(vc, animated: true)
+        let vc: NewsVC = NewsVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tappedCriarCadastroButton(){

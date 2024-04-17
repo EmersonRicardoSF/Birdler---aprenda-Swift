@@ -21,7 +21,8 @@
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
 		E8A65C562BCFC2DA0051B8D2 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A65C552BCFC2DA0051B8D2 /* NewsScreen.swift */; };
 		E8A65C5A2BCFC3210051B8D2 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A65C592BCFC3210051B8D2 /* NewsVC.swift */; };
-		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
+		E8A65C5E2BCFD5560051B8D2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A65C5D2BCFD5560051B8D2 /* NewsTableViewCell.swift */; };
+		E8C4040F2BB799F800226BDC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginVC.swift */; };
 		E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C404102BB79F5700226BDC /* LoginScreen.swift */; };
 		E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404152BB8015200226BDC /* DMSans-Bold.ttf */; };
 		E8C404282BB8015300226BDC /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8C404162BB8015200226BDC /* DMSans-BoldItalic.ttf */; };
@@ -80,7 +81,8 @@
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8A65C552BCFC2DA0051B8D2 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
 		E8A65C592BCFC3210051B8D2 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
-		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E8A65C5D2BCFD5560051B8D2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E8C4040E2BB799F800226BDC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E8C404102BB79F5700226BDC /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E8C404152BB8015200226BDC /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		E8C404162BB8015200226BDC /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -169,7 +171,7 @@
 		859012062BBF58190046283C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E8C4040E2BB799F800226BDC /* LoginViewController.swift */,
+				E8C4040E2BB799F800226BDC /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +272,7 @@
 		E8A65C502BCFC1FA0051B8D2 /* Novidades */ = {
 			isa = PBXGroup;
 			children = (
+				E8A65C5B2BCFD4A60051B8D2 /* Cell */,
 				E8A65C512BCFC2280051B8D2 /* Screen */,
 				E8A65C522BCFC2430051B8D2 /* Controller */,
 			);
@@ -288,6 +291,22 @@
 			isa = PBXGroup;
 			children = (
 				E8A65C592BCFC3210051B8D2 /* NewsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8A65C5B2BCFD4A60051B8D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E8A65C5C2BCFD5170051B8D2 /* Controller */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E8A65C5C2BCFD5170051B8D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8A65C5D2BCFD5560051B8D2 /* NewsTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,7 +475,7 @@
 				852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */,
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
-				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
+				E8C4040F2BB799F800226BDC /* LoginVC.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				E8A65C562BCFC2DA0051B8D2 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
@@ -467,6 +486,7 @@
 				63BEAC462BC63525002F3B42 /* RegisterController.swift in Sources */,
 				E8C404622BBC013500226BDC /* DMSansFont.swift in Sources */,
 				E8A65C5A2BCFC3210051B8D2 /* NewsVC.swift in Sources */,
+				E8A65C5E2BCFD5560051B8D2 /* NewsTableViewCell.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,
 				E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */,
 			);
@@ -617,9 +637,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,6 +646,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Emerson-Ricardo.Birdler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,9 +668,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,6 +677,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Emerson-Ricardo.Birdler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
