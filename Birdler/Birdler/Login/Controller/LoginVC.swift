@@ -32,8 +32,10 @@ extension LoginVC: LoginScreenProtocol {
         print("Entrar")
 //        let vc: HomeVC = HomeVC()
 //        navigationController?.pushViewController(vc, animated: true)
+//        MARK: quando fizer a ligacao com a Tabbar apagar essa metodo abaixo e descomentar o de cima.
         let vc: NewsVC = NewsVC()
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     func tappedCriarCadastroButton(){
