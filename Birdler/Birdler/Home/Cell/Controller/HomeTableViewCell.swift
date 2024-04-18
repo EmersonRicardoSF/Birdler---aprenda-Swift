@@ -49,11 +49,11 @@ class HomeTableViewCell: UITableViewCell {
         ])
     }
     
-    public func setupHomeCell() {
-        screen.nameLabel.text = "Nome: "
-        screen.qtdLabel.text = "Quantidade: "
-        screen.phoneLabel.text = "Telefone: "
-        screen.timeLabel.text = "Horário: "
-    }
+//    public func setupHomeCell() {
+//        screen.nameLabel.text = "Nome: "
+//        screen.qtdLabel.text = "Quantidade: "
+//        screen.phoneLabel.text = "Telefone: "
+//        screen.timeLabel.text = "Horário: "
+//    }
 
 }
