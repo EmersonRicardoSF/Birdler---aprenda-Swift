@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
     func configSections() {
         sections.append(contentsOf: [
             
-            sectionStudy(title: "Introdução", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
+            sectionStudy(title: "Introdução", description: "Swift", options: [1, 2].compactMap({return "Cell \($0)"})),
             sectionStudy(title: "Lógica aplicada", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
             sectionStudy(title: "Xcode", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
             sectionStudy(title: "UIKit", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
@@ -116,7 +116,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         sections[indexPath.section].opened = !sections[indexPath.section].opened
         tableView.reloadSections([indexPath.section], with: .automatic)
-        
         
     }
 }

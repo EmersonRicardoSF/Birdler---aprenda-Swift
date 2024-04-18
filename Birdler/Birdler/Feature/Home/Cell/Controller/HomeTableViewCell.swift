@@ -51,4 +51,15 @@ class HomeTableViewCell: UITableViewCell {
             
         ])
     }
+//<<<<<<< HEAD:Birdler/Birdler/Feature/Home/Cell/Controller/HomeTableViewCell.swift
+//=======
+    
+//    public func setupHomeCell() {
+//        screen.nameLabel.text = "Nome: "
+//        screen.qtdLabel.text = "Quantidade: "
+//        screen.phoneLabel.text = "Telefone: "
+//        screen.timeLabel.text = "Horário: "
+//    }
+
+//>>>>>>> Feature/Home:Birdler/Birdler/Home/Cell/Controller/HomeTableViewCell.swift
 }
