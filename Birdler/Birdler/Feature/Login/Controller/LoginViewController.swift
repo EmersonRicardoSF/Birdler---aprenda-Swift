@@ -25,7 +25,11 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenProtocol {
     func tappedRecuperarSenhaButton() {
+        // MARK: ALTERAR ESSA NAV DEPOIS
         print("Recuperar Senha")
+        let vc: ExerciseVC = ExerciseVC()
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     func tappedLoginButton() {
