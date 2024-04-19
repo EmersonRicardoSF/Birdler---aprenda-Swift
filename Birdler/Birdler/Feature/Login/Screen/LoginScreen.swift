@@ -61,24 +61,24 @@ class LoginScreen: UIView {
     }()
     
     lazy var usuarioTextField: UITextField = {
-        let textField = UITextField()
-        textField.leftViewMode = .always
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
-        textField.keyboardType = .emailAddress
-        textField.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.layer.cornerRadius = 8
-        textField.layer.masksToBounds = false
-        textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
-        textField.layer.borderWidth = 1
+        let tf = UITextField()
+        tf.leftViewMode = .always
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        tf.keyboardType = .emailAddress
+        tf.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.font = UIFont.boldSystemFont(ofSize: 20)
+        tf.layer.cornerRadius = 8
+        tf.layer.masksToBounds = false
+        tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
+        tf.layer.borderWidth = 1
         
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
-        textField.leftView = leftPaddingView
-        textField.leftViewMode = .always
+        tf.leftView = leftPaddingView
+        tf.leftViewMode = .always
         
-        return textField
+        return tf
         
     }()
     
@@ -91,24 +91,24 @@ class LoginScreen: UIView {
     }()
     
     lazy var passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
-        textField.keyboardType = .alphabet
-        textField.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
-        textField.isSecureTextEntry = true
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.layer.cornerRadius = 8
-        textField.layer.masksToBounds = false
-        textField.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
-        textField.layer.borderWidth = 1
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
+        tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
+        tf.keyboardType = .alphabet
+        tf.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.isSecureTextEntry = true
+        tf.font = UIFont.boldSystemFont(ofSize: 20)
+        tf.layer.cornerRadius = 8
+        tf.layer.masksToBounds = false
+        tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
+        tf.layer.borderWidth = 1
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
-        textField.leftView = leftPaddingView
-        textField.leftViewMode = .always
+        tf.leftView = leftPaddingView
+        tf.leftViewMode = .always
         
-        return textField
+        return tf
         
     }()
     
@@ -135,32 +135,32 @@ class LoginScreen: UIView {
     }()
     
     lazy var loginButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
-        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        let btn: UIButton = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Entrar", for: .normal)
+        btn.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 7.5
+        btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     
     lazy var criarCadastroButton: UIButton = {
-        let button: UIButton = UIButton()
+        let btn: UIButton = UIButton()
         let attributedString = NSMutableAttributedString(string: "Não possui cadastro? Crie aqui")
         let range = NSRange(location: 21, length: 9)
         attributedString.addAttribute(.foregroundColor, value: UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1), range: range)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setAttributedTitle(attributedString, for: .normal)
-        button.titleLabel?.font = UIFont.dmsansFont(type: .regular, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(tappedCriarCadastroButton), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setAttributedTitle(attributedString, for: .normal)
+        btn.titleLabel?.font = UIFont.dmsansFont(type: .regular, size: 19)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.addTarget(self, action: #selector(tappedCriarCadastroButton), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     

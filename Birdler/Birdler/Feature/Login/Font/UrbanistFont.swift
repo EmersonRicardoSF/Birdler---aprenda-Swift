@@ -2,7 +2,6 @@ import UIKit
 
 extension UIFont {
     
-    
     enum FontType2 {
         
         case bold

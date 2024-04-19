@@ -15,11 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let vc: LoginVC = LoginVC()
+        let vc: LoginViewController = LoginViewController()
+//        let tabBar: TabBarVC = TabBarVC()
         let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
+//        MARK: DEIXAR ESSA DE BAIXO E APAGAR A DE CIMA.
+//        window.rootViewController = tabBar
         window.makeKeyAndVisible()
         self.window = window
+        
     }
     
 
