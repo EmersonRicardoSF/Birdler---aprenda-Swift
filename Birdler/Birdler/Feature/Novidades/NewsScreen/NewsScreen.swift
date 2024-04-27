@@ -45,25 +45,31 @@ class NewsScreen: UIView {
         btn.backgroundColor = .white
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 8
-//        button.addTarget(self, action: #selector(tappedDocAppleDevButton), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(opendoc), for: .touchUpInside)
         
         return btn
         
     }()
     
     lazy var tableView: UITableView = {
-        let tv = UITableView()
+        let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
         tv.backgroundColor = .clear
         tv.separatorStyle = .none
+        tv.register(NewsHearderView.self, forHeaderFooterViewReuseIdentifier: NewsHearderView.identifer)
         return tv
         
     }()
     
-    @objc func tappedDocAppleDevButton(_ sender: UIButton) {
+    
+    @objc func opendoc() {
         print("Indo para a Web")
-        delegate?.tappedDocAppleDevButton()
+    }
+    
+    @objc func tappedDocAppleDevButton() {
+        print("Indo para a Web")
+//        self.delegate?.tappedDocAppleDevButton()
         
     }
     
@@ -103,15 +109,16 @@ class NewsScreen: UIView {
             backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             docAppleDevButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 64),
-            docAppleDevButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            docAppleDevButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -24),
+            docAppleDevButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
+            docAppleDevButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -22),
+//            docAppleDevButton.heightAnchor.constraint(equalToConstant: 24),
 
             docAppleDevImageView.centerYAnchor.constraint(equalTo: docAppleDevButton.centerYAnchor),
             docAppleDevImageView.leadingAnchor.constraint(equalTo: docAppleDevButton.leadingAnchor, constant: 32),
             
-            tableView.topAnchor.constraint(equalTo: docAppleDevButton.topAnchor, constant: 36),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+            tableView.topAnchor.constraint(equalTo: docAppleDevButton.topAnchor, constant: 44),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24),
         
         ])
