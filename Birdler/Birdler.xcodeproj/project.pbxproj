@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8510E6B92BE10F2000FCE404 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510E6B82BE10F2000FCE404 /* ExerciseTableViewCell.swift */; };
+		8510E6BB2BE10F3D00FCE404 /* ExerciseTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510E6BA2BE10F3D00FCE404 /* ExerciseTableViewScreen.swift */; };
 		852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852220812BC0C1EA008F11CE /* HomeHeaderView.swift */; };
 		8550B9242BD13F30005069A8 /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550B9232BD13F30005069A8 /* ExerciseVC.swift */; };
 		8550B9262BD13F99005069A8 /* ExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550B9252BD13F99005069A8 /* ExerciseScreen.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8510E6B82BE10F2000FCE404 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		8510E6BA2BE10F3D00FCE404 /* ExerciseTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewScreen.swift; sourceTree = "<group>"; };
 		852220812BC0C1EA008F11CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		8550B9232BD13F30005069A8 /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
 		8550B9252BD13F99005069A8 /* ExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		8550B92B2BD14748005069A8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8510E6B82BE10F2000FCE404 /* ExerciseTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 		8550B92C2BD14762005069A8 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8510E6BA2BE10F3D00FCE404 /* ExerciseTableViewScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -490,11 +496,13 @@
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
 				8550B9262BD13F99005069A8 /* ExerciseScreen.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
+				8510E6BB2BE10F3D00FCE404 /* ExerciseTableViewScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
 				E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */,
 				859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */,
 				E8C404622BBC013500226BDC /* DMSansFont.swift in Sources */,
 				8550B9242BD13F30005069A8 /* ExerciseVC.swift in Sources */,
+				8510E6B92BE10F2000FCE404 /* ExerciseTableViewCell.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,
 				E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */,
 			);

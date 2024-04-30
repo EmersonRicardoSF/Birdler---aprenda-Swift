@@ -11,6 +11,7 @@ class ExerciseScreen: UIView {
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -19,10 +20,12 @@ class ExerciseScreen: UIView {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.showsVerticalScrollIndicator = false
         tv.backgroundColor = .clear.withAlphaComponent(0.4)
-        tv.layer.borderWidth = 4
+        tv.layer.borderWidth = 2
+        tv.layer.borderColor = UIColor.white.cgColor
+        tv.layer.cornerRadius = 12
        // tv.layer.borderColor = .
 //        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
-//        tv.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        tv.register(HomeTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.identifier)
         
         return tv
     }()
@@ -53,7 +56,7 @@ class ExerciseScreen: UIView {
             
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
