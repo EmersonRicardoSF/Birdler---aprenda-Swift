@@ -24,7 +24,7 @@ class ExerciseScreen: UIView {
         tv.layer.borderColor = UIColor.white.cgColor
         tv.layer.cornerRadius = 12
        // tv.layer.borderColor = .
-//        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
+        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
         tv.register(HomeTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.identifier)
         
         return tv
