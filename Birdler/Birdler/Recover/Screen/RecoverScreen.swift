@@ -85,8 +85,7 @@ class RecoverScreen: UIView {
         button.backgroundColor = .red
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        //        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
-        
+        button.addTarget(self, action: #selector(tappedEnviarButton), for: .touchUpInside)
         return button
         
     }()
@@ -121,6 +120,7 @@ class RecoverScreen: UIView {
         textField.font = UIFont.systemFont(ofSize: 20)
         textField.layer.cornerRadius = 10
         textField.layer.masksToBounds = false
+        textField.layer.borderColor = .none
         
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
         textField.leftView = leftPaddingView
@@ -165,6 +165,11 @@ class RecoverScreen: UIView {
             let gradient = self.getGradientLayer(bounds: self.enviarButton.bounds)
             self.enviarButton.backgroundColor = self.gradientColor(bounds: self.enviarButton.bounds, gradientLayer: gradient)
         }
+        
+        DispatchQueue.main.async {
+            let gradient = self.getGradientLayer(bounds: self.emailTextField.bounds)
+            self.emailTextField.layer.borderColor = self.gradientColor(bounds: self.emailTextField.bounds, gradientLayer: gradient)?.cgColor
+        }
     }
     
     private func configConstraints() {
@@ -192,7 +197,7 @@ class RecoverScreen: UIView {
             textRecover.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 25),
             textRecover.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -25),
             
-            emailImageView.topAnchor.constraint(equalTo: textRecover.bottomAnchor, constant: 32),
+            emailImageView.centerYAnchor.constraint(equalTo: emailTextField.centerYAnchor),
             emailImageView.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
             emailImageView.heightAnchor.constraint(equalToConstant: 20),
             emailImageView.widthAnchor.constraint(equalToConstant: 25),
@@ -200,11 +205,13 @@ class RecoverScreen: UIView {
             emailTextField.topAnchor.constraint(equalTo: textRecover.bottomAnchor, constant: 28),
             emailTextField.trailingAnchor.constraint(equalTo: enviarButton.trailingAnchor),
             emailTextField.leadingAnchor.constraint(equalTo: emailImageView.trailingAnchor, constant: 5),
+            emailTextField.heightAnchor.constraint(equalToConstant: 40),
             
             enviarButton.heightAnchor.constraint(equalToConstant: 45),
             enviarButton.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
             enviarButton.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -30),
-            enviarButton.topAnchor.constraint(equalTo: emailImageView.bottomAnchor, constant: 45)
+//            enviarButton.topAnchor.constraint(equalTo: emailImageView.bottomAnchor, constant: 45),
+            enviarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -44)
         ])
     }
 }

@@ -253,17 +253,9 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		A3662CEE2BC832D6000EC721 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		A37A4AD02BC831D200DA66BE /* Recover */ = {
 			isa = PBXGroup;
 			children = (
-				A3662CEE2BC832D6000EC721 /* Cell */,
 				A3662CED2BC832CB000EC721 /* Screen */,
 				A3662CEC2BC832C1000EC721 /* Controller */,
 			);
