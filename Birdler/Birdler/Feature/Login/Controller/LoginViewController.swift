@@ -34,7 +34,7 @@ extension LoginViewController: LoginScreenProtocol {
     
     func tappedLoginButton() {
         print("Entrar")
-        let vc: HomeVC = HomeVC()
+        let vc: TabBarVC = TabBarVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
