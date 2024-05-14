@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		63A993512BF4005E00429C35 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993502BF4005E00429C35 /* RegisterVC.swift */; };
 		63A993532BF400D900429C35 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993522BF400D900429C35 /* RegisterScreen.swift */; };
+		63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993582BF4042B00429C35 /* RecoverVC.swift */; };
+		63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9935B2BF4046900429C35 /* RecoverScreen.swift */; };
 		852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852220812BC0C1EA008F11CE /* HomeHeaderView.swift */; };
 		8590120A2BBF58850046283C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012092BBF58850046283C /* HomeVC.swift */; };
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
@@ -73,6 +75,8 @@
 /* Begin PBXFileReference section */
 		63A993502BF4005E00429C35 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		63A993522BF400D900429C35 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		63A993582BF4042B00429C35 /* RecoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverVC.swift; sourceTree = "<group>"; };
+		63A9935B2BF4046900429C35 /* RecoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverScreen.swift; sourceTree = "<group>"; };
 		852220812BC0C1EA008F11CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		859012092BBF58850046283C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -168,6 +172,31 @@
 			isa = PBXGroup;
 			children = (
 				63A993522BF400D900429C35 /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		63A993562BF4040D00429C35 /* Recover */ = {
+			isa = PBXGroup;
+			children = (
+				63A9935A2BF4045700429C35 /* Screen */,
+				63A993572BF4041300429C35 /* Controller */,
+			);
+			path = Recover;
+			sourceTree = "<group>";
+		};
+		63A993572BF4041300429C35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63A993582BF4042B00429C35 /* RecoverVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63A9935A2BF4045700429C35 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				63A9935B2BF4046900429C35 /* RecoverScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -292,6 +321,7 @@
 		E84C59D42BC64976001226FB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				63A993562BF4040D00429C35 /* Recover */,
 				63A9934F2BF4001100429C35 /* Register */,
 				E84C80CC2BD2218900F6DEC8 /* Novidades */,
 				859012082BBF584C0046283C /* Home */,
@@ -525,6 +555,7 @@
 			files = (
 				852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */,
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
+				63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */,
 				E84C80CE2BD221D000F6DEC8 /* NewsTableViewCell.swift in Sources */,
 				E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
@@ -534,6 +565,7 @@
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
+				63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
 				E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */,
