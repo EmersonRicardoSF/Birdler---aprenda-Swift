@@ -25,6 +25,7 @@ class HomeHeaderView: UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         addElements()
         configConstraints()
+//        self.backgroundView?.backgroundColor = .clear
         
     }
     
@@ -36,7 +37,7 @@ class HomeHeaderView: UITableViewHeaderFooterView {
     private func addElements() {
         addSubview(nameLabel)
         self.backgroundColor = .clear
-        self.backgroundView?.backgroundColor = .clear
+//        self.backgroundView?.backgroundColor = .clear
         
     }
     
@@ -48,5 +49,8 @@ class HomeHeaderView: UITableViewHeaderFooterView {
         
         ])
     }
+    
+    
+    
     
 }

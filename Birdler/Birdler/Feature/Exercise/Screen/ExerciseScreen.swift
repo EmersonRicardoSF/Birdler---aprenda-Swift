@@ -7,7 +7,27 @@
 
 import UIKit
 
+protocol ExerciseScreenProtocol: AnyObject {
+    func customNavigation()
+}
+
 class ExerciseScreen: UIView {
+    
+    private weak var delegate: ExerciseScreenProtocol?
+    
+    public func delegate(delegate: ExerciseScreenProtocol?) {
+        self.delegate = delegate
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addElements()
+        configConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
@@ -23,22 +43,16 @@ class ExerciseScreen: UIView {
         tv.layer.borderWidth = 2
         tv.layer.borderColor = UIColor.white.cgColor
         tv.layer.cornerRadius = 12
-       // tv.layer.borderColor = .
+        // tv.layer.borderColor = .
         tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
-        tv.register(HomeTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.identifier)
+        tv.register(ExerciseTableViewCell.self, forCellReuseIdentifier: ExerciseTableViewCell.identifier)
         
         return tv
     }()
     
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addElements()
-        configConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
     }
     
     private func addElements() {
@@ -48,7 +62,7 @@ class ExerciseScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
             backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),

@@ -48,12 +48,13 @@ class ExerciseTableViewCell: UITableViewCell {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            screen.topAnchor.constraint(equalTo: contentView.topAnchor),
-            screen.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            screen.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            screen.topAnchor.constraint(equalTo: topAnchor),
+            screen.leadingAnchor.constraint(equalTo: leadingAnchor),
+            screen.trailingAnchor.constraint(equalTo: trailingAnchor),
+            screen.bottomAnchor.constraint(equalTo: bottomAnchor),
         
         ])
+
     }
 
 }
