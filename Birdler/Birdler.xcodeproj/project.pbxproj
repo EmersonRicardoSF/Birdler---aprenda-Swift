@@ -11,6 +11,9 @@
 		63A993532BF400D900429C35 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993522BF400D900429C35 /* RegisterScreen.swift */; };
 		63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993582BF4042B00429C35 /* RecoverVC.swift */; };
 		63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9935B2BF4046900429C35 /* RecoverScreen.swift */; };
+		63A9935F2BF407EF00429C35 /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9935E2BF407EF00429C35 /* ExerciseVC.swift */; };
+		63A993612BF4082800429C35 /* ExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993602BF4082800429C35 /* ExerciseScreen.swift */; };
+		63A993662BF4089200429C35 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A993652BF4089200429C35 /* ExerciseCell.swift */; };
 		852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852220812BC0C1EA008F11CE /* HomeHeaderView.swift */; };
 		8590120A2BBF58850046283C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012092BBF58850046283C /* HomeVC.swift */; };
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
@@ -77,6 +80,9 @@
 		63A993522BF400D900429C35 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		63A993582BF4042B00429C35 /* RecoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverVC.swift; sourceTree = "<group>"; };
 		63A9935B2BF4046900429C35 /* RecoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverScreen.swift; sourceTree = "<group>"; };
+		63A9935E2BF407EF00429C35 /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		63A993602BF4082800429C35 /* ExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen.swift; sourceTree = "<group>"; };
+		63A993652BF4089200429C35 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		852220812BC0C1EA008F11CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		859012092BBF58850046283C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -201,6 +207,40 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		63A9935D2BF407C900429C35 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				63A993642BF4087100429C35 /* Cell */,
+				63A993632BF4084A00429C35 /* Screen */,
+				63A993622BF4084000429C35 /* Controller */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		63A993622BF4084000429C35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63A9935E2BF407EF00429C35 /* ExerciseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63A993632BF4084A00429C35 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				63A993602BF4082800429C35 /* ExerciseScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		63A993642BF4087100429C35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				63A993652BF4089200429C35 /* ExerciseCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		852220802BC0C1A2008F11CE /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +361,7 @@
 		E84C59D42BC64976001226FB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				63A9935D2BF407C900429C35 /* Exercise */,
 				63A993562BF4040D00429C35 /* Recover */,
 				63A9934F2BF4001100429C35 /* Register */,
 				E84C80CC2BD2218900F6DEC8 /* Novidades */,
@@ -556,6 +597,7 @@
 				852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */,
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
 				63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */,
+				63A993612BF4082800429C35 /* ExerciseScreen.swift in Sources */,
 				E84C80CE2BD221D000F6DEC8 /* NewsTableViewCell.swift in Sources */,
 				E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
@@ -563,8 +605,10 @@
 				E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */,
 				E89B84E82BDC759D00035E26 /* NewsHearderView.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
+				63A993662BF4089200429C35 /* ExerciseCell.swift in Sources */,
 				E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
+				63A9935F2BF407EF00429C35 /* ExerciseVC.swift in Sources */,
 				63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
