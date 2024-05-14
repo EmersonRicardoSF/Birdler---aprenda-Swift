@@ -27,6 +27,8 @@ extension LoginVC: LoginScreenProtocol {
     
     func tappedRecuperarSenhaButton() {
         print("Recuperar Senha")
+        let vc: RecoverVC = RecoverVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tappedLoginButton() {
