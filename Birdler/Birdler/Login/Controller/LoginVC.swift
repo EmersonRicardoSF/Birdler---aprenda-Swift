@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginVC: UIViewController {
 
     var loginScreen: LoginScreen?
     
@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginScreenProtocol {
+extension LoginVC: LoginScreenProtocol {
     func tappedRecuperarSenhaButton() {
         print("Recuperar Senha")
     }
