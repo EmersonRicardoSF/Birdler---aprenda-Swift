@@ -25,7 +25,7 @@ extension UIFont {
         func getWeight() -> UIFont.Weight {
             switch self {
             case .semiBold:
-                return .bold
+                return .semibold
            
             }
         }

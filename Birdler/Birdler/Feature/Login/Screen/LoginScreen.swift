@@ -122,15 +122,15 @@ class LoginScreen: UIView {
         }()
     
     lazy var recuperarSenhaButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Recuperar Senha", for: .normal)
-        button.titleLabel?.font = UIFont.urbanistFont(type: .medium, size: 15)
-        button.setTitleColor(.white, for: .normal)
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(tappedRecuperarSenhaButton), for: .touchUpInside)
+        let btn: UIButton = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Recuperar Senha", for: .normal)
+        btn.titleLabel?.font = UIFont.urbanistFont(type: .medium, size: 15)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.addTarget(self, action: #selector(tappedRecuperarSenhaButton), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     
@@ -263,6 +263,7 @@ class LoginScreen: UIView {
         ])
     }
 }
+
 
 
 
