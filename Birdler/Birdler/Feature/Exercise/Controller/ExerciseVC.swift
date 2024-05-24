@@ -23,6 +23,7 @@ class ExerciseVC: UIViewController {
         exerciseScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         exerciseScreen?.delegate(delegate: self)
         configSections()
+        overrideUserInterfaceStyle = .light
     }
     
     
