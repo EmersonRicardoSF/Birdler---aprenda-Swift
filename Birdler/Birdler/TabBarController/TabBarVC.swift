@@ -28,7 +28,7 @@ class TabBarVC: UITabBarController {
         guard let items = tabBar.items else {return}
         items[0].image = UIImage(named: "homeIcon")
         items[1].image = UIImage(named: "swiftIcon")
-        items[2].image = UIImage(named: "newsIcon")
+        items[2].image = UIImage(named: "journalicon")
         items[0].title = ""
         items[1].title = ""
         items[2].title = ""
