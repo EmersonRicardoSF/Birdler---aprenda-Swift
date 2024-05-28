@@ -5,6 +5,8 @@
 //  Created by Vitor Ernane Guedes on 14/05/24.
 //
 
+//MARK: A imagem do profile precisa ser excluida e criar um Picker para poder entrar na galeria.
+
 import UIKit
 
 protocol RegisterScreenProtocol: AnyObject {
@@ -74,13 +76,13 @@ class RegisterScreen: UIView {
     }()
     
     lazy var profilePhoto: UIImageView = {
-    
-//        let imageView = UIImageView(image: UIImage(named: "photoProfile"))
+        
+        //        let imageView = UIImageView(image: UIImage(named: "photoProfile"))
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "iconUserNew")
-        
+        image.contentMode = .scaleAspectFit
         return image
         
     }()
@@ -202,7 +204,7 @@ class RegisterScreen: UIView {
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "RegisterPadLockIcon")
+        image.image = UIImage(named: "RegisterpadLockIcon")
         
         return image
     }()
@@ -256,7 +258,7 @@ class RegisterScreen: UIView {
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "RegisterPadLockIcon")
+        image.image = UIImage(named: "RegisterpadLockIcon")
         
         return image
     }()
@@ -340,7 +342,7 @@ class RegisterScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     
     private func addElements() {
         
@@ -400,23 +402,22 @@ class RegisterScreen: UIView {
             
             logoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             logoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-        
             
+            viewRegister.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 28),
             viewRegister.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewRegister.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewRegister.bottomAnchor.constraint(equalTo: bottomAnchor),
-            viewRegister.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 35),
-
-            profilePhoto.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 17),
-            profilePhoto.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 138),
-            profilePhoto.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -138),
-            profilePhoto.heightAnchor.constraint(equalToConstant: 120),
-//            profilePhoto.widthAnchor.constraint(equalToConstant: 120),
+            
+            
+            profilePhoto.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 16),
+            profilePhoto.centerXAnchor.constraint(equalTo: centerXAnchor),
+            profilePhoto.heightAnchor.constraint(equalToConstant: 100),
+            profilePhoto.widthAnchor.constraint(equalToConstant: 120),
             
             
             
             
-            iconUser.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 28),
+            iconUser.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 24),
             iconUser.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 45),
             
             userLabel.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 19),
@@ -460,7 +461,7 @@ class RegisterScreen: UIView {
             lineViewPassword.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewPassword.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-        
+            
             
             iconPasswordAgain.topAnchor.constraint(equalTo: lineViewPassword.bottomAnchor, constant: 17),
             iconPasswordAgain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 51),
@@ -476,13 +477,14 @@ class RegisterScreen: UIView {
             lineViewPasswordAgain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
             
-            cadastrarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant:-10),
+            cadastrarButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 20),
+            //cadastrarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant:-10),
             cadastrarButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
             cadastrarButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -35),
             cadastrarButton.heightAnchor.constraint(equalToConstant: 45),
             
-            ])
-            
+        ])
+        
     }
 }
 
