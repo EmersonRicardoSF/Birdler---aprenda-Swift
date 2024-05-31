@@ -10,7 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
-    var sections = [sectionStudy]()
+    var HomeData: [HomeModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,20 +19,20 @@ class HomeVC: UIViewController {
         homeScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         homeScreen?.delegate(delegate: self)
         configNavigation()
-        configSections()
+        loadHome()
     }
     
-    func configSections() {
-        sections.append(contentsOf: [
-            
-            sectionStudy(title: "Introdução", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
-            sectionStudy(title: "Lógica aplicada", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
-            sectionStudy(title: "Xcode", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
-            sectionStudy(title: "UIKit", description: "Swift", options: [1].compactMap({return "Cell \($0)"})),
-            sectionStudy(title: "Versionamento", description: "Swift", options: [1].compactMap({return "Cell \($0)"}))
-        
-        
-        ])
+    func loadHome() {
+        if let home = Bundle.main.url(forResource: "Home", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: home)
+                let decoder = JSONDecoder()
+                HomeData = try decoder.decode([HomeModel].self, from: data)
+                homeScreen?.tableView.reloadData()
+            } catch {
+                print("Erro ao tentar obter Home.")
+            }
+        }
     }
     
     // MARK: IMPORTANTE (configura a navBar)
@@ -49,49 +49,42 @@ class HomeVC: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         self.navigationItem.hidesBackButton = true
     }
-
+    
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = sections[section]
-        if section.opened {
-            return section.options.count + 1
-        } else {
-            return 1
-        }
+        return HomeData[section].sections?.count ?? 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return HomeData.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return HomeData[section].name
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as?
-//        HomeTableViewCell
-//        cell?.setupHomeCell()
-//        return cell ?? UITableViewCell()
-        if indexPath.row == 0{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {return UITableViewCell()}
-            tableView.layoutIfNeeded()
-            let data = sections[indexPath.section]
-            cell.screen.nameLabel.text = data.title
-            
-            
-            
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {return UITableViewCell()}
-            tableView.layoutIfNeeded()
-            let data = sections[indexPath.section]
-            cell.screen.nameLabel.text = data.description
-            return cell
-        }
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell else {return UITableViewCell()}
+        tableView.layoutIfNeeded()
+        let data = HomeData[indexPath.section].sections?[indexPath.row]
+        cell.screen.nameLabel.text = data
+        cell.backgroundColor = .secondarySystemBackground
+        cell.accessoryType = .disclosureIndicator
+        
+        return cell
+        
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 50
-//        // MARK: COLOCAR 50 DEPOIS DE CONFIGURADO
-//    }
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 50
+    //        // MARK: COLOCAR 50 DEPOIS DE CONFIGURADO
+    //    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeaderView.identifer)
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeaderView.identifier)
             as? HomeHeaderView
             return header
         } else {
@@ -101,22 +94,20 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 50
+            return 100
         } else {
-            return 0
+            return 50
         }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
-    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard tableView.cellForRow(at: indexPath) is HomeTableViewCell else { return }
+        let data = HomeData[indexPath.section].sections?[indexPath.row]
+        let vc = LicaoVC(licao: data)
+        navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
-        sections[indexPath.section].opened = !sections[indexPath.section].opened
-        tableView.reloadSections([indexPath.section], with: .automatic)
-        
+        print(data ?? "")
         
     }
 }

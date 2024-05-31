@@ -9,12 +9,12 @@ import UIKit
 
 class HomeHeaderView: UITableViewHeaderFooterView {
     
-    static let identifer = "HomeHeaderView"
+    static let identifier = "HomeHeaderView"
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Meu progresso: "
+        label.text = "Aprendizado"
         label.textColor = UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1)
         label.font = UIFont.poppinsFont(type: .bold , size: 20)
         return label

@@ -20,21 +20,24 @@ class HomeScreen: UIView {
         self.delegate = delegate
     }
     
+    lazy var imageBackGround: UIImageView = {
+        let image = UIImageView(image: UIImage(named: "background"))
+        return image
+    }()
+    
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.showsVerticalScrollIndicator = false
         tv.backgroundColor = .clear
-        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifer)
+        tv.separatorStyle = .none
+        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifier)
         tv.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
         
         return tv
     }()
     
-    lazy var imageBackGround: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "background"))
-        return image
-    }()
+    
     
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableView.delegate = delegate
@@ -68,7 +71,7 @@ class HomeScreen: UIView {
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     

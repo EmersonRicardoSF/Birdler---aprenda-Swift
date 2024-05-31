@@ -23,7 +23,7 @@ class ExerciseVC: UIViewController {
         exerciseScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         exerciseScreen?.delegate(delegate: self)
         configSections()
-        overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .dark
     }
     
     
@@ -73,7 +73,7 @@ extension ExerciseVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeaderView.identifer)
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeaderView.identifier)
             as? HomeHeaderView
             return header
         } else {
@@ -85,7 +85,7 @@ extension ExerciseVC: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 50
         } else {
-            return 0
+            return 50
         }
     }
     

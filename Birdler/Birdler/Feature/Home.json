@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Introdução ao Swift",
+        "sections": [
+            "Variáveis",
+            "Strings e inteiros",
+            "Strings multilinha",
+            "Doubles e booleanos",
+            "Interpolação de strings",
+            "Constantes",
+            "Anotações de tipo",
+            "Tipos simples-Resumo"
+        ]
+    },
+    {
+        "name": "Tipos Complexos",
+        "sections": [
+            "Arrays",
+            "Conjuntos",
+            "Tuplas",
+            "Arrays vs conjuntos vs tuplas",
+            "Dicionários",
+            "Valores padrão de dicionário",
+            "Criando coleções vazias",
+            "Enumerações",
+            "Valores associados de enum",
+            "Valores brutos de enum",
+            "Tipos complexos: Resumo"
+        ]
+    },
+    {
+        "name": "Operadores e Condições",
+        "sections": [
+            "Operadores aritméticos",
+            "Sobrecarregamento de operadores",
+            "Operadores de atribuição composta",
+            "Operadores de comparação",
+            "Condições",
+            "Combinando condições",
+            "O operador ternário",
+            "Instruções de switch",
+            "Operadores de intervalo",
+            "Operadores e condições: Resumo"
+        ]
+    },
+    {
+        "name": "Looping",
+        "sections": [
+            "Loops for",
+            "Loops while",
+            "Loops repeat",
+            "Saindo de loops",
+            "Saindo de múltiplos loops",
+            "Pulando itens",
+            "Loops infinitos",
+            "Looping: Resumo"
+        ]
+    },
+    {
+        "name": "Funções",
+        "sections": [
+            "Aprendendo sobre Funções",
+            "Aceitando parâmetros",
+            "Retornando valores",
+            "Rótulos de parâmetros",
+            "Omitindo rótulos de parâmetros",
+            "Parâmetros padrão",
+            "Funções variádicas",
+            "Escrevendo funções que lançam erros",
+            "Executando funções que lançam erros",
+            "Parâmetros inout",
+            "Funções: Resumo"
+        ]
+    },
+    {
+        "name": "Closures",
+        "sections": [
+            "Criando closures básicas",
+            "Aceitando parâmetros em uma closure",
+            "Retornando valores de uma closure",
+            "Closures como parâmetros",
+            "Sintaxe de trailing closure",
+            "Usando closures como parâmetros quando elas aceitam parâmetros",
+            "Usando closures como parâmetros quando elas retornam valores",
+            "Nomes abreviados de parâmetros",
+            "Closures com múltiplos parâmetros",
+            "Retornando closures de funções",
+            "Capturando valores",
+            "Closures: Resumo"
+        ]
+    },
+    {
+        "name": "Structs",
+        "sections": [
+            "Criando suas próprias structs",
+            "Propriedades computadas",
+            "Observadores de propriedades",
+            "Métodos",
+            "Métodos mutantes",
+            "Propriedades e métodos de strings",
+            "Propriedades e métodos de arrays",
+            "Inicializadores",
+            "Referindo-se à instância atual",
+            "Propriedades lazy",
+            "Propriedades e métodos estáticos",
+            "Controle de acesso",
+            "Structs: Resumo"
+        ]
+    },
+    {
+        "name": "Classes",
+        "sections": [
+            "Criando suas próprias classes",
+            "Herança de classes",
+            "Sobrescrevendo métodos",
+            "Classes finais",
+            "Copiando objetos",
+            "Desinicializadores",
+            "Mutabilidade",
+            "Classes: Resumo"
+        ]
+    },
+    {
+        "name": "Protocolos",
+        "sections": [
+            "Protocolos",
+            "Herança de protocolos",
+            "Extensões",
+            "Extensões de protocolo",
+            "Programação orientada a protocolos",
+            "Protocolos e extensões: Resumo"
+        ]
+    },
+    {
+        "name": "Swift Avançado",
+        "sections": [
+            "Lidando com dados ausentes",
+            "Desembrulhando opcionais",
+            "Desembrulhando com guard",
+            "Desembrulhando à força",
+            "Opcionais implicitamente desmembrados",
+            "Coalescência nula",
+            "Encadeamento opcional",
+            "Tentativa opcional",
+            "Inicializadores falíveis",
+            "Conversão de tipos",
+            "Opcionais: Resumo"
+        ]
+    },
+    {
+        "name": "UIKit Básico",
+        "sections": [
+            "Onde agora?"
+        ]
+    },
+    {
+        "name": "SwiftUI",
+        "sections": [
+            "Diferença entre UIKit e SwiftUI",
+            "Desembrulhando opcionais"
+        ]
+    }
+]
+ 
