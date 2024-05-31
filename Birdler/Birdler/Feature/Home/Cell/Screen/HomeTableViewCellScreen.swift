@@ -26,7 +26,7 @@ class HomeTableViewCellScreen: UIView {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()

@@ -31,6 +31,17 @@
 		E84C80D22BD3272400F6DEC8 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D12BD3272400F6DEC8 /* NewsVC.swift */; };
 		E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D42BD3277200F6DEC8 /* NewsScreen.swift */; };
 		E84C80DA2BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D92BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift */; };
+		E86C0B502C094C3400DEA1C3 /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B4F2C094C3400DEA1C3 /* Home.json */; };
+		E86C0B532C094D6300DEA1C3 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B522C094D6300DEA1C3 /* HomeModel.swift */; };
+		E86C0B572C09594C00DEA1C3 /* LicaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B562C09594C00DEA1C3 /* LicaoVC.swift */; };
+		E86C0B5A2C09598C00DEA1C3 /* LicaoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B592C09598C00DEA1C3 /* LicaoScreen.swift */; };
+		E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B5B2C09606D00DEA1C3 /* HTMLWrapper-Slim.html */; };
+		E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B5D2C09607400DEA1C3 /* CSSWrapper.css */; };
+		E86C0B642C09626F00DEA1C3 /* Strings e inteiros.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */; };
+		E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */; };
+		E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B632C09626F00DEA1C3 /* Variáveis.html */; };
+		E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */; };
+		E86C0B6B2C0964C300DEA1C3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */; };
 		E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */; };
 		E89B84E82BDC759D00035E26 /* NewsHearderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E72BDC759D00035E26 /* NewsHearderView.swift */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
@@ -102,6 +113,17 @@
 		E84C80D12BD3272400F6DEC8 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		E84C80D42BD3277200F6DEC8 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
 		E84C80D92BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewScreen.swift; sourceTree = "<group>"; };
+		E86C0B4F2C094C3400DEA1C3 /* Home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
+		E86C0B522C094D6300DEA1C3 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E86C0B562C09594C00DEA1C3 /* LicaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicaoVC.swift; sourceTree = "<group>"; };
+		E86C0B592C09598C00DEA1C3 /* LicaoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicaoScreen.swift; sourceTree = "<group>"; };
+		E86C0B5B2C09606D00DEA1C3 /* HTMLWrapper-Slim.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "HTMLWrapper-Slim.html"; sourceTree = "<group>"; };
+		E86C0B5D2C09607400DEA1C3 /* CSSWrapper.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = CSSWrapper.css; sourceTree = "<group>"; };
+		E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Strings e inteiros.html"; sourceTree = "<group>"; };
+		E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Tipos simples-Resumo.html"; sourceTree = "<group>"; };
+		E86C0B632C09626F00DEA1C3 /* Variáveis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Variáveis.html"; sourceTree = "<group>"; };
+		E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewControler+Extension.swift"; sourceTree = "<group>"; };
 		E89B84E72BDC759D00035E26 /* NewsHearderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHearderView.swift; sourceTree = "<group>"; };
 		E8C4040E2BB799F800226BDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +290,10 @@
 		859012082BBF584C0046283C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E86C0B5B2C09606D00DEA1C3 /* HTMLWrapper-Slim.html */,
+				E86C0B5D2C09607400DEA1C3 /* CSSWrapper.css */,
+				E86C0B542C0958FE00DEA1C3 /* Licao */,
+				E86C0B512C094D3600DEA1C3 /* Model */,
 				8590120F2BBF62080046283C /* Cell */,
 				8590120C2BBF589B0046283C /* Screen */,
 				8590120B2BBF58900046283C /* Controller */,
@@ -336,9 +362,11 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				E86C0B672C09644500DEA1C3 /* Extension */,
+				E86C0B5F2C09621F00DEA1C3 /* Lições */,
 				E84C59D42BC64976001226FB /* Feature */,
-				E8C404122BB7FD6100226BDC /* Font */,
 				E84C59D12BC6489D001226FB /* TabBarController */,
+				E8C404122BB7FD6100226BDC /* Font */,
 				A313671F2BB7889F00F0CF5A /* AppDelegate.swift */,
 				E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */,
 				A31367212BB7889F00F0CF5A /* SceneDelegate.swift */,
@@ -366,6 +394,7 @@
 				63A9934F2BF4001100429C35 /* Register */,
 				E84C80CC2BD2218900F6DEC8 /* Novidades */,
 				859012082BBF584C0046283C /* Home */,
+				E86C0B4F2C094C3400DEA1C3 /* Home.json */,
 				E8C4040D2BB799A900226BDC /* Login */,
 			);
 			path = Feature;
@@ -429,6 +458,68 @@
 				E89B84E72BDC759D00035E26 /* NewsHearderView.swift */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		E86C0B512C094D3600DEA1C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B522C094D6300DEA1C3 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E86C0B542C0958FE00DEA1C3 /* Licao */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B582C09597100DEA1C3 /* Screen */,
+				E86C0B552C09591000DEA1C3 /* Controller */,
+			);
+			path = Licao;
+			sourceTree = "<group>";
+		};
+		E86C0B552C09591000DEA1C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B562C09594C00DEA1C3 /* LicaoVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E86C0B582C09597100DEA1C3 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B592C09598C00DEA1C3 /* LicaoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E86C0B5F2C09621F00DEA1C3 /* Lições */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */,
+			);
+			name = "Lições";
+			path = "Lições";
+			sourceTree = "<group>";
+		};
+		E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B632C09626F00DEA1C3 /* Variáveis.html */,
+				E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */,
+				E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */,
+			);
+			name = "Introdução ao Swift";
+			path = "Introdução ao Swift";
+			sourceTree = "<group>";
+		};
+		E86C0B672C09644500DEA1C3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */,
+				E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
@@ -546,7 +637,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C404572BBBFD1E00226BDC /* Urbanist-ExtraBold.ttf in Resources */,
+				E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */,
 				E8C4044E2BBBFD1E00226BDC /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				E86C0B502C094C3400DEA1C3 /* Home.json in Resources */,
 				E8C4045D2BBBFD1E00226BDC /* Urbanist-SemiBoldItalic.ttf in Resources */,
 				E8C4042D2BB8015300226BDC /* DMSans-ExtraBold.ttf in Resources */,
 				E8C404312BB8015300226BDC /* DMSans-ExtraLight.ttf in Resources */,
@@ -560,19 +653,23 @@
 				E8C4045E2BBBFD1E00226BDC /* Urbanist-Italic.ttf in Resources */,
 				E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */,
 				E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */,
+				E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */,
 				E8C404592BBBFD1E00226BDC /* Urbanist-SemiBold.ttf in Resources */,
 				E8C404512BBBFD1E00226BDC /* Urbanist-BlackItalic.ttf in Resources */,
+				E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */,
 				E8C4044F2BBBFD1E00226BDC /* Urbanist-LightItalic.ttf in Resources */,
 				E8C404562BBBFD1E00226BDC /* Urbanist-Medium.ttf in Resources */,
 				E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */,
 				E8C4045B2BBBFD1E00226BDC /* Urbanist-Black.ttf in Resources */,
 				E8C404552BBBFD1E00226BDC /* Urbanist-Regular.ttf in Resources */,
+				E86C0B642C09626F00DEA1C3 /* Strings e inteiros.html in Resources */,
 				E8C4044D2BBBFD1E00226BDC /* Urbanist-ExtraLight.ttf in Resources */,
 				E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */,
 				E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */,
 				A313672C2BB788A000F0CF5A /* Base in Resources */,
 				E8C4045C2BBBFD1E00226BDC /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
+				E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */,
 				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
 				E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */,
 				E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */,
@@ -599,7 +696,9 @@
 				63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */,
 				63A993612BF4082800429C35 /* ExerciseScreen.swift in Sources */,
 				E84C80CE2BD221D000F6DEC8 /* NewsTableViewCell.swift in Sources */,
+				E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */,
 				E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */,
+				E86C0B5A2C09598C00DEA1C3 /* LicaoScreen.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
 				E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */,
@@ -608,6 +707,7 @@
 				63A993662BF4089200429C35 /* ExerciseCell.swift in Sources */,
 				E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
+				E86C0B6B2C0964C300DEA1C3 /* String+Extension.swift in Sources */,
 				63A9935F2BF407EF00429C35 /* ExerciseVC.swift in Sources */,
 				63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
@@ -618,6 +718,8 @@
 				E84C80D22BD3272400F6DEC8 /* NewsVC.swift in Sources */,
 				A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */,
 				63A993532BF400D900429C35 /* RegisterScreen.swift in Sources */,
+				E86C0B532C094D6300DEA1C3 /* HomeModel.swift in Sources */,
+				E86C0B572C09594C00DEA1C3 /* LicaoVC.swift in Sources */,
 				63A993512BF4005E00429C35 /* RegisterVC.swift in Sources */,
 				E84C80DA2BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift in Sources */,
 				E8C404112BB79F5700226BDC /* LoginScreen.swift in Sources */,
