@@ -28,7 +28,11 @@ class TabBarVC: UITabBarController {
         guard let items = tabBar.items else {return}
         items[0].image = UIImage(named: "homeIcon")
         items[1].image = UIImage(named: "swiftIcon")
+<<<<<<< HEAD
         items[2].image = UIImage(named: "newsImageIcon")
+=======
+        items[2].image = UIImage(named: "journalicon")
+>>>>>>> Feature/NewTabbar
         items[0].title = ""
         items[1].title = ""
         items[2].title = ""
@@ -36,3 +40,4 @@ class TabBarVC: UITabBarController {
 
 }
 
+//comentario teste
