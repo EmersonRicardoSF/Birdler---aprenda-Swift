@@ -36,10 +36,6 @@ extension LoginVC: LoginScreenProtocol {
         let vc: TabBarVC = TabBarVC()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
-//        navigationController?.pushViewController(vc, animated: true)
-//        MARK: quando fizer a ligacao com a Tabbar apagar essa metodo de cima e descomentar o de baixo.
-//        let vc: NewsVC = NewsVC()
-//        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -50,4 +46,3 @@ extension LoginVC: LoginScreenProtocol {
     }
 }
 
-//comentario teste
