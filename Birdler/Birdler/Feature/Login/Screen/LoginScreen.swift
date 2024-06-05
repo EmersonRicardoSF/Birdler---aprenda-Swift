@@ -45,19 +45,18 @@ class LoginScreen: UIView {
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
         
     }()
     
     lazy var loginLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.dmsansFont(type: .bold, size: 60)
-        label.text = "Birdler"
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.font = UIFont.dmsansFont(type: .bold, size: 60)
+        lbl.text = "Birdler"
         
-        return label
+        return lbl
         
     }()
     
@@ -68,14 +67,14 @@ class LoginScreen: UIView {
         tf.autocorrectionType = .no
         tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
         tf.keyboardType = .emailAddress
-        tf.attributedPlaceholder = NSAttributedString(string: "      Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.attributedPlaceholder = NSAttributedString(string: "Usuário", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
         tf.font = UIFont.boldSystemFont(ofSize: 20)
         tf.layer.cornerRadius = 8
         tf.layer.masksToBounds = false
         tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         tf.layer.borderWidth = 1
         
-        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
+        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 28))
         tf.leftView = leftPaddingView
         tf.leftViewMode = .always
         
@@ -84,11 +83,11 @@ class LoginScreen: UIView {
     }()
     
     lazy var usuarioImageView: UIImageView = {
-            let image = UIImageView()
-            image.translatesAutoresizingMaskIntoConstraints = false
-            image.image = UIImage(named: "Person")
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Person")
         
-            return image
+        return image
     }()
     
     lazy var passwordTextField: UITextField = {
@@ -98,14 +97,15 @@ class LoginScreen: UIView {
         tf.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
         tf.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
         tf.keyboardType = .alphabet
-        tf.attributedPlaceholder = NSAttributedString(string: "      Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
+        tf.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.99)])
         tf.isSecureTextEntry = true
         tf.font = UIFont.boldSystemFont(ofSize: 20)
         tf.layer.cornerRadius = 8
         tf.layer.masksToBounds = false
         tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         tf.layer.borderWidth = 1
-        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 28))
+        
+        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 28))
         tf.leftView = leftPaddingView
         tf.leftViewMode = .always
         
@@ -114,13 +114,13 @@ class LoginScreen: UIView {
     }()
     
     lazy var passwordImageView: UIImageView = {
-            let image = UIImageView()
-            image.translatesAutoresizingMaskIntoConstraints = false
-            image.image = UIImage(named: "Key")
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "Key")
         
-            return image
+        return image
         
-        }()
+    }()
     
     lazy var recuperarSenhaButton: UIButton = {
         let btn: UIButton = UIButton()
@@ -141,6 +141,7 @@ class LoginScreen: UIView {
         btn.setTitle("Entrar", for: .normal)
         btn.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         btn.setTitleColor(.white, for: .normal)
+        btn.isEnabled = false
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 7.5
         btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
@@ -214,7 +215,7 @@ class LoginScreen: UIView {
         
         DispatchQueue.main.async {
             let gradient = self.getGradientLayer(bounds: self.loginButton.bounds)
-            self.loginButton.backgroundColor = self.gradientColor(bounds: self.loginButton.bounds, gradientLayer: gradient)
+            self.loginButton.backgroundColor = self.gradientColor(bounds: self.loginButton.bounds, gradientLayer: gradient)?.withAlphaComponent(0.5)
             
         }
     }
@@ -263,8 +264,12 @@ class LoginScreen: UIView {
             
         ])
     }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        usuarioTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+    }
 }
-
 
 
 

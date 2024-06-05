@@ -37,6 +37,8 @@
 		E84C80D22BD3272400F6DEC8 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D12BD3272400F6DEC8 /* NewsVC.swift */; };
 		E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D42BD3277200F6DEC8 /* NewsScreen.swift */; };
 		E84C80DA2BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C80D92BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift */; };
+		E8604F762C1073D6005018E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E8604F752C1073D6005018E3 /* FirebaseAuth */; };
+		E8604F782C1073D6005018E3 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E8604F772C1073D6005018E3 /* FirebaseAuthCombine-Community */; };
 		E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */; };
 		E89B84E82BDC759D00035E26 /* NewsHearderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E72BDC759D00035E26 /* NewsHearderView.swift */; };
 		E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C4040E2BB799F800226BDC /* LoginViewController.swift */; };
@@ -159,9 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CA80BA2C00B9B1000764D7 /* FirebaseAnalyticsSwift in Frameworks */,
+				E8604F762C1073D6005018E3 /* FirebaseAuth in Frameworks */,
 				63CA80B62C00B9B1000764D7 /* FirebaseAnalytics in Frameworks */,
 				63CA80B82C00B9B1000764D7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				63CA80BE2C00B9B1000764D7 /* FirebaseAppCheck in Frameworks */,
+				E8604F782C1073D6005018E3 /* FirebaseAuthCombine-Community in Frameworks */,
 				63CA80BC2C00B9B1000764D7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +338,7 @@
 			children = (
 				A313671E2BB7889F00F0CF5A /* Birdler */,
 				A313671D2BB7889F00F0CF5A /* Products */,
+				E8604F742C1073D6005018E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -444,6 +449,13 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		E8604F742C1073D6005018E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +534,8 @@
 				63CA80B92C00B9B1000764D7 /* FirebaseAnalyticsSwift */,
 				63CA80BB2C00B9B1000764D7 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				63CA80BD2C00B9B1000764D7 /* FirebaseAppCheck */,
+				E8604F752C1073D6005018E3 /* FirebaseAuth */,
+				E8604F772C1073D6005018E3 /* FirebaseAuthCombine-Community */,
 			);
 			productName = Birdler;
 			productReference = A313671C2BB7889F00F0CF5A /* Birdler.app */;
@@ -894,6 +908,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63CA80B42C00B9B1000764D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
+		};
+		E8604F752C1073D6005018E3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63CA80B42C00B9B1000764D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E8604F772C1073D6005018E3 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63CA80B42C00B9B1000764D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
