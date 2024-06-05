@@ -13,6 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        let appearanceNav = UINavigationBar.appearance()
+        appearanceNav.tintColor = .white
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let vc: LoginVC = LoginVC()
@@ -26,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
+    // ativando branch navigation
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

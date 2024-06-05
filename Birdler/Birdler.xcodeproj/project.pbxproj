@@ -392,7 +392,7 @@
 				63A9935D2BF407C900429C35 /* Exercise */,
 				63A993562BF4040D00429C35 /* Recover */,
 				63A9934F2BF4001100429C35 /* Register */,
-				E84C80CC2BD2218900F6DEC8 /* Novidades */,
+				E84C80CC2BD2218900F6DEC8 /* News */,
 				859012082BBF584C0046283C /* Home */,
 				E86C0B4F2C094C3400DEA1C3 /* Home.json */,
 				E8C4040D2BB799A900226BDC /* Login */,
@@ -400,14 +400,14 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
-		E84C80CC2BD2218900F6DEC8 /* Novidades */ = {
+		E84C80CC2BD2218900F6DEC8 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				E84C80CF2BD3267100F6DEC8 /* Cell */,
 				E84C80D32BD3273900F6DEC8 /* NewsScreen */,
 				E84C80D02BD3268500F6DEC8 /* Controller */,
 			);
-			path = Novidades;
+			path = News;
 			sourceTree = "<group>";
 		};
 		E84C80CF2BD3267100F6DEC8 /* Cell */ = {
@@ -866,6 +866,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6S2627ZS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Birdler/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -878,7 +879,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Emerson-Ricardo.Birdler";
+				PRODUCT_BUNDLE_IDENTIFIER = AprendaSwift.Birdler.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -893,6 +894,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6S2627ZS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Birdler/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -905,7 +907,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Emerson-Ricardo.Birdler";
+				PRODUCT_BUNDLE_IDENTIFIER = AprendaSwift.Birdler.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
