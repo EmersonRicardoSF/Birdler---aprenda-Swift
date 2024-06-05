@@ -1,11 +1,12 @@
+// LoginViewController.swift
+// Birdler
 //
-//  LoginViewController.swift
-//  Birdler
-//
-//  Created by Nayla on 30/3/2024.
+// Created by Nayla on 30/3/2024.
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginVC: UIViewController {
 
@@ -19,7 +20,14 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginScreen?.delegate(delegate: self)
-
+        loginScreen?.usuarioTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        loginScreen?.passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    @objc private func textFieldDidChange() {
+        let isEmailEmpty = loginScreen?.usuarioTextField.text?.isEmpty ?? true
+        let isPasswordEmpty = loginScreen?.passwordTextField.text?.isEmpty ?? true
+        loginScreen?.loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty
     }
 }
 
@@ -33,14 +41,9 @@ extension LoginVC: LoginScreenProtocol {
     
     func tappedLoginButton() {
         print("Entrar")
-        let vc: TabBarVC = TabBarVC()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-//        navigationController?.pushViewController(vc, animated: true)
-//        MARK: quando fizer a ligacao com a Tabbar apagar essa metodo de cima e descomentar o de baixo.
-//        let vc: NewsVC = NewsVC()
-//        self.navigationController?.pushViewController(vc, animated: true)
-        
+        let email = loginScreen?.usuarioTextField.text ?? ""
+        let senha = loginScreen?.passwordTextField.text ?? ""
+        logarUsuario(email: email, senha: senha)
     }
     
     func tappedCriarCadastroButton(){
@@ -48,6 +51,21 @@ extension LoginVC: LoginScreenProtocol {
         let vc: RegisterVC = RegisterVC()
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func logarUsuario(email: String, senha: String) {
+        Auth.auth().signIn(withEmail: email, password: senha) { [weak self] success, error in
+            if let error = error {
+                print("Erro ao logar: \(error.localizedDescription)")
+                // Aqui você pode mostrar um alerta ao usuário informando o erro
+                let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(alert, animated: true)
+            } else {
+                print("Sucesso! O usuário está logado")
+                let vc: TabBarVC = TabBarVC()
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc, animated: true)
+            }
+        }
+    }
 }
-
-//comentario teste
