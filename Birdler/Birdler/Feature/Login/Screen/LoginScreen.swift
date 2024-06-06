@@ -73,7 +73,8 @@ class LoginScreen: UIView {
         tf.layer.masksToBounds = false
         tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         tf.layer.borderWidth = 1
-        
+        tf.autocapitalizationType = .none
+        tf.textColor = .white
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 28))
         tf.leftView = leftPaddingView
         tf.leftViewMode = .always
@@ -102,6 +103,8 @@ class LoginScreen: UIView {
         tf.font = UIFont.boldSystemFont(ofSize: 20)
         tf.layer.cornerRadius = 8
         tf.layer.masksToBounds = false
+        tf.autocapitalizationType = .none
+        tf.textColor = .white
         tf.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor
         tf.layer.borderWidth = 1
         

@@ -62,6 +62,7 @@ extension LoginVC: LoginScreenProtocol {
                 self?.present(alert, animated: true)
             } else {
                 print("Sucesso! O usuário está logado")
+                UserDefaults.standard.set(true, forKey: "UsuarioLogado")
                 let vc: TabBarVC = TabBarVC()
                 vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true)

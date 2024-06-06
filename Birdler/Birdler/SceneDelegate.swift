@@ -10,22 +10,30 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    var usuarioLogado = UserDefaults.standard.bool(forKey: "UsuarioLogado")
+
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let appearanceNav = UINavigationBar.appearance()
-        appearanceNav.tintColor = .white
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        let vc: LoginVC = LoginVC()
-        //        let tabBar: TabBarVC = TabBarVC()
-        let nav = UINavigationController(rootViewController: vc)
-        //        window.rootViewController = nav
-        //        MARK: DEIXAR ESSA DE BAIXO E APAGAR A DE CIMA.
-        window.rootViewController = nav
-        window.makeKeyAndVisible()
-        self.window = window
         
+        switch usuarioLogado {
+        
+        case true:
+            let window = UIWindow(windowScene: windowScene)
+            let vc: TabBarVC = TabBarVC()
+            window.rootViewController = vc
+            window.makeKeyAndVisible()
+            self.window = window
+        
+        case false:
+            let window = UIWindow(windowScene: windowScene)
+            let vc: LoginVC = LoginVC()
+            let navVC = UINavigationController(rootViewController: vc)
+            window.rootViewController = navVC
+            window.makeKeyAndVisible()
+            self.window = window
+        }
+    
     }
     
     // ativando branch navigation

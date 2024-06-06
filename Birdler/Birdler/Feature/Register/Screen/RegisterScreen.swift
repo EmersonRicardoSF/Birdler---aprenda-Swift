@@ -123,7 +123,7 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = false
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        
+        textField.textColor = .black
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -177,7 +177,8 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = false
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        
+        textField.autocapitalizationType = .none
+        textField.textColor = .black
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -231,7 +232,8 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = true
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        
+        textField.autocapitalizationType = .none
+        textField.textColor = .black
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -285,7 +287,8 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = true
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        
+        textField.textColor = .black
+
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
