@@ -32,7 +32,6 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let color: [UIColor] = [.orange,.green,.blue,.red]
         let cell: UITableViewCell = UITableViewCell()
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = .secondarySystemBackground
@@ -42,7 +41,7 @@ extension NewsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
-            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: NewsHearderView.identifer)
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: NewsHearderView.identifier)
             as? NewsHearderView
             return header
         } else {
@@ -68,5 +67,3 @@ extension NewsVC: NewsScreenProtocol {
     
     
 }
-
-// ativando nova branch

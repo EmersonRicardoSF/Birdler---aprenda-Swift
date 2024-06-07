@@ -5,14 +5,11 @@
 //  Created by Vitor Ernane Guedes on 14/05/24.
 //
 
-//MARK: A imagem do profile precisa ser excluida e criar um Picker para poder entrar na galeria.
-
 import UIKit
 
 protocol RegisterScreenProtocol: AnyObject {
     func tappedCadastrarButton()
 }
-
 
 class RegisterScreen: UIView {
     
@@ -22,8 +19,7 @@ class RegisterScreen: UIView {
         self.delegate = delegate
         
     }
-    
-    
+
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
         
@@ -39,8 +35,8 @@ class RegisterScreen: UIView {
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         
         return gradient
+        
     }
-    
     
     func gradientColor(bounds: CGRect, gradientLayer :CAGradientLayer) -> UIColor? {
         UIGraphicsBeginImageContext(gradientLayer.bounds.size)
@@ -51,7 +47,6 @@ class RegisterScreen: UIView {
         return UIColor(patternImage: image!)
         
     }
-    
     
     lazy var logoLabel: UILabel = {
         let label = UILabel()
@@ -68,16 +63,14 @@ class RegisterScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.layer.cornerRadius = 28
-        
         
         return view
         
     }()
-    
+//    MARK: Colocar um picker
     lazy var profilePhoto: UIImageView = {
-        
-        //        let imageView = UIImageView(image: UIImage(named: "photoProfile"))
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -87,11 +80,6 @@ class RegisterScreen: UIView {
         
     }()
     
-    // coluna que poderia muito bem ser uma celula onde iria ter o icone, label e text field.. MAS COMOFAZ?
-    
-    
-    //MARK: Coluna do campo de nome
-    
     lazy var iconUser: UIImageView = {
         
         let image = UIImageView()
@@ -99,6 +87,7 @@ class RegisterScreen: UIView {
         image.image = UIImage(named: "RegisterUserIcon")
         
         return image
+        
     }()
     
     lazy var userLabel: UILabel = {
@@ -123,7 +112,8 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = false
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        textField.textColor = .black
+        textField.textColor = .darkGray
+        
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -137,14 +127,11 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "________________________________________________________"
+        label.text = "___________________________________________________"
         label.textColor = .lightGray
         return label
         
     }()
-    
-    //MARK: Coluna do campo de email
-    
     
     lazy var iconEmail: UIImageView = {
         
@@ -153,6 +140,7 @@ class RegisterScreen: UIView {
         image.image = UIImage(named: "RegisterEmailIcon")
         
         return image
+        
     }()
     
     lazy var emailLabel: UILabel = {
@@ -161,6 +149,7 @@ class RegisterScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.text = "Email"
         label.textColor = .black
+        
         return label
         
     }()
@@ -173,12 +162,12 @@ class RegisterScreen: UIView {
         textField.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
         textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
         textField.keyboardType = .alphabet
-        textField.attributedPlaceholder = NSAttributedString(string: "ex: maria.sk8@hotmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textField.attributedPlaceholder = NSAttributedString(string: "ex: maria@gmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
         textField.isSecureTextEntry = false
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
         textField.autocapitalizationType = .none
-        textField.textColor = .black
+        textField.textColor = .darkGray
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -192,14 +181,11 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "________________________________________________________"
+        label.text = "___________________________________________________"
         label.textColor = .lightGray
         return label
         
     }()
-    
-    //MARK: Coluna do campo de senha
-    
     
     lazy var iconPassword: UIImageView = {
         
@@ -208,6 +194,7 @@ class RegisterScreen: UIView {
         image.image = UIImage(named: "RegisterpadLockIcon")
         
         return image
+        
     }()
     
     lazy var passwordlLabel: UILabel = {
@@ -216,6 +203,7 @@ class RegisterScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.text = "Digite sua senha"
         label.textColor = .black
+        
         return label
         
     }()
@@ -233,7 +221,8 @@ class RegisterScreen: UIView {
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
         textField.autocapitalizationType = .none
-        textField.textColor = .black
+        textField.textColor = .darkGray
+        
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -247,14 +236,11 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "________________________________________________________"
+        label.text = "___________________________________________________"
         label.textColor = .lightGray
         return label
         
     }()
-    
-    //MARK: Confirmacao de senha
-    
     
     lazy var iconPasswordAgain: UIImageView = {
         
@@ -265,7 +251,7 @@ class RegisterScreen: UIView {
         return image
     }()
     
-    lazy var passwordAgainlLabel: UILabel = {
+    lazy var passwordAgainLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
@@ -287,7 +273,7 @@ class RegisterScreen: UIView {
         textField.isSecureTextEntry = true
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
-        textField.textColor = .black
+        textField.textColor = .darkGray
 
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
@@ -302,19 +288,16 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "________________________________________________________"
+        label.text = "___________________________________________________"
         label.textColor = .lightGray
         return label
         
     }()
     
-    
-    //MARK: CRIANDO BOTAO E AÇÃO
-    
     lazy var cadastrarButton: UIButton = {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Entrar", for: .normal)
+        button.setTitle("Cadastrar", for: .normal)
         button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -332,9 +315,6 @@ class RegisterScreen: UIView {
         
     }
     
-    /*-------------------------------------------------------------------------------------------------------*/
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
@@ -345,7 +325,6 @@ class RegisterScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     private func addElements() {
         
@@ -359,12 +338,10 @@ class RegisterScreen: UIView {
         viewRegister.addSubview(userTextField)
         viewRegister.addSubview(lineView)
         
-        
         viewRegister.addSubview(iconEmail)
         viewRegister.addSubview(emailLabel)
         viewRegister.addSubview(emailTextField)
         viewRegister.addSubview(lineViewEmail)
-        
         
         viewRegister.addSubview(iconPassword)
         viewRegister.addSubview(passwordlLabel)
@@ -372,12 +349,11 @@ class RegisterScreen: UIView {
         viewRegister.addSubview(lineViewPassword)
         
         viewRegister.addSubview(iconPasswordAgain)
-        viewRegister.addSubview(passwordAgainlLabel)
+        viewRegister.addSubview(passwordAgainLabel)
         viewRegister.addSubview(passwordAgainTextField)
         viewRegister.addSubview(lineViewPasswordAgain)
         
         viewRegister.addSubview(cadastrarButton)
-        
         
         DispatchQueue.main.async {
             
@@ -391,11 +367,9 @@ class RegisterScreen: UIView {
             self.cadastrarButton.backgroundColor = self.gradientColor(bounds: self.cadastrarButton.bounds, gradientLayer: gradient)
             
         }
-        
     }
     
     private func configConstrains() {
-        
         NSLayoutConstraint.activate([
             
             backgroundImageView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -411,14 +385,10 @@ class RegisterScreen: UIView {
             viewRegister.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewRegister.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            
             profilePhoto.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 16),
             profilePhoto.centerXAnchor.constraint(equalTo: centerXAnchor),
             profilePhoto.heightAnchor.constraint(equalToConstant: 100),
             profilePhoto.widthAnchor.constraint(equalToConstant: 120),
-            
-            
-            
             
             iconUser.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 24),
             iconUser.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 45),
@@ -433,9 +403,6 @@ class RegisterScreen: UIView {
             lineView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-            
-            
-            
             iconEmail.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 25),
             iconEmail.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 49),
             
@@ -448,8 +415,6 @@ class RegisterScreen: UIView {
             lineViewEmail.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant:3),
             lineViewEmail.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewEmail.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
-            
-            
             
             iconPassword.topAnchor.constraint(equalTo: lineViewEmail.bottomAnchor, constant: 17),
             iconPassword.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 51),
@@ -464,31 +429,24 @@ class RegisterScreen: UIView {
             lineViewPassword.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewPassword.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-            
-            
             iconPasswordAgain.topAnchor.constraint(equalTo: lineViewPassword.bottomAnchor, constant: 17),
             iconPasswordAgain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 51),
             
-            passwordAgainlLabel.topAnchor.constraint(equalTo: lineViewPassword.bottomAnchor, constant: 10),
-            passwordAgainlLabel.leadingAnchor.constraint(equalTo: iconPasswordAgain.leadingAnchor, constant: 35),
+            passwordAgainLabel.topAnchor.constraint(equalTo: lineViewPassword.bottomAnchor, constant: 10),
+            passwordAgainLabel.leadingAnchor.constraint(equalTo: iconPasswordAgain.leadingAnchor, constant: 35),
             
-            passwordAgainTextField.topAnchor.constraint(equalTo: passwordAgainlLabel.bottomAnchor, constant: 5),
+            passwordAgainTextField.topAnchor.constraint(equalTo: passwordAgainLabel.bottomAnchor, constant: 5),
             passwordAgainTextField.leadingAnchor.constraint(equalTo: iconPasswordAgain.leadingAnchor, constant: 35),
             
             lineViewPasswordAgain.topAnchor.constraint(equalTo: passwordAgainTextField.bottomAnchor, constant:3),
             lineViewPasswordAgain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewPasswordAgain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-            
             cadastrarButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 20),
-            //cadastrarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant:-10),
             cadastrarButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
             cadastrarButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -35),
             cadastrarButton.heightAnchor.constraint(equalToConstant: 45),
             
         ])
-        
     }
 }
-
-// criando branch

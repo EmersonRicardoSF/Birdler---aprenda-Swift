@@ -14,6 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        let appearanceNav = UINavigationBar.appearance()
+        appearanceNav.tintColor = .white
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         switch usuarioLogado {
@@ -21,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case true:
             let window = UIWindow(windowScene: windowScene)
             let vc: TabBarVC = TabBarVC()
+            window.overrideUserInterfaceStyle = .dark
             window.rootViewController = vc
             window.makeKeyAndVisible()
             self.window = window
@@ -29,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let vc: LoginVC = LoginVC()
             let navVC = UINavigationController(rootViewController: vc)
+            window.overrideUserInterfaceStyle = .dark
             window.rootViewController = navVC
             window.makeKeyAndVisible()
             self.window = window
@@ -36,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     }
     
-    // ativando branch navigation
+   
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

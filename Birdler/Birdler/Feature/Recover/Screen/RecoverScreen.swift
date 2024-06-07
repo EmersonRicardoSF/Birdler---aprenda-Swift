@@ -14,9 +14,10 @@ protocol RecoverScreenProtocol: AnyObject {
 }
 
 class RecoverScreen: UIView {
-    private weak var delegate: HomeScreenProtocol?
-    public func delegate(delegate: HomeScreenProtocol?) {
+    private weak var delegate: RecoverScreenProtocol?
+    public func delegate(delegate: RecoverScreenProtocol?) {
         self.delegate = delegate
+        
     }
     
     func getGradientLayer(bounds : CGRect) -> CAGradientLayer{
@@ -44,15 +45,30 @@ class RecoverScreen: UIView {
         imageView.image = UIImage(named: "background")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
+        
+    }()
+    
+    lazy var loginLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.dmsansFont(type: .bold, size: 60)
+        label.text = "Birdler"
+        
+        return label
+        
     }()
     
     lazy var retangleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.layer.cornerRadius = 28
+        
         return view
+        
     }()
     
     lazy var recoverPass: UILabel = {
@@ -62,7 +78,9 @@ class RecoverScreen: UIView {
         label.text = "Esqueceu a senha?"
         label.textAlignment = .center
         label.textColor = UIColor(.black)
+        
         return label
+        
     }()
     
     lazy var textRecover: UILabel = {
@@ -72,29 +90,7 @@ class RecoverScreen: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.textColor = .secondaryLabel
-        return label
-    }()
-    
-    lazy var enviarButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Enviar", for: .normal)
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .red
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
-        button.addTarget(self, action: #selector(tappedEnviarButton), for: .touchUpInside)
-        return button
-        
-    }()
-    
-    lazy var loginLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.dmsansFont(type: .bold, size: 60)
-        label.text = "Birdler"
+        label.textColor = .gray
         
         return label
         
@@ -116,7 +112,8 @@ class RecoverScreen: UIView {
         textField.autocorrectionType = .no
         textField.layer.backgroundColor = .none
         textField.keyboardType = .emailAddress
-        textField.attributedPlaceholder = NSAttributedString(string: "exemplo@gmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.secondaryLabel])
+        textField.attributedPlaceholder = NSAttributedString(string: "exemplo@gmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textField.textColor = .gray
         textField.font = UIFont.systemFont(ofSize: 20)
         textField.layer.cornerRadius = 10
         textField.layer.masksToBounds = false
@@ -127,6 +124,21 @@ class RecoverScreen: UIView {
         textField.leftViewMode = .always
         
         return textField
+        
+    }()
+    
+    lazy var enviarButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Enviar", for: .normal)
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .red
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 7.5
+        button.addTarget(self, action: #selector(tappedEnviarButton), for: .touchUpInside)
+        
+        return button
         
     }()
     
@@ -210,8 +222,8 @@ class RecoverScreen: UIView {
             enviarButton.heightAnchor.constraint(equalToConstant: 45),
             enviarButton.leadingAnchor.constraint(equalTo: retangleView.leadingAnchor, constant: 30),
             enviarButton.trailingAnchor.constraint(equalTo: retangleView.trailingAnchor, constant: -30),
-//            enviarButton.topAnchor.constraint(equalTo: emailImageView.bottomAnchor, constant: 45),
-            enviarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -44)
+            enviarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -44),
+            
         ])
     }
 }
