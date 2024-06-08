@@ -5,6 +5,7 @@ body {
 	font-size: [FONTSIZE]%;
 	background-color: black;
 	color: white;
+    text-align: justify;
 }
 
 img {

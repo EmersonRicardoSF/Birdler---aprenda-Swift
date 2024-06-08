@@ -20,6 +20,7 @@
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
 		859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012102BBF623D0046283C /* HomeTableViewCell.swift */; };
 		859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012132BBF63920046283C /* HomeTableViewCellScreen.swift */; };
+		85E36A242C1468BB008C3D47 /* Constraints.html in Resources */ = {isa = PBXBuildFile; fileRef = 85E36A232C1468BB008C3D47 /* Constraints.html */; };
 		A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313671F2BB7889F00F0CF5A /* AppDelegate.swift */; };
 		A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367212BB7889F00F0CF5A /* SceneDelegate.swift */; };
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
@@ -108,6 +109,7 @@
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		859012102BBF623D0046283C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		859012132BBF63920046283C /* HomeTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellScreen.swift; sourceTree = "<group>"; };
+		85E36A232C1468BB008C3D47 /* Constraints.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Constraints.html; sourceTree = "<group>"; };
 		A313671C2BB7889F00F0CF5A /* Birdler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A313671F2BB7889F00F0CF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A31367212BB7889F00F0CF5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 				E86C0B632C09626F00DEA1C3 /* Variáveis.html */,
 				E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */,
 				E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */,
+				85E36A232C1468BB008C3D47 /* Constraints.html */,
 			);
 			name = "Introdução ao Swift";
 			path = "Introdução ao Swift";
@@ -706,6 +709,7 @@
 				E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */,
 				E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */,
 				A313672C2BB788A000F0CF5A /* Base in Resources */,
+				85E36A242C1468BB008C3D47 /* Constraints.html in Resources */,
 				E8C4045C2BBBFD1E00226BDC /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
 				E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */,

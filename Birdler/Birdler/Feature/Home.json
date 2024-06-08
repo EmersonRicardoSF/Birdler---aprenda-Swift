@@ -3,48 +3,47 @@
         "name": "Introdução ao Swift",
         "sections": [
             "Variáveis",
+            "Tipagem",
             "Strings e inteiros",
-            "Strings multilinha",
-            "Doubles e booleanos",
+            "Doubles e Float",
+            "Booleanos",
             "Interpolação de strings",
             "Constantes",
-            "Anotações de tipo",
-            "Tipos simples-Resumo"
+            "Diferença Var & Let",
+            "Resumo da introdução"
         ]
     },
     {
-        "name": "Tipos Complexos",
+        "name": "Módulo 1",
         "sections": [
+            "Constraints",
             "Arrays",
-            "Conjuntos",
             "Tuplas",
+            "Conjuntos",
             "Arrays vs conjuntos vs tuplas",
             "Dicionários",
-            "Valores padrão de dicionário",
-            "Criando coleções vazias",
+            "Coleções",
             "Enumerações",
-            "Valores associados de enum",
-            "Valores brutos de enum",
-            "Tipos complexos: Resumo"
+            "Classes",
+            "Structs",
+            "Resumo módulo 1"
         ]
     },
     {
-        "name": "Operadores e Condições",
+        "name": "Módulo 2",
         "sections": [
             "Operadores aritméticos",
-            "Sobrecarregamento de operadores",
-            "Operadores de atribuição composta",
-            "Operadores de comparação",
+            "Opcionais",
             "Condições",
             "Combinando condições",
-            "O operador ternário",
+            "Else",
             "Instruções de switch",
             "Operadores de intervalo",
             "Operadores e condições: Resumo"
         ]
     },
     {
-        "name": "Looping",
+        "name": "Módulo 3",
         "sections": [
             "Loops for",
             "Loops while",
@@ -57,7 +56,7 @@
         ]
     },
     {
-        "name": "Funções",
+        "name": "Módulo 4",
         "sections": [
             "Aprendendo sobre Funções",
             "Aceitando parâmetros",
@@ -73,7 +72,7 @@
         ]
     },
     {
-        "name": "Closures",
+        "name": "Módulo 5",
         "sections": [
             "Criando closures básicas",
             "Aceitando parâmetros em uma closure",
@@ -90,7 +89,7 @@
         ]
     },
     {
-        "name": "Structs",
+        "name": "Módulo 6",
         "sections": [
             "Criando suas próprias structs",
             "Propriedades computadas",
@@ -108,7 +107,7 @@
         ]
     },
     {
-        "name": "Classes",
+        "name": "Módulo 7",
         "sections": [
             "Criando suas próprias classes",
             "Herança de classes",
@@ -121,7 +120,7 @@
         ]
     },
     {
-        "name": "Protocolos",
+        "name": "Módulo 8",
         "sections": [
             "Protocolos",
             "Herança de protocolos",
