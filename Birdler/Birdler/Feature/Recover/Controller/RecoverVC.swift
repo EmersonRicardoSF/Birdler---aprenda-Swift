@@ -9,7 +9,7 @@
 
 import UIKit
 
-class RecoverVC: UIViewController, HomeScreenProtocol, UITextFieldDelegate {
+class RecoverVC: UIViewController, UITextFieldDelegate {
     
     var recoverScreen: RecoverScreen?
     override func loadView() {

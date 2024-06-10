@@ -113,6 +113,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeVC: HomeScreenProtocol {
+    func testNavigation() {
+        let vc: GenericExerciseVC = GenericExerciseVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tappedEnviarButton() {
         
     }
