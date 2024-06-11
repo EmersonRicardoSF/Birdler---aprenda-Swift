@@ -26,7 +26,8 @@ class GenericExerciseViewModel {
     }
     
     func goToNextQuestion() {
-        if let config = config, currentQuestionIndex < config.questions.count - 1 {
+        if let config = config, currentQuestionIndex <
+            config.questions.count - 1 {
             currentQuestionIndex += 1
         } else {
             currentQuestionIndex = 0 // Reinicia para a primeira pergunta ou finaliza
