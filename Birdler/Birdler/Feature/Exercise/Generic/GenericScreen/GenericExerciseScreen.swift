@@ -1,6 +1,34 @@
 import UIKit
 
+protocol GenericExerciseScreenProtocol: AnyObject {
+    func customNavigation()
+  
+}
+
 class GenericExerciseScreen: UIView {
+    
+    private weak var delegate: GenericExerciseScreenProtocol?
+    
+    public func delegate(delegate: GenericExerciseScreenProtocol?) {
+        self.delegate = delegate
+    }
+    
+    var correctAnswer: String = ""
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addElements()
+        configConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    lazy var imageBackGround: UIImageView = {
+        let image = UIImageView(image: UIImage(named: "background"))
+        return image
+    }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -21,83 +49,86 @@ class GenericExerciseScreen: UIView {
         return label
     }()
     
-    lazy var exerciseButtonLeft: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.isEnabled = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
-        button.backgroundColor = .gray
-        button.setTitle("Your Title", for: .normal)
-        
-        // Use UIButton.Configuration para configurar a aparência e o layout do botão
-        var config = UIButton.Configuration.plain()
-        config.baseBackgroundColor = .gray
-        config.titlePadding = 16
-        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
-        button.configuration = config
-        
-        return button
-    }()
+    lazy var exerciseButtonLeft: UIButton = createButton(selector: #selector(tappedButton(_:)))
+    lazy var exerciseButtonMiddle: UIButton = createButton(selector: #selector(tappedButton(_:)))
+    lazy var exerciseButtonRight: UIButton = createButton(selector: #selector(tappedButton(_:)))
     
-    lazy var exerciseButtonMiddle: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
-        button.isEnabled = false
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
-        button.backgroundColor = .gray
-        button.setTitle("Your Title", for: .normal)
-        
-        // Use UIButton.Configuration para configurar a aparência e o layout do botão
-        var config = UIButton.Configuration.plain()
-        config.baseBackgroundColor = .gray
-        config.titlePadding = 16
-        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
-        button.configuration = config
-        
-        return button
-    }()
-    
-        lazy var exerciseButtonRight: UIButton = {
-            let button = UIButton(type: .system)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-            button.setTitleColor(.white, for: .normal)
-            button.isEnabled = false
-            button.clipsToBounds = true
-            button.layer.cornerRadius = 7.5
-            button.backgroundColor = .gray
-            button.setTitle("Your Title", for: .normal)
-            
-            // Use UIButton.Configuration para configurar a aparência e o layout do botão
-            var config = UIButton.Configuration.plain()
-            config.baseBackgroundColor = .gray
-            config.titlePadding = 16
-            config.cornerStyle = .capsule // Define o estilo do canto como cápsula
-            button.configuration = config
-            
-            return button
-        }()
-    
-    lazy var imageBackGround: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "background"))
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addElements()
-        configConstraints()
+    private var buttons: [UIButton] {
+        return [exerciseButtonLeft, exerciseButtonMiddle, exerciseButtonRight]
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    
+    private func createButton(selector: Selector) -> UIButton {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        button.setTitleColor(.white, for: .normal)
+        button.isEnabled = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 7.5
+        button.backgroundColor = .gray
+        button.setTitle("Your Title", for: .normal)
+        button.addTarget(self, action: selector, for: .touchUpInside)
+        
+        // Use UIButton.Configuration para configurar a aparência e o layout do botão
+        var config = UIButton.Configuration.plain()
+        config.baseBackgroundColor = .gray
+        config.titlePadding = 16
+        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
+        button.configuration = config
+        
+        return button
+    }
+    
+    @objc func tappedButton(_ sender: UIButton) {
+        guard let title = sender.currentTitle else { return }
+        
+        for button in buttons {
+            if let buttonTitle = button.currentTitle {
+                button.backgroundColor = buttonTitle == correctAnswer ? .systemGreen : .systemRed
+            }
+        }
+    }
+    
+    private lazy var nextQuestionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 7.5
+        button.backgroundColor = .systemBlue
+        button.setTitle("Próxima Pergunta", for: .normal)
+        button.addTarget(self, action: #selector(nextQuestionButtonTapped), for: .touchUpInside)
+        
+        // Use UIButton.Configuration para configurar a aparência e o layout do botão
+        var config = UIButton.Configuration.plain()
+        config.baseBackgroundColor = .systemBlue
+        config.titlePadding = 16
+        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
+        button.configuration = config
+        
+        return button
+    }()
+    
+    @objc private func nextQuestionButtonTapped() {
+        delegate?.customNavigation()
+    }
+    
+    func configureView(with question: Config.Question) {
+        titleLabel.text = question.titleLabel.text
+        questionsLabel.text = question.questionsLabel.text
+        correctAnswer = question.correctAnswer
+        
+        for (index, button) in buttons.enumerated() {
+            if index < question.exerciseButtons.count {
+                let buttonData = question.exerciseButtons[index]
+                button.setTitle(buttonData.title, for: .normal)
+                button.isEnabled = buttonData.enabled
+                button.backgroundColor = UIColor.gray
+            }
+        }
     }
     
     private func addElements() {
@@ -107,15 +138,11 @@ class GenericExerciseScreen: UIView {
         addSubview(exerciseButtonLeft)
         addSubview(exerciseButtonMiddle)
         addSubview(exerciseButtonRight)
+        addSubview(nextQuestionButton)
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            imageBackGround.topAnchor.constraint(equalTo: topAnchor),
-            imageBackGround.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageBackGround.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
@@ -127,14 +154,14 @@ class GenericExerciseScreen: UIView {
             exerciseButtonLeft.topAnchor.constraint(equalTo: questionsLabel.bottomAnchor, constant: 40),
             exerciseButtonLeft.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            
             exerciseButtonMiddle.topAnchor.constraint(equalTo: exerciseButtonLeft.bottomAnchor, constant: 20),
             exerciseButtonMiddle.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
             
             exerciseButtonRight.topAnchor.constraint(equalTo: exerciseButtonMiddle.bottomAnchor, constant: 20),
             exerciseButtonRight.centerXAnchor.constraint(equalTo: centerXAnchor),
             
+            nextQuestionButton.topAnchor.constraint(equalTo: exerciseButtonRight.bottomAnchor, constant: 40),
+            nextQuestionButton.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
     }
 }

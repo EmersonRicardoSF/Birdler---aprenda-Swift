@@ -1,7 +1,12 @@
 struct Config: Decodable {
-    let titleLabel: Text
-    let questionsLabel: Text
-    let exerciseButtons: [Button]
+    let questions: [Question]
+    
+    struct Question: Decodable {
+        let titleLabel: Text
+        let questionsLabel: Text
+        let exerciseButtons: [Button]
+        let correctAnswer: String
+    }
     
     struct Text: Decodable {
         let text: String
