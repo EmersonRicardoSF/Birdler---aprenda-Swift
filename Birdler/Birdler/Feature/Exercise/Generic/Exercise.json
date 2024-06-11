@@ -1,0 +1,26 @@
+{
+    "titleLabel": {
+        "text": "Quando o Swift foi criado?"
+    },
+    "questionsLabel": {
+        "text": "Swift é uma linguagem de programação desenvolvida pela Apple e implementada em: "
+    },
+    "exerciseButtons": [
+        {
+            "title": "2014",
+            "enabled": true,
+            "backgroundColor": "gray"
+        },
+        {
+            "title": "2012",
+            "enabled": true,
+            "backgroundColor": "gray"
+        },
+        {
+            "title": "2016",
+            "enabled": true,
+            "backgroundColor": "gray"
+        }
+    ]
+}
+
