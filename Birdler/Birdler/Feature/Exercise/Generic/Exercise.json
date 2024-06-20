@@ -28,29 +28,29 @@
         },
         {
             "titleLabel": {
-                "text": "Qual é a capital da França?"
+                "text": "O que significa @escaping?"
             },
             "questionsLabel": {
-                "text": "A capital da França é: "
+                "text": "A opção correta é: "
             },
             "exerciseButtons": [
                 {
-                    "title": "Paris",
+                    "title": "utilizar um framework",
                     "enabled": true,
-                    "backgroundColor": "gray"
+                    "backgroundColor": ".gray"
                 },
                 {
-                    "title": "Londres",
+                    "title": "esperar uma resposta sincrona",
                     "enabled": true,
-                    "backgroundColor": "gray"
+                    "backgroundColor": ".gray"
                 },
                 {
-                    "title": "Berlim",
+                    "title": "esperar uma resposta assíncrona",
                     "enabled": true,
-                    "backgroundColor": "gray"
+                    "backgroundColor": ".gray"
                 }
             ],
-            "correctAnswer": "Paris"
+            "correctAnswer": "esperar uma resposta assíncrona"
         }
     ]
 }

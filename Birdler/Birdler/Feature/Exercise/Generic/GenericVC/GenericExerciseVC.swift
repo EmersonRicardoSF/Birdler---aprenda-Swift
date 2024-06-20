@@ -10,6 +10,7 @@ class GenericExerciseVC: UIViewController {
         genericExerciseScreen = GenericExerciseScreen()
         view = genericExerciseScreen
         loadData()
+        genericExerciseScreen?.delegate(delegate: self)
     }
     
     private func loadData() {
