@@ -20,8 +20,28 @@ class NewsVC: UIViewController {
         super.viewDidLoad()
         self.newsScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         self.newsScreen?.delegate(delegate: self)
+        configNavigation()
         overrideUserInterfaceStyle = .dark
+    }
+    
+    func configNavigation() {
+        let privacyPoliceButton = UIBarButtonItem(image: UIImage(systemName: "book.pages"), style: .plain, target: self, action: #selector(openPrivacyPolice))
         
+        let termsAndConditionsButton = UIBarButtonItem(title: "Terms & Conditions", style: .plain, target: self, action: #selector(openTermsAndConditions))
+        
+        
+        
+        navigationItem.rightBarButtonItem = termsAndConditionsButton
+        navigationItem.leftBarButtonItem = privacyPoliceButton
+
+    }
+    
+    @objc func openPrivacyPolice() {
+        self.openSafariPageWith(url: "https://doc-hosting.flycricket.io/birdler-privacy-policy/c0033192-bd5c-493f-bb02-9742f367e22b/privacy")
+    }
+    
+    @objc func openTermsAndConditions() {
+        self.openSafariPageWith(url: "https://doc-hosting.flycricket.io/birdler-terms-of-use/37ac2e0e-8209-407d-b2fa-218db2997d64/terms")
     }
 }
 
