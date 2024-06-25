@@ -50,6 +50,7 @@ class HomeScreen: UIView {
         button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .clear
+        button.isHidden = true
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.addTarget(self, action: #selector(tappedTestButton), for: .touchUpInside)

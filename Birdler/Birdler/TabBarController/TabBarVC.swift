@@ -17,7 +17,7 @@ class TabBarVC: UITabBarController {
     
     func addSomeTabBarItems() {
         let vc1 = UINavigationController(rootViewController: HomeVC())
-        let vc2 = UINavigationController(rootViewController: ExerciseVC())
+        let vc2 = UINavigationController(rootViewController: GenericExerciseVC())
         let vc3 = UINavigationController(rootViewController: NewsVC())
         setViewControllers([vc1, vc2, vc3], animated: false)
         tabBar.tintColor = .systemOrange
