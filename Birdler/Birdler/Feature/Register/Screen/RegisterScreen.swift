@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegisterScreenProtocol: AnyObject {
     func tappedCadastrarButton()
+    func tappedProfileImageButton()
 }
 
 class RegisterScreen: UIView {
@@ -19,7 +20,7 @@ class RegisterScreen: UIView {
         self.delegate = delegate
         
     }
-
+    
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
         
@@ -69,13 +70,30 @@ class RegisterScreen: UIView {
         return view
         
     }()
-//    MARK: Colocar um picker
-    lazy var profilePhoto: UIImageView = {
+    
+    let profileImageViewWidth:CGFloat = 100
+    
+    //    MARK: Colocar um picker
+    lazy var profileImageButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .clear
+        button.layer.cornerRadius = profileImageViewWidth / 2
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(tappedProfileImageButton), for: .touchUpInside)
         
+        return button
+        
+    }()
+    
+    lazy var profileImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "iconUserNew")
+        image.image = UIImage(systemName: "person.crop.circle.fill.badge.plus")
+        image.layer.cornerRadius = profileImageViewWidth / 2
+        image.layer.masksToBounds = true
         image.contentMode = .scaleAspectFit
+        image.tintColor = .lightGray
         return image
         
     }()
@@ -168,6 +186,7 @@ class RegisterScreen: UIView {
         textField.layer.masksToBounds = false
         textField.autocapitalizationType = .none
         textField.textColor = .darkGray
+        
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -274,7 +293,7 @@ class RegisterScreen: UIView {
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.layer.masksToBounds = false
         textField.textColor = .darkGray
-
+        
         let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
         textField.leftView = leftPaddingView
         textField.leftViewMode = .always
@@ -308,12 +327,19 @@ class RegisterScreen: UIView {
         
     }()
     
+    @objc func tappedProfileImageButton(_ sender: UIButton) {
+        delegate?.tappedProfileImageButton()
+        print("Add Photo Profile")
+        
+    }
+    
     @objc func tappedCadastrarButton(_ sender: UIButton) {
         print("Criou a conta")
         let _: HomeVC = HomeVC()
         delegate?.tappedCadastrarButton()
         
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -332,7 +358,9 @@ class RegisterScreen: UIView {
         addSubview(logoLabel)
         addSubview(viewRegister)
         
-        viewRegister.addSubview(profilePhoto)
+        viewRegister.addSubview(profileImageButton)
+        viewRegister.addSubview(profileImage)
+        
         viewRegister.addSubview(iconUser)
         viewRegister.addSubview(userLabel)
         viewRegister.addSubview(userTextField)
@@ -385,15 +413,20 @@ class RegisterScreen: UIView {
             viewRegister.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewRegister.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            profilePhoto.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 16),
-            profilePhoto.centerXAnchor.constraint(equalTo: centerXAnchor),
-            profilePhoto.heightAnchor.constraint(equalToConstant: 100),
-            profilePhoto.widthAnchor.constraint(equalToConstant: 120),
+            profileImage.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 16),
+            profileImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            profileImage.heightAnchor.constraint(equalToConstant: 100),
+            profileImage.widthAnchor.constraint(equalToConstant: 100),
             
-            iconUser.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 24),
+            profileImageButton.topAnchor.constraint(equalTo: profileImage.topAnchor), // Alinhar com a imagem
+            profileImageButton.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor),
+            profileImageButton.trailingAnchor.constraint(equalTo: profileImage.trailingAnchor),
+            profileImageButton.bottomAnchor.constraint(equalTo: profileImage.bottomAnchor),
+            
+            iconUser.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 24),
             iconUser.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 45),
             
-            userLabel.topAnchor.constraint(equalTo: profilePhoto.bottomAnchor, constant: 19),
+            userLabel.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 19),
             userLabel.leadingAnchor.constraint(equalTo: iconUser.leadingAnchor, constant: 35),
             
             userTextField.topAnchor.constraint(equalTo: userLabel.bottomAnchor, constant: 5),
