@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
+    
     var HomeData: [HomeModel] = []
     
     override func viewDidLoad() {
@@ -113,6 +114,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeVC: HomeScreenProtocol {
+    func testNavigation() {
+        let vc: GenericExerciseVC = GenericExerciseVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tappedEnviarButton() {
         
     }

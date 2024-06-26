@@ -1,0 +1,57 @@
+{
+    "questions": [
+        {
+            "titleLabel": {
+                "text": "Quando o Swift foi criado?"
+            },
+            "questionsLabel": {
+                "text": "Swift é uma linguagem de programação desenvolvida pela Apple e implementada em: "
+            },
+            "exerciseButtons": [
+                {
+                    "title": "2014",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "2012",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "2016",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "2014"
+        },
+        {
+            "titleLabel": {
+                "text": "O que significa @escaping?"
+            },
+            "questionsLabel": {
+                "text": "A opção correta é: "
+            },
+            "exerciseButtons": [
+                {
+                    "title": "utilizar um framework",
+                    "enabled": true,
+                    "backgroundColor": ".gray"
+                },
+                {
+                    "title": "esperar uma resposta sincrona",
+                    "enabled": true,
+                    "backgroundColor": ".gray"
+                },
+                {
+                    "title": "esperar uma resposta assíncrona",
+                    "enabled": true,
+                    "backgroundColor": ".gray"
+                }
+            ],
+            "correctAnswer": "esperar uma resposta assíncrona"
+        }
+    ]
+}
+

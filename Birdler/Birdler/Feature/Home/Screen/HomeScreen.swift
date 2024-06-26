@@ -10,6 +10,7 @@ import UIKit
 protocol HomeScreenProtocol: AnyObject {
     func customNavigation()
     func tappedEnviarButton()
+    func testNavigation()
 }
 
 class HomeScreen: UIView {
@@ -36,12 +37,33 @@ class HomeScreen: UIView {
         
         return tv
     }()
-    
-    
-    
+  
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
+    }
+    
+    lazy var TestButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Teste", for: .normal)
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .clear
+        button.isHidden = true
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 7.5
+        button.addTarget(self, action: #selector(tappedTestButton), for: .touchUpInside)
+    
+        return button
+        
+    }()
+    
+    @objc func tappedTestButton(sender: UIButton) {
+        print("funcionando")
+        delegate?.testNavigation()
+        
+        
     }
     
     override init(frame: CGRect) {
@@ -57,6 +79,7 @@ class HomeScreen: UIView {
     private func addElements() {
         addSubview(imageBackGround)
         addSubview(tableView)
+        addSubview(TestButton)
         
     }
     
@@ -71,7 +94,10 @@ class HomeScreen: UIView {
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            TestButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            TestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
         ])
     }
     
