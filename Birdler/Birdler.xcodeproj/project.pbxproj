@@ -469,13 +469,13 @@
 		E84C59D42BC64976001226FB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				63A9935D2BF407C900429C35 /* Exercise */,
-				63A993562BF4040D00429C35 /* Recover */,
 				63A9934F2BF4001100429C35 /* Register */,
-				E84C80CC2BD2218900F6DEC8 /* News */,
-				859012082BBF584C0046283C /* Home */,
-				E86C0B4F2C094C3400DEA1C3 /* Home.json */,
+				63A993562BF4040D00429C35 /* Recover */,
 				E8C4040D2BB799A900226BDC /* Login */,
+				859012082BBF584C0046283C /* Home */,
+				63A9935D2BF407C900429C35 /* Exercise */,
+				E84C80CC2BD2218900F6DEC8 /* News */,
+				E86C0B4F2C094C3400DEA1C3 /* Home.json */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
