@@ -1,5 +1,12 @@
 [
     {
+        "name": "Bem Vindo(a)",
+        "sections": [
+            "Boas Vindas",
+        ]
+    },
+    
+    {
         "name": "Sintaxe Básica",
         "sections": [
             "Variáveis",

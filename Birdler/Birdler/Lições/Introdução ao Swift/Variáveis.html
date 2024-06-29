@@ -1,19 +1,27 @@
-<p>Quando você abrir o Xcode, ele perguntará o que você deseja fazer, e eu gostaria que você escolhesse "Começar com um Playground" – este é um sandbox onde você pode digitar código Swift e ver os resultados imediatos.</p>
-<p>O padrão é um playground em branco para iOS, o que é bom, então clique em Avançar e depois em Criar para salvá-lo na sua área de trabalho.</p>
-<p>Neste vídeo, quero apresentar a você as variáveis, que são lugares onde você pode armazenar dados do programa. Elas são chamadas de variáveis porque podem <em>variar</em> – você pode mudar seus valores livremente.</p>
-<p>Os playgrounds começam com uma linha de código que cria uma variável para nós:</p>
-<pre class="code">
-<p></p>
-<p><span class="keyword">var</span> str <span class="operator">=</span> <span class="string">"Hello, playground"</span></p>
-<p></p>
-</pre>
-<p style="height: 0px; margin-bottom: 0px;"></p>
-<p>Isso cria uma nova variável chamada <code>str</code>, atribuindo-lhe o valor “Hello, playground”. À direita do playground, você pode ver “Hello, playground” na área de saída – é o Xcode mostrando que o valor foi definido.</p>
-<p>Como <code>str</code> é uma variável, podemos mudá-la:</p>
-<pre class="code">
-<p></p>
-<p>str <span class="operator">=</span> <span class="string">"Goodbye"</span></p>
-<p></p>
-</pre>
-<p style="height: 0px; margin-bottom: 0px;"></p>
-<p>Não precisamos de <code>var</code> na segunda vez porque a variável já foi criada – estamos apenas mudando-a.</p>
+    <h2>Sintaxe Básica: Variáveis, Constantes e Tipos de Dados</h2>
+    <p>
+        Nesta seção, vamos aprofundar no uso de variáveis, constantes e tipos de dados em Swift. Entender como declarar e usar esses elementos é fundamental para a programação em Swift. Vamos explorar cada um desses conceitos em detalhe.
+    </p>
+    <h3>Variáveis</h3>
+    <p>
+        Variáveis são usadas para armazenar valores que podem ser modificados ao longo do tempo. Para declarar uma variável em Swift, utilizamos a palavra-chave <code>var</code> e o nome da variável, como por exemplo: nome. Se a variável for formada por uma frase, sempre usamos a primeira letra em minúsculo e as outras palavras começamos em maiúsculo para melhor identificar a frase, e isso será para todos os valores que declaramos na programação.
+    </p>
+    <h4>Declaração e Inicialização</h4>
+    <pre><code>var nome: String = "João"</code></pre>
+    <p>
+        Aqui, estamos declarando uma variável chamada <code>nome</code> do tipo <code>String</code> e inicializando-a com o valor "João". A sintaxe é <code>var nomeVariavel: Tipo = valor</code>.
+    </p>
+    <h4>Modificação de Valores</h4>
+    <pre><code>var idade: Int = 25
+idade = 26</code></pre>
+    <p>
+        Neste exemplo, declaramos a variável <code>idade</code> do tipo <code>Int</code> com o valor 25. Posteriormente, modificamos o valor para 26.
+    </p>
+    <h4>Inferência de Tipo</h4>
+    <p>
+        Swift é uma linguagem com tipagem estática, mas também é capaz de inferir o tipo de uma variável com base no valor atribuído a ela, permitindo que você omita a anotação de tipo.
+    </p>
+    <pre><code>var cidade = "São Paulo" // Swift infere que `cidade` é do tipo String</code></pre>
+</body>
+</html>
+
