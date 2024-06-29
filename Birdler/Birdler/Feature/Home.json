@@ -1,164 +1,110 @@
 [
     {
-        "name": "Introdução ao Swift",
+        "name": "Sintaxe Básica",
         "sections": [
             "Variáveis",
-            "Strings e inteiros",
-            "Strings multilinha",
-            "Doubles e booleanos",
-            "Interpolação de strings",
             "Constantes",
-            "Anotações de tipo",
-            "Tipos simples-Resumo"
+            "Tipos de variáveis e constantes",
+            "Operadores:Aritméticos,Comparação,Lógicos."
         ]
     },
+    
     {
-        "name": "Tipos Complexos",
+        "name": "Controle de Fluxo",
         "sections": [
-            "Arrays",
-            "Conjuntos",
-            "Tuplas",
-            "Arrays vs conjuntos vs tuplas",
-            "Dicionários",
-            "Valores padrão de dicionário",
-            "Criando coleções vazias",
-            "Enumerações",
-            "Valores associados de enum",
-            "Valores brutos de enum",
-            "Tipos complexos: Resumo"
+            "Condicionais: if, else if, else",
+            "Switch",
+            "Loop"
         ]
     },
+    
     {
-        "name": "Operadores e Condições",
+        "name": "Funções, Estruturas e Classes",
         "sections": [
-            "Operadores aritméticos",
-            "Sobrecarregamento de operadores",
-            "Operadores de atribuição composta",
-            "Operadores de comparação",
-            "Condições",
-            "Combinando condições",
-            "O operador ternário",
-            "Instruções de switch",
-            "Operadores de intervalo",
-            "Operadores e condições: Resumo"
+            "Funções",
+            "Estruturas: Struct",
+            "Classes: Class"
         ]
     },
+    
     {
-        "name": "Looping",
+        "name": "Propriedades e Métodos",
         "sections": [
-            "Loops for",
-            "Loops while",
-            "Loops repeat",
-            "Saindo de loops",
-            "Saindo de múltiplos loops",
-            "Pulando itens",
-            "Loops infinitos",
-            "Looping: Resumo"
+            "Propriedades",
+            "Métodos"
         ]
     },
+    
     {
-        "name": "Funções",
+        "name": "Enums e Protocolos de Delegação.",
         "sections": [
-            "Aprendendo sobre Funções",
-            "Aceitando parâmetros",
-            "Retornando valores",
-            "Rótulos de parâmetros",
-            "Omitindo rótulos de parâmetros",
-            "Parâmetros padrão",
-            "Funções variádicas",
-            "Escrevendo funções que lançam erros",
-            "Executando funções que lançam erros",
-            "Parâmetros inout",
-            "Funções: Resumo"
+            "Enums",
+            "Protocolos de Delegação",
         ]
     },
+    
     {
-        "name": "Closures",
+        "name": "ARC, Extensões e Genéricos",
         "sections": [
-            "Criando closures básicas",
-            "Aceitando parâmetros em uma closure",
-            "Retornando valores de uma closure",
-            "Closures como parâmetros",
-            "Sintaxe de trailing closure",
-            "Usando closures como parâmetros quando elas aceitam parâmetros",
-            "Usando closures como parâmetros quando elas retornam valores",
-            "Nomes abreviados de parâmetros",
-            "Closures com múltiplos parâmetros",
-            "Retornando closures de funções",
-            "Capturando valores",
-            "Closures: Resumo"
-        ]
-    },
-    {
-        "name": "Structs",
-        "sections": [
-            "Criando suas próprias structs",
-            "Propriedades computadas",
-            "Observadores de propriedades",
-            "Métodos",
-            "Métodos mutantes",
-            "Propriedades e métodos de strings",
-            "Propriedades e métodos de arrays",
-            "Inicializadores",
-            "Referindo-se à instância atual",
-            "Propriedades lazy",
-            "Propriedades e métodos estáticos",
-            "Controle de acesso",
-            "Structs: Resumo"
-        ]
-    },
-    {
-        "name": "Classes",
-        "sections": [
-            "Criando suas próprias classes",
-            "Herança de classes",
-            "Sobrescrevendo métodos",
-            "Classes finais",
-            "Copiando objetos",
-            "Desinicializadores",
-            "Mutabilidade",
-            "Classes: Resumo"
-        ]
-    },
-    {
-        "name": "Protocolos",
-        "sections": [
-            "Protocolos",
-            "Herança de protocolos",
+            "Gerenciamento de memória (ARC)",
             "Extensões",
-            "Extensões de protocolo",
-            "Programação orientada a protocolos",
-            "Protocolos e extensões: Resumo"
+            "Genéricos"
+            
         ]
     },
     {
-        "name": "Swift Avançado",
+        
+        "name": "Manipulação de Strings e Coleções",
         "sections": [
-            "Lidando com dados ausentes",
-            "Desembrulhando opcionais",
-            "Desembrulhando com guard",
-            "Desembrulhando à força",
-            "Opcionais implicitamente desmembrados",
-            "Coalescência nula",
-            "Encadeamento opcional",
-            "Tentativa opcional",
-            "Inicializadores falíveis",
-            "Conversão de tipos",
-            "Opcionais: Resumo"
+            "Manipulação de Strings e Coleções"
+            
+        ]
+    },
+    
+    {
+        "name": "Desenvolvimento IOS Básico",
+        "sections": [
+            "Navegação no Xcode",
+            "Criar e configurar um projeto",
+            "Interface Builder para criar layouts visuais",
+            "Storyboards vs. XIBs vs. Programmatic UI",
+            "UIView, UILabel, UIButton, UIImageView, etc.",
+            "Auto Layout e Constraints",
+            "UITableView e UICollectionView",
+            "Gestão de ciclo de vida de View Controllers"
+            
+        ]
+    },
+    
+    {
+        "name": "Arquitetura de Aplicativos e implementação",
+        "sections": [
+            "Arquitetura MVC",
+            "Arquitetura MVVM"
         ]
     },
     {
-        "name": "UIKit Básico",
+        "name": "Persistência de Dados:",
         "sections": [
-            "Onde agora?"
+            
+            
+            "UserDefaults",
+            "Keychain",
+            "Core Data",
+            "SQLite",
+            "Realm"
         ]
     },
     {
-        "name": "SwiftUI",
+        "name": "Networking",
         "sections": [
-            "Diferença entre UIKit e SwiftUI",
-            "Desembrulhando opcionais"
+            "URLSession",
+            "Consumir APIs RESTful (GET, POST, PUT, DELETE)",
+            "Manipulação de JSON",
+            "Bibliotecas de terceiros como Alamofire",
+            
+            
         ]
-    }
+    },
 ]
  
