@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é MVVM?</title>
+</head>
+<body>
+    <h1>O que é MVVM?</h1>
+    <p>MVVM é um acrônimo para Model-View-ViewModel. Vamos ver o que cada uma dessas partes faz:</p>
+
+    <h2>Model (Modelo):</h2>
+    <p>Representa os dados e a lógica de negócios do aplicativo. Por exemplo, em um aplicativo de tarefas, o Model seria a classe que armazena informações sobre uma tarefa, como título, descrição e data de conclusão.</p>
+
+    <h2>View (Visão):</h2>
+    <p>É a interface do usuário, ou seja, tudo o que você vê na tela e com o que interage. Em Swift, isso pode ser um botão, uma tabela, um rótulo de texto, etc.</p>
+
+    <h2>ViewModel (Modelo de Visão):</h2>
+    <p>Faz a ponte entre o Model e a View. Ele pega os dados do Model e os formata de uma maneira que a View possa entender e exibir. Além disso, ele recebe as ações do usuário na View e as encaminha para o Model.</p>
+
+    <h2>Por que usar MVVM?</h2>
+    <p>A principal vantagem de usar MVVM é que ele ajuda a separar as responsabilidades no código. Isso significa que a lógica de negócios (Model) fica separada da lógica de exibição (View), facilitando a manutenção e testes do aplicativo.</p>
+
+    <h2>Como funciona na prática?</h2>
+    <p>Imagine que você está criando um aplicativo simples de lista de tarefas em Swift:</p>
+
+    <h3>Model:</h3>
+    <p>Você teria uma classe <code>Task</code> que contém propriedades como <code>title</code> (título da tarefa) e <code>dueDate</code> (data de vencimento).</p>
+    <pre>
+<code>
+class Task {
+    var title: String
+    var dueDate: Date
+    
+    init(title: String, dueDate: Date) {
+        self.title = title
+        self.dueDate = dueDate
+    }
+}
+</code>
+    </pre>
+
+    <h3>ViewModel:</h3>
+    <p>Esta classe pegaria os dados da <code>Task</code> e os prepararia para a View. Ela pode formatar a data para ser exibida de forma legível, por exemplo.</p>
+    <pre>
+<code>
+class TaskViewModel {
+    private let task: Task
+    
+    init(task: Task) {
+        self.task = task
+    }
+    
+    var title: String {
+        return task.title
+    }
+    
+    var dueDateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter.string(from: task.dueDate)
+    }
+}
+</code>
+    </pre>
+
+    <h3>View:</h3>
+    <p>Esta seria a interface do usuário que exibe as informações da tarefa. Em Swift, poderia ser uma <code>UILabel</code> para o título e outra para a data.</p>
+    <pre>
+<code>
+let task = Task(title: "Comprar leite", dueDate: Date())
+let viewModel = TaskViewModel(task: task)
+
+let titleLabel = UILabel()
+titleLabel.text = viewModel.title
+
+let dueDateLabel = UILabel()
+dueDateLabel.text = viewModel.dueDateString
+</code>
+    </pre>
+
+    <h2>Conclusão</h2>
+    <p>MVVM ajuda a manter o código organizado, separando a lógica de dados, apresentação e interface do usuário. Isso faz com que o desenvolvimento e a manutenção sejam mais fáceis e rápidos. Em Swift, você usaria classes e structs para implementar o Model, ViewModel e View, respectivamente, mantendo tudo bem estruturado e fácil de gerenciar. Nos dias atuais, é uma das arquiteturas mais utilizadas pois se adapta muito bem em projetos pequenos, médios e grandes. Digamos que é a queridinha dos desenvolvedores.</p>
+</body>
+</html>
+

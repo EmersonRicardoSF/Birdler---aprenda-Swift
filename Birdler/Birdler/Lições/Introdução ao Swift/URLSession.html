@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é URLSession?</title>
+</head>
+<body>
+    <h1>O que é URLSession?</h1>
+    <p>URLSession é uma classe fornecida pela Apple que facilita o envio de solicitações HTTP (como GET e POST) e o recebimento de respostas. Ela é usada para baixar dados, carregar arquivos, fazer upload de imagens e muitas outras operações de rede.</p>
+
+    <h2>Como funciona?</h2>
+    <p>Para entender como funciona, imagine que seu aplicativo precisa buscar informações sobre o clima em uma cidade. Você precisará fazer uma solicitação para um servidor que fornece esses dados. Aqui está uma visão geral de como isso pode ser feito com URLSession:</p>
+    <ul>
+        <li><strong>Criar a URL:</strong> Primeiro, você precisa do endereço (URL) do servidor. Este endereço pode ser algo como <code>https://api.clima.com/cidade</code>.</li>
+        <li><strong>Configurar a URLSession:</strong> Você configura a URLSession para gerenciar a solicitação e a resposta.</li>
+        <li><strong>Criar a solicitação:</strong> Você cria uma solicitação que será enviada ao servidor.</li>
+        <li><strong>Enviar a solicitação:</strong> Você envia a solicitação e espera pela resposta do servidor.</li>
+        <li><strong>Processar a resposta:</strong> Quando a resposta chega, você processa os dados recebidos e os usa no seu aplicativo.</li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+    <p>Vamos ver um exemplo simples que busca dados de clima de uma URL fictícia:</p>
+
+    <pre>
+<code>
+import Foundation
+
+// 1. Criar a URL
+if let url = URL(string: "https://api.clima.com/cidade") {
+
+    // 2. Configurar a URLSession
+    let session = URLSession.shared
+
+    // 3. Criar a solicitação
+    let task = session.dataTask(with: url) { data, response, error in
+        
+        // 4. Processar a resposta
+        if let error = error {
+            print("Erro: \(error)")
+            return
+        }
+        
+        if let data = data {
+            // Converter os dados recebidos para String (apenas como exemplo)
+            let dataString = String(data: data, encoding: .utf8)
+            print("Dados recebidos: \(dataString ?? "Nenhum dado")")
+        }
+    }
+    
+    // 5. Enviar a solicitação
+    task.resume()
+}
+</code>
+    </pre>
+
+    <h2>Explicação do Código</h2>
+    <ul>
+        <li><strong>Criar a URL:</strong> Aqui, criamos a URL que aponta para o servidor de clima.</li>
+        <li><strong>Configurar a URLSession:</strong> Utilizamos <code>URLSession.shared</code> para obter uma instância padrão da URLSession.</li>
+        <li><strong>Criar a solicitação:</strong> <code>dataTask(with: url)</code> cria a tarefa que envia a solicitação para a URL e define um bloco de conclusão que será executado quando a resposta for recebida.</li>
+        <li><strong>Processar a resposta:</strong> Dentro do bloco de conclusão, verificamos se há erros e processamos os dados recebidos. Neste exemplo, apenas convertemos os dados para uma string e imprimimos no console.</li>
+        <li><strong>Enviar a solicitação:</strong> Chamamos <code>task.resume()</code> para iniciar a tarefa.</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+    <p>URLSession é uma ferramenta poderosa e essencial para qualquer aplicativo que precise se comunicar com a internet. Ela simplifica o envio e recebimento de dados, permitindo que desenvolvedores integrem funcionalidades online em seus aplicativos de forma eficiente e estruturada. E nunca se esqueça do <code>task.resume()</code>. Pois mesmo que todo o código esteja correto, sem essa implementação no final, nada funciona.</p>
+</body>
+</html>
+

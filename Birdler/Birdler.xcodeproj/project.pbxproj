@@ -25,6 +25,12 @@
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
 		859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012102BBF623D0046283C /* HomeTableViewCell.swift */; };
 		859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012132BBF63920046283C /* HomeTableViewCellScreen.swift */; };
+		85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */; };
+		85F3A9A92C317DA60055A6FF /* Arquitetura MVVM.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */; };
+		85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9AA2C317E510055A6FF /* URLSession.html */; };
+		85F3A9AD2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9AC2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html */; };
+		85F3A9AF2C317F360055A6FF /* Manipulação de JSON.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9AE2C317F360055A6FF /* Manipulação de JSON.html */; };
+		85F3A9B12C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9B02C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html */; };
 		A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313671F2BB7889F00F0CF5A /* AppDelegate.swift */; };
 		A31367222BB7889F00F0CF5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367212BB7889F00F0CF5A /* SceneDelegate.swift */; };
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
@@ -119,6 +125,12 @@
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		859012102BBF623D0046283C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		859012132BBF63920046283C /* HomeTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellScreen.swift; sourceTree = "<group>"; };
+		85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Arquitetura MVC.html"; sourceTree = "<group>"; };
+		85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Arquitetura MVVM.html"; sourceTree = "<group>"; };
+		85F3A9AA2C317E510055A6FF /* URLSession.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = URLSession.html; sourceTree = "<group>"; };
+		85F3A9AC2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Consumir APIs RESTful (GET, POST, PUT, DELETE).html"; sourceTree = "<group>"; };
+		85F3A9AE2C317F360055A6FF /* Manipulação de JSON.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Manipulação de JSON.html"; sourceTree = "<group>"; };
+		85F3A9B02C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Bibliotecas de terceiros com Alamofire.html"; sourceTree = "<group>"; };
 		A313671C2BB7889F00F0CF5A /* Birdler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A313671F2BB7889F00F0CF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A31367212BB7889F00F0CF5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -591,6 +603,12 @@
 				E86C0B632C09626F00DEA1C3 /* Variáveis.html */,
 				E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */,
 				E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */,
+				85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */,
+				85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */,
+				85F3A9AA2C317E510055A6FF /* URLSession.html */,
+				85F3A9AC2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html */,
+				85F3A9AE2C317F360055A6FF /* Manipulação de JSON.html */,
+				85F3A9B02C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html */,
 			);
 			name = "Introdução ao Swift";
 			path = "Introdução ao Swift";
@@ -745,7 +763,10 @@
 				E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */,
 				E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */,
 				63CA80B32C00B947000764D7 /* GoogleService-Info.plist in Resources */,
+				85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */,
 				E8C4045A2BBBFD1E00226BDC /* Urbanist-ThinItalic.ttf in Resources */,
+				85F3A9AD2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html in Resources */,
+				85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */,
 				E8C404522BBBFD1E00226BDC /* Urbanist-Bold.ttf in Resources */,
 				E8C4045E2BBBFD1E00226BDC /* Urbanist-Italic.ttf in Resources */,
 				E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */,
@@ -757,6 +778,7 @@
 				E8C4044F2BBBFD1E00226BDC /* Urbanist-LightItalic.ttf in Resources */,
 				E8C404562BBBFD1E00226BDC /* Urbanist-Medium.ttf in Resources */,
 				E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */,
+				85F3A9AF2C317F360055A6FF /* Manipulação de JSON.html in Resources */,
 				E8C4045B2BBBFD1E00226BDC /* Urbanist-Black.ttf in Resources */,
 				E8C404552BBBFD1E00226BDC /* Urbanist-Regular.ttf in Resources */,
 				E88DB0322C2F9F10000430A1 /* Boas Vindas.html in Resources */,
@@ -774,12 +796,14 @@
 				E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */,
 				E8C404542BBBFD1E00226BDC /* Urbanist-Thin.ttf in Resources */,
 				E8C4042F2BB8015300226BDC /* DMSans-LightItalic.ttf in Resources */,
+				85F3A9A92C317DA60055A6FF /* Arquitetura MVVM.html in Resources */,
 				E8C404502BBBFD1E00226BDC /* Urbanist-Light.ttf in Resources */,
 				E8C404282BB8015300226BDC /* DMSans-BoldItalic.ttf in Resources */,
 				E8C404382BB8015300226BDC /* DMSans-Thin.ttf in Resources */,
 				E8C404372BB8015300226BDC /* DMSans-Black.ttf in Resources */,
 				E8C4042B2BB8015300226BDC /* DMSans-SemiBoldItalic.ttf in Resources */,
 				E8C404582BBBFD1E00226BDC /* Urbanist-BoldItalic.ttf in Resources */,
+				85F3A9B12C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

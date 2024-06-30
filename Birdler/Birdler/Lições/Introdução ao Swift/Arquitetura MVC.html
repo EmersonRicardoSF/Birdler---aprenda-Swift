@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é MVC?</title>
+</head>
+<body>
+    <h1>O que é MVC?</h1>
+    <p>MVC é uma maneira organizada de criar aplicativos que ajuda os desenvolvedores a manter tudo em ordem e fácil de mexer. Ela divide o aplicativo em três partes:</p>
+
+    <h2>Model (Modelo):</h2>
+    <p><strong>O que é:</strong> Imagina que é um caderno onde você guarda todas as informações importantes.</p>
+    <p><strong>Exemplo:</strong> Se o aplicativo é sobre pessoas, o Modelo guarda informações como nome, idade, etc.</p>
+
+    <h2>View (Visualização):</h2>
+    <p><strong>O que é:</strong> É a tela do aplicativo, o que você vê e com o que você interage.</p>
+    <p><strong>Exemplo:</strong> Botões, textos, imagens, tudo que aparece na tela do seu celular quando você abre o aplicativo.</p>
+
+    <h2>Controller (Controlador):</h2>
+    <p><strong>O que é:</strong> É o cérebro do aplicativo, que faz a ligação entre o caderno de informações (Model) e a tela (View).</p>
+    <p><strong>Exemplo:</strong> Quando você clica em um botão, o Controlador decide o que fazer com essa ação, atualizando as informações e mudando o que aparece na tela.</p>
+
+    <h2>Como Funciona na Prática?</h2>
+    <p>Vamos imaginar um aplicativo de restaurante que mostra eventos:</p>
+    <ul>
+        <li><strong>Interação do Usuário:</strong> Você abre o aplicativo e vê uma lista de eventos.</li>
+        <li><strong>Controlador:</strong> O Controlador recebe essa ação e pede ao Modelo (caderno) para buscar as informações dos eventos.</li>
+        <li><strong>Modelo:</strong> O Modelo pega as informações dos eventos e dá para o Controlador.</li>
+        <li><strong>Controlador:</strong> O Controlador pega essas informações e fala para a Visualização (tela) mostrar os eventos para você.</li>
+    </ul>
+
+    <h2>Benefícios:</h2>
+    <ul>
+        <li><strong>Tudo no Seu Lugar:</strong> Como cada parte tem sua função específica, é mais fácil encontrar e corrigir problemas.</li>
+        <li><strong>Fácil de Atualizar:</strong> Se precisar mudar alguma coisa na tela, não precisa mexer nas informações guardadas, e vice-versa.</li>
+        <li><strong>Reutilizável:</strong> Pode usar as mesmas partes em diferentes partes do aplicativo.</li>
+    </ul>
+
+    <h2>Exemplo Simples:</h2>
+    <p>Vamos pensar em um exemplo básico de um aplicativo de pessoas:</p>
+    <ul>
+        <li><strong>Modelo:</strong> Um lugar onde guardamos o nome das pessoas.</li>
+        <li><strong>Visualização:</strong> A tela que mostra o nome das pessoas.</li>
+        <li><strong>Controlador:</strong> O cérebro que decide o que mostrar na tela e como reagir quando você interage.</li>
+    </ul>
+
+    <pre>
+<code>
+// Modelo: Guarda o nome de uma pessoa
+class Pessoa {
+    var nome: String
+    init(nome: String) {
+        self.nome = nome
+    }
+}
+
+// Visualização: Mostra o nome da pessoa na tela
+class PessoaView {
+    func mostrarNome(nome: String) {
+        print("O nome é \(nome)")
+    }
+}
+
+// Controlador: Liga o Modelo e a Visualização
+class PessoaController {
+    var pessoa: Pessoa
+    var pessoaView: PessoaView
+
+    init(pessoa: Pessoa, pessoaView: PessoaView) {
+        self.pessoa = pessoa
+        self.pessoaView = pessoaView
+    }
+
+    func atualizarNome(novoNome: String) {
+        pessoa.nome = novoNome
+    }
+
+    func mostrarNome() {
+        pessoaView.mostrarNome(nome: pessoa.nome)
+    }
+}
+
+// Usando as partes juntas
+let pessoa = Pessoa(nome: "João")
+let pessoaView = PessoaView()
+let pessoaController = PessoaController(pessoa: pessoa, pessoaView: pessoaView)
+
+pessoaController.mostrarNome() // Mostra: O nome é João
+pessoaController.atualizarNome(novoNome: "Maria")
+pessoaController.mostrarNome() // Mostra: O nome é Maria
+</code>
+</pre>
+
+    <p>Assim, usando MVC, tudo fica mais organizado e fácil de entender, é uma excelente arquitetura para aqueles que precisam entender os conceitos mais básicos, mas pode não ser a melhor escolha em projetos extremamente grandes, onde existe a necessidade de uma divisão maior.</p>
+</body>
+</html>
+
