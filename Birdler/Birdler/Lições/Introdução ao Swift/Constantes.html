@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    </style>
+</head>
+<body>
+
+    <h1>O que são Constantes?</h1>
+    <p>Constantes são espaços de memória reservados para armazenar dados que, uma vez atribuídos, não podem ser alterados durante a execução do programa. Elas são úteis para valores que você sabe que não mudarão, como pi, nomes de usuário, ou configurações de aplicação que permanecem constantes.</p>
+
+    <h2>Declaração de Constantes</h2>
+    <p>Para declarar uma constante, usamos a palavra-chave <code>let</code>, seguida pelo nome da constante, seu tipo e um valor inicial.</p>
+    <pre><code>let pi: Double = 3.14159
+let anoDeNascimento: Int = 1995</code></p>
+
+    <h2>Modificando o valor de uma Constante</h2>
+    <p>Diferente das variáveis, o valor de uma constante não pode ser alterado após ser definido. Tentar fazer isso resultará em um erro de compilação.</p>
+    <pre><code>let pi = 3.14159
+pi = 3.14  // Erro: Cannot assign to value: 'pi' is a 'let' constant</code></pre>
+
+    <h2>Vantagens de Usar Constantes</h2>
+    <ul class="advantages">
+        <li>Segurança: Previne a modificação acidental de valores que não deveriam mudar.</li>
+        <li>Clareza: Deixa claro para outros desenvolvedores que o valor não deve ser alterado.</li>
+        <li>Otimização: O compilador pode otimizar o código sabendo que certos valores são constantes.</li>
+    </ul>
+
+    <h2>Boas Práticas</h2>
+    <ul class="practices">
+        <li><strong>Use <code>let</code> sempre que possível:</strong> Declare uma constante se você não precisa que o valor mude, o que ajuda a evitar bugs.</li>
+        <li><strong>Nomeie claramente:</strong> Dê nomes significativos às constantes para facilitar a leitura do código.</li>
+    </ul>
+
+</body>
+</html>
+
