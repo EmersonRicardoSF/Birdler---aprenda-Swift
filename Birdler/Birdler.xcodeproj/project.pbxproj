@@ -36,6 +36,14 @@
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
+		A3BC6B222C3377D80041A387 /* Navegação no Xcode.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B212C3377D80041A387 /* Navegação no Xcode.html */; };
+		A3BC6B242C3387AF0041A387 /* Criar e configurar um projeto.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B232C3387AF0041A387 /* Criar e configurar um projeto.html */; };
+		A3BC6B262C3387E20041A387 /* Interface Builder para criar layouts visuais.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B252C3387E20041A387 /* Interface Builder para criar layouts visuais.html */; };
+		A3BC6B282C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B272C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html */; };
+		A3BC6B2A2C33880C0041A387 /* UIView, UILabel, UIButton, UIImageView, etc..html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B292C33880C0041A387 /* UIView, UILabel, UIButton, UIImageView, etc..html */; };
+		A3BC6B2C2C3388220041A387 /* Auto Layout e Constraints.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B2B2C3388220041A387 /* Auto Layout e Constraints.html */; };
+		A3BC6B2E2C33883C0041A387 /* UITableView e UICollectionView.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B2D2C33883C0041A387 /* UITableView e UICollectionView.html */; };
+		A3BC6B302C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B2F2C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html */; };
 		BE8B71222C11FEB5000DD200 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B71212C11FEB5000DD200 /* FirebaseAnalytics */; };
 		BE8B71242C11FEB5000DD200 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B71232C11FEB5000DD200 /* FirebaseAnalyticsOnDeviceConversion */; };
 		BE8B71262C11FEB5000DD200 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B71252C11FEB5000DD200 /* FirebaseAnalyticsSwift */; };
@@ -138,6 +146,14 @@
 		A31367282BB788A000F0CF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BC6B212C3377D80041A387 /* Navegação no Xcode.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Navegação no Xcode.html"; sourceTree = "<group>"; };
+		A3BC6B232C3387AF0041A387 /* Criar e configurar um projeto.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Criar e configurar um projeto.html"; sourceTree = "<group>"; };
+		A3BC6B252C3387E20041A387 /* Interface Builder para criar layouts visuais.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Interface Builder para criar layouts visuais.html"; sourceTree = "<group>"; };
+		A3BC6B272C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Storyboards vs. XIBs vs. Programmatic UI.html"; sourceTree = "<group>"; };
+		A3BC6B292C33880C0041A387 /* UIView, UILabel, UIButton, UIImageView, etc..html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "UIView, UILabel, UIButton, UIImageView, etc..html"; sourceTree = "<group>"; };
+		A3BC6B2B2C3388220041A387 /* Auto Layout e Constraints.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Auto Layout e Constraints.html"; sourceTree = "<group>"; };
+		A3BC6B2D2C33883C0041A387 /* UITableView e UICollectionView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "UITableView e UICollectionView.html"; sourceTree = "<group>"; };
+		A3BC6B2F2C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Gestão de ciclo de vida de View Controllers.html"; sourceTree = "<group>"; };
 		E84C59D22BC64901001226FB /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		E84C59D72BC68882001226FB /* PoppinsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppinsFont.swift; sourceTree = "<group>"; };
@@ -465,6 +481,21 @@
 			path = Birdler;
 			sourceTree = "<group>";
 		};
+		A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */ = {
+			isa = PBXGroup;
+			children = (
+				A3BC6B212C3377D80041A387 /* Navegação no Xcode.html */,
+				A3BC6B232C3387AF0041A387 /* Criar e configurar um projeto.html */,
+				A3BC6B252C3387E20041A387 /* Interface Builder para criar layouts visuais.html */,
+				A3BC6B272C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html */,
+				A3BC6B292C33880C0041A387 /* UIView, UILabel, UIButton, UIImageView, etc..html */,
+				A3BC6B2B2C3388220041A387 /* Auto Layout e Constraints.html */,
+				A3BC6B2D2C33883C0041A387 /* UITableView e UICollectionView.html */,
+				A3BC6B2F2C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html */,
+			);
+			path = "Desenvolvimento IOS Basico";
+			sourceTree = "<group>";
+		};
 		BE8B712B2C11FEDF000DD200 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */,
+				A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */,
 			);
 			name = "Lições";
 			path = "Lições";
@@ -759,11 +791,14 @@
 				E8C404312BB8015300226BDC /* DMSans-ExtraLight.ttf in Resources */,
 				E8C404292BB8015300226BDC /* DMSans-Regular.ttf in Resources */,
 				A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */,
+				A3BC6B2E2C33883C0041A387 /* UITableView e UICollectionView.html in Resources */,
 				E8C404532BBBFD1E00226BDC /* Urbanist-MediumItalic.ttf in Resources */,
+				A3BC6B282C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html in Resources */,
 				E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */,
 				E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */,
 				63CA80B32C00B947000764D7 /* GoogleService-Info.plist in Resources */,
 				85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */,
+				A3BC6B222C3377D80041A387 /* Navegação no Xcode.html in Resources */,
 				E8C4045A2BBBFD1E00226BDC /* Urbanist-ThinItalic.ttf in Resources */,
 				85F3A9AD2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html in Resources */,
 				85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */,
@@ -773,8 +808,11 @@
 				E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */,
 				E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */,
 				E8C404592BBBFD1E00226BDC /* Urbanist-SemiBold.ttf in Resources */,
+				A3BC6B262C3387E20041A387 /* Interface Builder para criar layouts visuais.html in Resources */,
+				A3BC6B302C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html in Resources */,
 				E8C404512BBBFD1E00226BDC /* Urbanist-BlackItalic.ttf in Resources */,
 				E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */,
+				A3BC6B2A2C33880C0041A387 /* UIView, UILabel, UIButton, UIImageView, etc..html in Resources */,
 				E8C4044F2BBBFD1E00226BDC /* Urbanist-LightItalic.ttf in Resources */,
 				E8C404562BBBFD1E00226BDC /* Urbanist-Medium.ttf in Resources */,
 				E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */,
@@ -783,12 +821,14 @@
 				E8C404552BBBFD1E00226BDC /* Urbanist-Regular.ttf in Resources */,
 				E88DB0322C2F9F10000430A1 /* Boas Vindas.html in Resources */,
 				E86C0B642C09626F00DEA1C3 /* Strings e inteiros.html in Resources */,
+				A3BC6B2C2C3388220041A387 /* Auto Layout e Constraints.html in Resources */,
 				851942122C189A4C00733F77 /* Exercise.json in Resources */,
 				E8C4044D2BBBFD1E00226BDC /* Urbanist-ExtraLight.ttf in Resources */,
 				E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */,
 				E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */,
 				A313672C2BB788A000F0CF5A /* Base in Resources */,
 				E8C4045C2BBBFD1E00226BDC /* Urbanist-ExtraBoldItalic.ttf in Resources */,
+				A3BC6B242C3387AF0041A387 /* Criar e configurar um projeto.html in Resources */,
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
 				E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */,
 				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
