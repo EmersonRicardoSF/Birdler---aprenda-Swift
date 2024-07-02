@@ -1,0 +1,155 @@
+</head>
+<body>
+
+    <h1>String</h1>
+    <h2>O que é String?</h2>
+    <ul>
+        <li>String é um tipo de dado que representa uma sequência de caracteres, como texto.</li>
+        <li>Strings em Swift são Unicode, o que significa que elas podem representar quase todos os caracteres modernos e antigos usados na codificação de texto.</li>
+    </ul>
+
+    <h2>Declaração e Inicialização</h2>
+    <p>Você pode declarar e inicializar uma variável ou constante do tipo String usando a palavra-chave <code>var</code> ou <code>let</code>.</p>
+    <pre><code>let saudacao: String = "Olá, Mundo!"
+var nome: String = "Maria"</code></pre>
+
+    <h2>Concatenação de Strings</h2>
+    <p>Concatenação é o processo de juntar duas ou mais strings em uma única string. Em Swift, isso é feito usando o operador de adição <code>+</code>.</p>
+    <pre><code>let primeiroNome = "João"
+let ultimoNome = "Silva"
+let nomeCompleto = primeiroNome + " " + ultimoNome  // "João Silva"</code></pre>
+    
+    <p>Aqui, <code>" "</code> (um espaço) é usado para separar o primeiro nome do último nome na string concatenada.</p>
+
+    <h2>Interpolação de Strings</h2>
+    <p>Interpolação de strings é uma forma conveniente de inserir valores de variáveis dentro de strings literais. Em Swift, isso é feito usando a barra invertida <code>\</code> seguida por parênteses <code>()</code> contendo a expressão ou a variável a ser interpolada.</p>
+    <pre><code>let idade = 25
+let mensagem = "Eu tenho \(idade) anos."  // "Eu tenho 25 anos."</code></pre>
+    <p>Você também pode usar expressões dentro da interpolação:</p>
+    <pre><code>let comprimento = 10
+let largura = 5
+let area = comprimento * largura
+let descricaoArea = "A área do retângulo é \(area) metros quadrados."  // "A área do retângulo é 50 metros quadrados."</code></pre>
+
+    <h2>Manipulação de Strings</h2>
+    <p>Manipulação de strings envolve diversas operações que podemos realizar com strings, como alterar o caso das letras, contar caracteres, dividir strings, substituir substrings, entre outras.</p>
+    <div class="examples">
+        <ul>
+            <li><strong>Alterar o Caso das Letras:</strong>
+                <pre><code>let frase = "Swift é incrível!"
+let fraseMaiuscula = frase.uppercased()  // "SWIFT É INCRÍVEL!"
+let fraseMinuscula = frase.lowercased()  // "swift é incrível!"</code></pre>
+            </li>
+            <li><strong>Contar Caracteres:</strong>
+                <pre><code>let quantidadeDeCaracteres = frase.count  // 17</code></pre>
+            </li>
+            <li><strong>Verificar Prefixo e Sufixo:</strong>
+                <pre><code>let mensagem = "Olá, Mundo!"
+let temPrefixo = mensagem.hasPrefix("Olá")  // true
+let temSufixo = mensagem.hasSuffix("Mundo!")  // true</code></pre>
+            </li>
+            <li><strong>Dividir String:</strong>
+                <pre><code>let frutas = "Maçã, Banana, Laranja"
+let listaDeFrutas = frutas.split(separator: ", ")  // ["Maçã", "Banana", "Laranja"]</code></pre>
+            </li>
+            <li><strong>Substituir Substring:</strong>
+                <pre><code>let saudacao = "Olá, Mundo!"
+let novaSaudacao = saudacao.replacingOccurrences(of: "Mundo", with: "Swift")  // "Olá, Swift!"</code></pre>
+            </li>
+            <li><strong>Acessar Caracteres Específicos:</strong>
+                <pre><code>let texto = "Swift"
+let primeiroCaracter = texto[texto.startIndex]  // "S"
+let ultimoCaracter = texto[texto.index(before: texto.endIndex)]  // "t"</code></pre>
+            </li>
+            <li><strong>Inserir e Remover Substrings:</strong>
+                <pre><code>var mensagem = "Olá, Mundo!"
+mensagem.insert("s", at: mensagem.index(before: mensagem.endIndex))  // "Olá, Mundos!"
+mensagem.remove(at: mensagem.index(before: mensagem.endIndex))  // "Olá, Mundo!"</code></pre>
+            </li>
+            <li><strong>Criar Substrings:</strong>
+                <pre><code>let saudacaoCompleta = "Olá, Mundo!"
+let index = saudacaoCompleta.firstIndex(of: ",") ?? saudacaoCompleta.endIndex
+let primeiraParte = saudacaoCompleta[..<index]  // "Olá"
+let segundaParte = saudacaoCompleta[saudacaoCompleta.index(after: index)...]  // " Mundo!"</code></pre>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Exemplos Combinados</h2>
+    <div class="examples">
+        <ul>
+            <li><strong>Concatenação e Interpolação:</strong>
+                <pre><code>let primeiroNome = "Ana"
+let ultimoNome = "Pereira"
+let idade = 28
+let apresentacao = "Meu nome é " + primeiroNome + " " + ultimoNome + " e eu tenho \(idade) anos."
+print(apresentacao)  // "Meu nome é Ana Pereira e eu tenho 28 anos."</code></pre>
+            </li>
+            <li><strong>Manipulação e Interpolação:</strong>
+                <pre><code>let fraseOriginal = "Swift é fácil de aprender"
+let fraseMaiuscula = fraseOriginal.uppercased()
+let quantidadeDeCaracteres = fraseOriginal.count
+let descricao = "A frase '\(fraseOriginal)' em maiúsculas fica '\(fraseMaiuscula)' e tem \(quantidadeDeCaracteres) caracteres."
+print(descricao)</code></pre>
+            </li>
+        </ul>
+    </div>
+
+    <h1>Int</h1>
+    <h2>O que é Int?</h2>
+    <ul>
+        <li>Int é um tipo de dado que representa números inteiros, ou seja, números sem parte fracionária.</li>
+        <li>Em Swift, o tipo padrão de inteiro é Int, que é otimizado para a arquitetura da plataforma (32 bits ou 64 bits).</li>
+    </ul>
+
+    <h2>Declaração e Inicialização</h2>
+    <p>Você pode declarar uma variável ou constante do tipo Int usando a palavra-chave <code>var</code> ou <code>let</code>.</p>
+    <pre><code>let idade: Int = 30
+var quantidadeDeItens: Int = 50</code></pre>
+    <p>Swift é capaz de inferir o tipo Int quando não é explicitamente declarado, desde que o valor inicial seja um inteiro.</p>
+    <pre><code>let numero = 100  // Inferido como Int</code></pre>
+
+    <h2>Double (Números de Ponto Flutuante de Precisão Dupla)</h2>
+    <h2>O que é?</h2>
+    <ul>
+        <li>Double é um tipo de dado que representa números com ponto flutuante de precisão dupla, o que significa que pode armazenar números com maior precisão e uma faixa maior de valores do que Float.</li>
+        <li>Usado quando a precisão dos valores decimais é crucial.</li>
+    </ul>
+
+    <h2>Declaração e Inicialização</h2>
+    <p>Você pode declarar uma variável ou constante do tipo Double usando a palavra-chave <code>var</code> ou <code>let</code>.</p>
+    <pre><code>let altura: Double = 1.75
+var peso: Double = 70.5</code></pre>
+    <p>Swift é capaz de inferir o tipo Double quando não é explicitamente declarado, desde que o valor inicial seja um número decimal.</p>
+    <pre><code>let temperatura = 23.5  // Inferido como Double</code></pre>
+
+    <h1>Float (Números de Ponto Flutuante de Precisão Simples)</h1>
+    <h2>O que é?</h2>
+    <ul>
+        <li>Float é um tipo de dado que representa números com ponto flutuante de precisão simples.</li>
+        <li>Usado quando a precisão dos valores decimais não é tão crítica e se deseja economizar memória.</li>
+    </ul>
+
+    <h2>Declaração e Inicialização</h2>
+    <p>Você pode declarar uma variável ou constante do tipo Float usando a palavra-chave <code>var</code> ou <code>let</code>.</p>
+    <pre><code>let distancia: Float = 5.6
+var velocidade: Float = 3.4</code></pre>
+    <p>Swift é capaz de inferir o tipo Float quando o valor inicial é explicitamente um Float.</p>
+    <pre><code>let preco: Float = 19.99</code></pre>
+
+    <h1>Bool (Booleanos)</h1>
+    <h2>O que é?</h2>
+    <ul>
+        <li>Bool é um tipo de dado que representa valores booleanos, ou seja, valores que só podem ser <code>true</code> ou <code>false</code>.</li>
+        <li>Usado para representar condições lógicas e controlar o fluxo do programa com instruções condicionais.</li>
+    </ul>
+
+    <h2>Declaração e Inicialização</h2>
+    <p>Você pode declarar uma variável ou constante do tipo Bool usando a palavra-chave <code>var</code> ou <code>let</code>.</p>
+    <pre><code>let isSwiftFun: Bool = true
+var isRaining: Bool = false</code></pre>
+    <p>Swift é capaz de inferir o tipo Bool quando o valor inicial é explicitamente <code>true</code> ou <code>false</code>.</p>
+
+</body>
+</html>
+
