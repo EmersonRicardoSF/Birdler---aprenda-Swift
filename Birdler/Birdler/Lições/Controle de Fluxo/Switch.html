@@ -1,0 +1,48 @@
+    </style>
+</head>
+<body>
+            <h1>Switch</h1>
+            <p>O switch é uma alternativa ao uso de múltiplos if-else, e é usado para selecionar uma entre várias opções possíveis, baseado no valor de uma variável.</p>
+
+            <h3>Switch Statement</h3>
+            <p><strong>Descrição:</strong> Avalia o valor de uma expressão e executa o bloco de código associado ao caso correspondente.</p>
+            <pre><code>let diaDaSemana = "Quarta-feira"
+
+switch diaDaSemana {
+case "Segunda-feira":
+    print("Hoje é segunda-feira.")
+case "Terça-feira":
+    print("Hoje é terça-feira.")
+case "Quarta-feira":
+    print("Hoje é quarta-feira.")
+case "Quinta-feira":
+    print("Hoje é quinta-feira.")
+case "Sexta-feira":
+    print("Hoje é sexta-feira.")
+default:
+    print("Hoje é fim de semana.")
+}</code></pre>
+
+            <h3>Usando Intervalos e Padrões em switch</h3>
+            <p><strong>Descrição:</strong> Você pode usar intervalos e padrões para combinar casos em switch.</p>
+            <pre><code>let nota = 85
+
+switch nota {
+case 0..<60:
+    print("Nota F")
+case 60..<70:
+    print("Nota D")
+case 70..<80:
+    print("Nota C")
+case 80..<90:
+    print("Nota B")
+case 90...100:
+    print("Nota A")
+default:
+    print("Nota inválida")
+}</code></pre>
+        </div>
+    </div>
+</body>
+</html>
+

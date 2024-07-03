@@ -12,14 +12,14 @@
             "Variáveis",
             "Constantes",
             "Tipos de variáveis e constantes",
-            "Operadores Aritméticos,Comparação,Lógicos."
+            "Operadores - Aritméticos,Comparação,Lógicos."
         ]
     },
     
     {
         "name": "Controle de Fluxo",
         "sections": [
-            "Condicionais: if, else if, else",
+            "Condicionais if, else if, else",
             "Switch",
             "Loop"
         ]
@@ -29,8 +29,7 @@
         "name": "Funções, Estruturas e Classes",
         "sections": [
             "Funções",
-            "Estruturas: Struct",
-            "Classes: Class"
+            "Estruturas e Classes"
         ]
     },
     

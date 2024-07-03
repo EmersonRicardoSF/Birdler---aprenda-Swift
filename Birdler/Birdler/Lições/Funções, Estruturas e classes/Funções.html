@@ -1,0 +1,236 @@
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Funções</h1>
+        <p>O que é uma Função? Uma função é um bloco de código que executa uma tarefa específica. Funções são usadas para organizar e reutilizar código. Em Swift, as funções podem ter parâmetros e retornar valores.</p>
+
+        <div class="section">
+            <h2>Definindo uma Função</h2>
+            <p>Para definir uma função em Swift, usamos a palavra-chave <code>func</code>, seguida pelo nome da função, parâmetros (opcional), tipo de retorno (opcional) e o corpo da função.</p>
+            
+            <h3>Estrutura Básica</h3>
+            <pre><code>func nomeDaFuncao(parametros) -> TipoDeRetorno {
+    // Corpo da função
+    // Código a ser executado
+    return valor // Opcional, depende do tipo de retorno
+}</code></pre>
+
+            <h3>Exemplo Simples</h3>
+            <pre><code>func saudacao() {
+    print("Olá, Mundo!")
+}
+
+saudacao()
+// Saída: Olá, Mundo!</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Parâmetros de Função</h2>
+            <p>Parâmetros são valores que você pode passar para uma função para customizar seu comportamento. Cada parâmetro tem um nome e um tipo.</p>
+            
+            <h3>Função com Parâmetros</h3>
+            <pre><code>func saudacao(nome: String) {
+    print("Olá, \(nome)!")
+}
+
+saudacao(nome: "João")
+// Saída: Olá, João!</code></pre>
+
+            <h3>Múltiplos Parâmetros</h3>
+            <pre><code>func adicionar(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+let resultado = adicionar(a: 5, b: 3)
+print(resultado)
+// Saída: 8</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Retornando Valores</h2>
+            <p>Uma função pode retornar um valor para a parte do programa que a chamou. Para especificar que uma função retorna um valor, você adiciona uma seta (<code>-></code>) seguida pelo tipo de retorno depois dos parênteses de parâmetro.</p>
+            
+            <h3>Função com Retorno de Valor</h3>
+            <pre><code>func multiplicar(a: Int, b: Int) -> Int {
+    return a * b
+}
+
+let resultado = multiplicar(a: 4, b: 5)
+print(resultado)
+// Saída: 20</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Parâmetros e Retorno Opcionais</h2>
+            <p>Você pode definir funções sem parâmetros ou sem tipo de retorno.</p>
+
+            <h3>Sem Parâmetros</h3>
+            <pre><code>func saudacao() {
+    print("Olá, Mundo!")
+}
+
+saudacao()
+// Saída: Olá, Mundo!</code></pre>
+
+            <h3>Sem Retorno</h3>
+            <pre><code>func imprimirMensagem(mensagem: String) {
+    print(mensagem)
+}
+
+imprimirMensagem(mensagem: "Bem-vindo ao Swift!")
+// Saída: Bem-vindo ao Swift!</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Funções com Parâmetros Padrão</h2>
+            <p>Você pode fornecer valores padrão para os parâmetros em uma função. Isso permite chamar a função sem fornecer esses valores.</p>
+            <pre><code>func saudacao(nome: String = "Visitante") {
+    print("Olá, \(nome)!")
+}
+
+saudacao()
+// Saída: Olá, Visitante!
+
+saudacao(nome: "Maria")
+// Saída: Olá, Maria!</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Funções Variádicas</h2>
+            <p>Funções variádicas aceitam um número variável de argumentos do mesmo tipo. Para declarar um parâmetro variádico, você usa reticências (<code>...</code>) após o tipo do parâmetro.</p>
+            <pre><code>func somaDe(numeros: Int...) -> Int {
+    var soma = 0
+    for numero in numeros {
+        soma += numero
+    }
+    return soma
+}
+
+let resultado = somaDe(numeros: 1, 2, 3, 4, 5)
+print(resultado)
+// Saída: 15</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Nomes Externos e Internos para Parâmetros</h2>
+            <p>Você pode definir nomes diferentes para serem usados externamente e internamente na função.</p>
+            <pre><code>func dividir(_ numerador: Double, por denominador: Double) -> Double {
+    return numerador / denominador
+}
+
+let resultado = dividir(10.0, por: 2.0)
+print(resultado)
+// Saída: 5.0</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Funções Aninhadas</h2>
+            <p>Você pode definir funções dentro de outras funções. As funções aninhadas são úteis para organizar e encapsular a funcionalidade.</p>
+            <pre><code>func calcularFatorial(_ numero: Int) -> Int {
+    func fatorial(_ n: Int) -> Int {
+        return n == 0 ? 1 : n * fatorial(n - 1)
+    }
+    return fatorial(numero)
+}
+
+let resultado = calcularFatorial(5)
+print(resultado)
+// Saída: 120</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Funções como Tipos de Dados</h2>
+            <p>Funções podem ser tratadas como valores e passadas como argumentos para outras funções.</p>
+            <pre><code>func multiplicar(a: Int, b: Int) -> Int {
+    return a * b
+}
+
+func aplicarOperacao(_ operacao: (Int, Int) -> Int, _ a: Int, _ b: Int) -> Int {
+    return operacao(a, b)
+}
+
+let resultado = aplicarOperacao(multiplicar, 4, 5)
+print(resultado)
+// Saída: 20</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Funções de Retorno</h2>
+            <p>Funções podem retornar outras funções.</p>
+            <pre><code>func criarIncrementador(incremento: Int) -> (Int) -> Int {
+    func incrementador(_ valor: Int) -> Int {
+        return valor + incremento
+    }
+    return incrementador
+}
+
+let incrementaPorCinco = criarIncrementador(incremento: 5)
+let resultado = incrementaPorCinco(10)
+print(resultado)
+// Saída: 15</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos Combinados</h2>
+            
+            <h3>Exemplo Completo</h3>
+            <pre><code>// Definindo uma função com múltiplos parâmetros e retorno
+func calcularMedia(_ numeros: Double...) -> Double {
+    let soma = numeros.reduce(0, +)
+    return soma / Double(numeros.count)
+}
+
+let media = calcularMedia(5.5, 3.0, 8.0, 6.5)
+print("A média é \(media)")
+// Saída: A média é 5.75
+
+// Definindo uma função com parâmetros padrão
+func cumprimentar(_ nome: String = "Visitante", comSaudacao saudacao: String = "Olá") {
+    print("\(saudacao), \(nome)!")
+}
+
+cumprimentar()
+// Saída: Olá, Visitante!
+
+cumprimentar("João", comSaudacao: "Bem-vindo")
+// Saída: Bem-vindo, João!
+
+// Definindo uma função aninhada
+func calcularPotencia(base: Int, expoente: Int) -> Int {
+    func potencia(_ base: Int, _ expoente: Int) -> Int {
+        return expoente == 0 ? 1 : base * potencia(base, expoente - 1)
+    }
+    return potencia(base, expoente)
+}
+
+let resultadoPotencia = calcularPotencia(base: 2, expoente: 3)
+print("2 elevado a 3 é \(resultadoPotencia)")
+// Saída: 2 elevado a 3 é 8
+
+// Definindo uma função que retorna outra função
+func criarSaudacao(_ saudacao: String) -> (String) -> String {
+    func saudacaoPersonalizada(_ nome: String) -> String {
+        return "\(saudacao), \(nome)!"
+    }
+    return saudacaoPersonalizada
+}
+
+let saudacaoAmigavel = criarSaudacao("Olá")
+print(saudacaoAmigavel("Ana"))
+// Saída: Olá, Ana!</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Boas Práticas</h2>
+            <ul>
+                <li><strong>Nomes Significativos:</strong> Use nomes de função claros e descritivos para que o propósito da função seja facilmente compreendido.</li>
+                <li><strong>Modularização:</strong> Divida seu código em funções pequenas e específicas para melhorar a legibilidade e a reutilização.</li>
+                <li><strong>Parâmetros Padrão:</strong> Use parâmetros padrão para simplificar chamadas de função quando valores comuns são usados frequentemente.</li>
+                <li><strong>Documentação:</strong> Adicione comentários e documentação para descrever o comportamento e os parâmetros da função.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

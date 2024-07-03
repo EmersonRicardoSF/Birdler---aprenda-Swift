@@ -69,6 +69,12 @@
 		E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B632C09626F00DEA1C3 /* Variáveis.html */; };
 		E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */; };
 		E86C0B6B2C0964C300DEA1C3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */; };
+		E86C11CE2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11CD2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html */; };
+		E86C11D22C35336800A9EF47 /* Condicionais if, else if, else.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11D12C35336800A9EF47 /* Condicionais if, else if, else.html */; };
+		E86C11D42C353C0500A9EF47 /* Switch.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11D32C353C0500A9EF47 /* Switch.html */; };
+		E86C11D62C353D3000A9EF47 /* Loop.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11D52C353D3000A9EF47 /* Loop.html */; };
+		E86C11D92C3549EE00A9EF47 /* Funções.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11D82C3549EE00A9EF47 /* Funções.html */; };
+		E86C11DB2C354EB600A9EF47 /* Estruturas e Classes.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C11DA2C354EB600A9EF47 /* Estruturas e Classes.html */; };
 		E88DB0322C2F9F10000430A1 /* Boas Vindas.html in Resources */ = {isa = PBXBuildFile; fileRef = E88DB0312C2F9F10000430A1 /* Boas Vindas.html */; };
 		E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */; };
 		E89B84E82BDC759D00035E26 /* NewsHearderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B84E72BDC759D00035E26 /* NewsHearderView.swift */; };
@@ -172,6 +178,12 @@
 		E86C0B632C09626F00DEA1C3 /* Variáveis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Variáveis.html"; sourceTree = "<group>"; };
 		E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E86C11CD2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Operadores - Aritméticos,Comparação,Lógicos..html"; sourceTree = "<group>"; };
+		E86C11D12C35336800A9EF47 /* Condicionais if, else if, else.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Condicionais if, else if, else.html"; sourceTree = "<group>"; };
+		E86C11D32C353C0500A9EF47 /* Switch.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Switch.html; sourceTree = "<group>"; };
+		E86C11D52C353D3000A9EF47 /* Loop.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Loop.html; sourceTree = "<group>"; };
+		E86C11D82C3549EE00A9EF47 /* Funções.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Funções.html"; sourceTree = "<group>"; };
+		E86C11DA2C354EB600A9EF47 /* Estruturas e Classes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Estruturas e Classes.html"; sourceTree = "<group>"; };
 		E88DB0312C2F9F10000430A1 /* Boas Vindas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Boas Vindas.html"; sourceTree = "<group>"; };
 		E89B84E52BDC63E100035E26 /* UiViewControler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewControler+Extension.swift"; sourceTree = "<group>"; };
 		E89B84E72BDC759D00035E26 /* NewsHearderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHearderView.swift; sourceTree = "<group>"; };
@@ -634,7 +646,10 @@
 		E86C0B5F2C09621F00DEA1C3 /* Lições */ = {
 			isa = PBXGroup;
 			children = (
-				E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */,
+				E86C11CF2C3532F700A9EF47 /* Bem Vindo(a) */,
+				E86C0B602C09624A00DEA1C3 /* Sintaxe Básica */,
+				E86C11D02C35332000A9EF47 /* Controle de Fluxo */,
+				E86C11D72C35498D00A9EF47 /* Funções, Estruturas e classes */,
 				A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */,
 				E84946912C34BD6900CF9A39 /* Fundamentos do Desenvolvimento iOS */,
 			);
@@ -642,15 +657,15 @@
 			path = "Lições";
 			sourceTree = "<group>";
 		};
-		E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */ = {
+		E86C0B602C09624A00DEA1C3 /* Sintaxe Básica */ = {
 			isa = PBXGroup;
 			children = (
-				E88DB0312C2F9F10000430A1 /* Boas Vindas.html */,
 				E86C0B632C09626F00DEA1C3 /* Variáveis.html */,
 				E84946922C34BDB600CF9A39 /* Constantes.html */,
 				E84946942C34BDE100CF9A39 /* Tipos de variáveis e constantes.html */,
+				E86C11CD2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html */,
 			);
-			name = "Introdução ao Swift";
+			name = "Sintaxe Básica";
 			path = "Introdução ao Swift";
 			sourceTree = "<group>";
 		};
@@ -661,6 +676,34 @@
 				E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E86C11CF2C3532F700A9EF47 /* Bem Vindo(a) */ = {
+			isa = PBXGroup;
+			children = (
+				E88DB0312C2F9F10000430A1 /* Boas Vindas.html */,
+			);
+			path = "Bem Vindo(a)";
+			sourceTree = "<group>";
+		};
+		E86C11D02C35332000A9EF47 /* Controle de Fluxo */ = {
+			isa = PBXGroup;
+			children = (
+				E86C11D12C35336800A9EF47 /* Condicionais if, else if, else.html */,
+				E86C11D32C353C0500A9EF47 /* Switch.html */,
+				E86C11D52C353D3000A9EF47 /* Loop.html */,
+			);
+			path = "Controle de Fluxo";
+			sourceTree = "<group>";
+		};
+		E86C11D72C35498D00A9EF47 /* Funções, Estruturas e classes */ = {
+			isa = PBXGroup;
+			children = (
+				E86C11D82C3549EE00A9EF47 /* Funções.html */,
+				E86C11DA2C354EB600A9EF47 /* Estruturas e Classes.html */,
+			);
+			name = "Funções, Estruturas e classes";
+			path = "Funções, Estruturas e classes";
 			sourceTree = "<group>";
 		};
 		E8C4040D2BB799A900226BDC /* Login */ = {
@@ -794,20 +837,24 @@
 				E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */,
 				E84946952C34BDE100CF9A39 /* Tipos de variáveis e constantes.html in Resources */,
 				E8C4044E2BBBFD1E00226BDC /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				E86C11D22C35336800A9EF47 /* Condicionais if, else if, else.html in Resources */,
 				E86C0B502C094C3400DEA1C3 /* Home.json in Resources */,
 				E8C4045D2BBBFD1E00226BDC /* Urbanist-SemiBoldItalic.ttf in Resources */,
+				E86C11DB2C354EB600A9EF47 /* Estruturas e Classes.html in Resources */,
 				E8C4042D2BB8015300226BDC /* DMSans-ExtraBold.ttf in Resources */,
 				E8C404312BB8015300226BDC /* DMSans-ExtraLight.ttf in Resources */,
 				E8C404292BB8015300226BDC /* DMSans-Regular.ttf in Resources */,
 				A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */,
 				A3BC6B2E2C33883C0041A387 /* UITableView e UICollectionView.html in Resources */,
 				E8C404532BBBFD1E00226BDC /* Urbanist-MediumItalic.ttf in Resources */,
+				E86C11D42C353C0500A9EF47 /* Switch.html in Resources */,
 				A3BC6B282C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html in Resources */,
 				E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */,
 				E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */,
 				63CA80B32C00B947000764D7 /* GoogleService-Info.plist in Resources */,
 				85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */,
 				A3BC6B222C3377D80041A387 /* Navegação no Xcode.html in Resources */,
+				E86C11D62C353D3000A9EF47 /* Loop.html in Resources */,
 				E8C4045A2BBBFD1E00226BDC /* Urbanist-ThinItalic.ttf in Resources */,
 				85F3A9AD2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html in Resources */,
 				85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */,
@@ -828,6 +875,7 @@
 				E8C404322BB8015300226BDC /* DMSans-Light.ttf in Resources */,
 				85F3A9AF2C317F360055A6FF /* Manipulação de JSON.html in Resources */,
 				E8C4045B2BBBFD1E00226BDC /* Urbanist-Black.ttf in Resources */,
+				E86C11D92C3549EE00A9EF47 /* Funções.html in Resources */,
 				E8C404552BBBFD1E00226BDC /* Urbanist-Regular.ttf in Resources */,
 				E88DB0322C2F9F10000430A1 /* Boas Vindas.html in Resources */,
 				A3BC6B2C2C3388220041A387 /* Auto Layout e Constraints.html in Resources */,
@@ -851,6 +899,7 @@
 				E8C404372BB8015300226BDC /* DMSans-Black.ttf in Resources */,
 				E8C4042B2BB8015300226BDC /* DMSans-SemiBoldItalic.ttf in Resources */,
 				E8C404582BBBFD1E00226BDC /* Urbanist-BoldItalic.ttf in Resources */,
+				E86C11CE2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html in Resources */,
 				85F3A9B12C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
