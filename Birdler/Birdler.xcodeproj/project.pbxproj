@@ -51,6 +51,8 @@
 		BE8B712A2C11FEB5000DD200 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B71292C11FEB5000DD200 /* FirebaseAppCheck */; };
 		BE8B712D2C11FEDF000DD200 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B712C2C11FEDF000DD200 /* FirebaseAuth */; };
 		BE8B71302C1290FB000DD200 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE8B712F2C1290FB000DD200 /* IQKeyboardManagerSwift */; };
+		E84946932C34BDB600CF9A39 /* Constantes.html in Resources */ = {isa = PBXBuildFile; fileRef = E84946922C34BDB600CF9A39 /* Constantes.html */; };
+		E84946952C34BDE100CF9A39 /* Tipos de variáveis e constantes.html in Resources */ = {isa = PBXBuildFile; fileRef = E84946942C34BDE100CF9A39 /* Tipos de variáveis e constantes.html */; };
 		E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C59D22BC64901001226FB /* TabBarVC.swift */; };
 		E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */; };
 		E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84C59D72BC68882001226FB /* PoppinsFont.swift */; };
@@ -64,8 +66,6 @@
 		E86C0B5A2C09598C00DEA1C3 /* LicaoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B592C09598C00DEA1C3 /* LicaoScreen.swift */; };
 		E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B5B2C09606D00DEA1C3 /* HTMLWrapper-Slim.html */; };
 		E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B5D2C09607400DEA1C3 /* CSSWrapper.css */; };
-		E86C0B642C09626F00DEA1C3 /* Strings e inteiros.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */; };
-		E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */; };
 		E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */ = {isa = PBXBuildFile; fileRef = E86C0B632C09626F00DEA1C3 /* Variáveis.html */; };
 		E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */; };
 		E86C0B6B2C0964C300DEA1C3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */; };
@@ -154,6 +154,8 @@
 		A3BC6B2B2C3388220041A387 /* Auto Layout e Constraints.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Auto Layout e Constraints.html"; sourceTree = "<group>"; };
 		A3BC6B2D2C33883C0041A387 /* UITableView e UICollectionView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "UITableView e UICollectionView.html"; sourceTree = "<group>"; };
 		A3BC6B2F2C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Gestão de ciclo de vida de View Controllers.html"; sourceTree = "<group>"; };
+		E84946922C34BDB600CF9A39 /* Constantes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Constantes.html; sourceTree = "<group>"; };
+		E84946942C34BDE100CF9A39 /* Tipos de variáveis e constantes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Tipos de variáveis e constantes.html"; sourceTree = "<group>"; };
 		E84C59D22BC64901001226FB /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		E84C59D52BC68853001226FB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		E84C59D72BC68882001226FB /* PoppinsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppinsFont.swift; sourceTree = "<group>"; };
@@ -167,8 +169,6 @@
 		E86C0B592C09598C00DEA1C3 /* LicaoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicaoScreen.swift; sourceTree = "<group>"; };
 		E86C0B5B2C09606D00DEA1C3 /* HTMLWrapper-Slim.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "HTMLWrapper-Slim.html"; sourceTree = "<group>"; };
 		E86C0B5D2C09607400DEA1C3 /* CSSWrapper.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = CSSWrapper.css; sourceTree = "<group>"; };
-		E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Strings e inteiros.html"; sourceTree = "<group>"; };
-		E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Tipos simples-Resumo.html"; sourceTree = "<group>"; };
 		E86C0B632C09626F00DEA1C3 /* Variáveis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Variáveis.html"; sourceTree = "<group>"; };
 		E86C0B682C09648500DEA1C3 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		E86C0B6A2C0964C300DEA1C3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -503,6 +503,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E84946912C34BD6900CF9A39 /* Fundamentos do Desenvolvimento iOS */ = {
+			isa = PBXGroup;
+			children = (
+				85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */,
+				85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */,
+				85F3A9AA2C317E510055A6FF /* URLSession.html */,
+				85F3A9AC2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html */,
+				85F3A9AE2C317F360055A6FF /* Manipulação de JSON.html */,
+				85F3A9B02C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html */,
+			);
+			path = "Fundamentos do Desenvolvimento iOS";
+			sourceTree = "<group>";
+		};
 		E84C59D12BC6489D001226FB /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +636,7 @@
 			children = (
 				E86C0B602C09624A00DEA1C3 /* Introdução ao Swift */,
 				A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */,
+				E84946912C34BD6900CF9A39 /* Fundamentos do Desenvolvimento iOS */,
 			);
 			name = "Lições";
 			path = "Lições";
@@ -633,14 +647,8 @@
 			children = (
 				E88DB0312C2F9F10000430A1 /* Boas Vindas.html */,
 				E86C0B632C09626F00DEA1C3 /* Variáveis.html */,
-				E86C0B612C09626F00DEA1C3 /* Strings e inteiros.html */,
-				E86C0B622C09626F00DEA1C3 /* Tipos simples-Resumo.html */,
-				85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */,
-				85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */,
-				85F3A9AA2C317E510055A6FF /* URLSession.html */,
-				85F3A9AC2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html */,
-				85F3A9AE2C317F360055A6FF /* Manipulação de JSON.html */,
-				85F3A9B02C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html */,
+				E84946922C34BDB600CF9A39 /* Constantes.html */,
+				E84946942C34BDE100CF9A39 /* Tipos de variáveis e constantes.html */,
 			);
 			name = "Introdução ao Swift";
 			path = "Introdução ao Swift";
@@ -784,6 +792,7 @@
 			files = (
 				E8C404572BBBFD1E00226BDC /* Urbanist-ExtraBold.ttf in Resources */,
 				E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */,
+				E84946952C34BDE100CF9A39 /* Tipos de variáveis e constantes.html in Resources */,
 				E8C4044E2BBBFD1E00226BDC /* Urbanist-ExtraLightItalic.ttf in Resources */,
 				E86C0B502C094C3400DEA1C3 /* Home.json in Resources */,
 				E8C4045D2BBBFD1E00226BDC /* Urbanist-SemiBoldItalic.ttf in Resources */,
@@ -804,6 +813,7 @@
 				85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */,
 				E8C404522BBBFD1E00226BDC /* Urbanist-Bold.ttf in Resources */,
 				E8C4045E2BBBFD1E00226BDC /* Urbanist-Italic.ttf in Resources */,
+				E84946932C34BDB600CF9A39 /* Constantes.html in Resources */,
 				E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */,
 				E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */,
 				E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */,
@@ -820,7 +830,6 @@
 				E8C4045B2BBBFD1E00226BDC /* Urbanist-Black.ttf in Resources */,
 				E8C404552BBBFD1E00226BDC /* Urbanist-Regular.ttf in Resources */,
 				E88DB0322C2F9F10000430A1 /* Boas Vindas.html in Resources */,
-				E86C0B642C09626F00DEA1C3 /* Strings e inteiros.html in Resources */,
 				A3BC6B2C2C3388220041A387 /* Auto Layout e Constraints.html in Resources */,
 				851942122C189A4C00733F77 /* Exercise.json in Resources */,
 				E8C4044D2BBBFD1E00226BDC /* Urbanist-ExtraLight.ttf in Resources */,
@@ -830,7 +839,6 @@
 				E8C4045C2BBBFD1E00226BDC /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 				A3BC6B242C3387AF0041A387 /* Criar e configurar um projeto.html in Resources */,
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
-				E86C0B652C09626F00DEA1C3 /* Tipos simples-Resumo.html in Resources */,
 				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
 				E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */,
 				E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */,
