@@ -21,6 +21,9 @@
 		852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852220812BC0C1EA008F11CE /* HomeHeaderView.swift */; };
 		85403D312C17134D00A20CCF /* GenericExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403D302C17134D00A20CCF /* GenericExerciseVC.swift */; };
 		85403D332C17178800A20CCF /* GenericExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403D322C17178800A20CCF /* GenericExerciseScreen.swift */; };
+		85610F8A2C34D75100991757 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 85610F892C34D75100991757 /* SideMenu */; };
+		85610F8D2C34D85D00991757 /* SideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85610F8C2C34D85D00991757 /* SideVC.swift */; };
+		85610F8F2C34E14C00991757 /* SideScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85610F8E2C34E14C00991757 /* SideScreen.swift */; };
 		8590120A2BBF58850046283C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012092BBF58850046283C /* HomeVC.swift */; };
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
 		859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012102BBF623D0046283C /* HomeTableViewCell.swift */; };
@@ -129,6 +132,8 @@
 		852220812BC0C1EA008F11CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		85403D302C17134D00A20CCF /* GenericExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExerciseVC.swift; sourceTree = "<group>"; };
 		85403D322C17178800A20CCF /* GenericExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExerciseScreen.swift; sourceTree = "<group>"; };
+		85610F8C2C34D85D00991757 /* SideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideVC.swift; sourceTree = "<group>"; };
+		85610F8E2C34E14C00991757 /* SideScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideScreen.swift; sourceTree = "<group>"; };
 		859012092BBF58850046283C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		859012102BBF623D0046283C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 			files = (
 				BE8B71302C1290FB000DD200 /* IQKeyboardManagerSwift in Frameworks */,
 				BE8B71262C11FEB5000DD200 /* FirebaseAnalyticsSwift in Frameworks */,
+				85610F8A2C34D75100991757 /* SideMenu in Frameworks */,
 				BE8B712D2C11FEDF000DD200 /* FirebaseAuth in Frameworks */,
 				BE8B71222C11FEB5000DD200 /* FirebaseAnalytics in Frameworks */,
 				BE8B71242C11FEB5000DD200 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
@@ -372,6 +378,15 @@
 			path = Generic;
 			sourceTree = "<group>";
 		};
+		85610F8B2C34D81C00991757 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				85610F8C2C34D85D00991757 /* SideVC.swift */,
+				85610F8E2C34E14C00991757 /* SideScreen.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		859012062BBF58190046283C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +479,7 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				85610F8B2C34D81C00991757 /* SideMenu */,
 				E86C0B672C09644500DEA1C3 /* Extension */,
 				E86C0B5F2C09621F00DEA1C3 /* Lições */,
 				E84C59D42BC64976001226FB /* Feature */,
@@ -743,6 +759,7 @@
 				BE8B71292C11FEB5000DD200 /* FirebaseAppCheck */,
 				BE8B712C2C11FEDF000DD200 /* FirebaseAuth */,
 				BE8B712F2C1290FB000DD200 /* IQKeyboardManagerSwift */,
+				85610F892C34D75100991757 /* SideMenu */,
 			);
 			productName = Birdler;
 			productReference = A313671C2BB7889F00F0CF5A /* Birdler.app */;
@@ -775,6 +792,7 @@
 			packageReferences = (
 				BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				BE8B712E2C1290FB000DD200 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				85610F882C34D75100991757 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = A313671D2BB7889F00F0CF5A /* Products */;
 			projectDirPath = "";
@@ -864,8 +882,10 @@
 			files = (
 				852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */,
 				E8C404602BBBFEEA00226BDC /* UrbanistFont.swift in Sources */,
+				85610F8F2C34E14C00991757 /* SideScreen.swift in Sources */,
 				63A993592BF4042B00429C35 /* RecoverVC.swift in Sources */,
 				63A993612BF4082800429C35 /* ExerciseScreen.swift in Sources */,
+				85610F8D2C34D85D00991757 /* SideVC.swift in Sources */,
 				E84C80CE2BD221D000F6DEC8 /* NewsTableViewCell.swift in Sources */,
 				E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */,
 				851942202C18A2A900733F77 /* GenericViewModel.swift in Sources */,
@@ -1116,6 +1136,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		85610F882C34D75100991757 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 		BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1135,6 +1163,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		85610F892C34D75100991757 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85610F882C34D75100991757 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
 		BE8B71212C11FEB5000DD200 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
