@@ -31,7 +31,7 @@ class SideScreen: UIView {
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "teste1")
+        image.image = UIImage(named: "teste2")
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
         image.layer.cornerRadius = 12

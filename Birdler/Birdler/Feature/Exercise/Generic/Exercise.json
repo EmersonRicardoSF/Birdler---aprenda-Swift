@@ -5,7 +5,7 @@
                 "text": "Quando o Swift foi criado?"
             },
             "questionsLabel": {
-                "text": "Swift é uma linguagem de programação desenvolvida pela Apple e implementada em: "
+                "text": "Swift é uma linguagem de programação desenvolvida pela Apple e implementada em:"
             },
             "exerciseButtons": [
                 {
@@ -31,26 +31,312 @@
                 "text": "O que significa @escaping?"
             },
             "questionsLabel": {
-                "text": "A opção correta é: "
+                "text": "A opção correta é:"
             },
             "exerciseButtons": [
                 {
                     "title": "utilizar um framework",
                     "enabled": true,
-                    "backgroundColor": ".gray"
+                    "backgroundColor": "gray"
                 },
                 {
                     "title": "esperar uma resposta sincrona",
                     "enabled": true,
-                    "backgroundColor": ".gray"
+                    "backgroundColor": "gray"
                 },
                 {
                     "title": "esperar uma resposta assíncrona",
                     "enabled": true,
-                    "backgroundColor": ".gray"
+                    "backgroundColor": "gray"
                 }
             ],
             "correctAnswer": "esperar uma resposta assíncrona"
+        },
+        {
+            "titleLabel": {
+                "text": "Qual a principal linguagem de programação utilizada no Xcode para desenvolver aplicativos iOS?"
+            },
+            "questionsLabel": {
+                "text": "A principal linguagem de programação é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "Python",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Java",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Swift",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "Swift"
+        },
+        {
+            "titleLabel": {
+                "text": "Como você declara uma constante em Swift?"
+            },
+            "questionsLabel": {
+                "text": "Para declarar uma constante, você usa:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "var constante = 10",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "let constante = 10",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "const constante = 10",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "let constante = 10"
+        },
+        {
+            "titleLabel": {
+                "text": "Qual a função principal do Storyboard no Xcode?"
+            },
+            "questionsLabel": {
+                "text": "O Storyboard é usado para:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "Escrever código",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Gerenciar arquivos de mídia",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Design de interfaces gráficas",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "Design de interfaces gráficas"
+        },
+        {
+            "titleLabel": {
+                "text": "Qual a sintaxe correta para declarar uma função em Swift?"
+            },
+            "questionsLabel": {
+                "text": "A sintaxe correta é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "function minhaFuncao() {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "func minhaFuncao() {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "def minhaFuncao() {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "func minhaFuncao() {}"
+        },
+        {
+            "titleLabel": {
+                "text": "Como você declara uma variável opcional em Swift?"
+            },
+            "questionsLabel": {
+                "text": "A sintaxe correta é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "var nome: String?",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "variavel nome = String",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "let nome: Int!",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "var nome: String?"
+        },
+        {
+            "titleLabel": {
+                "text": "Qual das seguintes opções é uma estrutura de controle de fluxo em Swift?"
+            },
+            "questionsLabel": {
+                "text": "A estrutura de controle de fluxo é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "switch",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "foreach",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "until",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "switch"
+        },
+        {
+            "titleLabel": {
+                "text": "Como você imprime uma mensagem no console em Swift?"
+            },
+            "questionsLabel": {
+                "text": "Para imprimir no console, use:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "print(\"Olá, mundo!\")",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "console.log(\"Olá, mundo!\")",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "echo \"Olá, mundo!\"",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "print(\"Olá, mundo!\")"
+        },
+        {
+            "titleLabel": {
+                "text": "Qual é o ambiente de desenvolvimento integrado (IDE) oficial para desenvolvimento iOS?"
+            },
+            "questionsLabel": {
+                "text": "O IDE oficial é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "Visual Studio",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Xcode",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Eclipse",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "Xcode"
+        },
+        {
+            "titleLabel": {
+                "text": "Como você define uma classe em Swift?"
+            },
+            "questionsLabel": {
+                "text": "A sintaxe correta para definir uma classe é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "class MinhaClasse {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "define MinhaClasse {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "new class MinhaClasse {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "class MinhaClasse {}"
+        },
+        {
+            "titleLabel": {
+                "text": "O que é um IBOutlet no Xcode?"
+            },
+            "questionsLabel": {
+                "text": "Um IBOutlet é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "Um comando de terminal",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Uma referência a um elemento de interface",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "Uma biblioteca externa",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "Uma referência a um elemento de interface"
+        },
+        {
+            "titleLabel": {
+                "text": "Como você cria um loop for em Swift?"
+            },
+            "questionsLabel": {
+                "text": "A sintaxe correta é:"
+            },
+            "exerciseButtons": [
+                {
+                    "title": "for (var i = 0; i < 10; i++) {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "for i in 0..<10 {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                },
+                {
+                    "title": "for each i in 0 to 10 {}",
+                    "enabled": true,
+                    "backgroundColor": "gray"
+                }
+            ],
+            "correctAnswer": "for i in 0..<10 {}"
         }
     ]
 }

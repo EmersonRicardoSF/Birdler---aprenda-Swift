@@ -34,6 +34,8 @@ class GenericExerciseScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.dmsansFont(type: .bold, size: 20)
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.textAlignment = .left
         label.textColor = .systemOrange
         return label

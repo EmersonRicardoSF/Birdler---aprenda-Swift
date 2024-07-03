@@ -19,6 +19,8 @@
 		8519421D2C189E1F00733F77 /* GenericModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519421C2C189E1F00733F77 /* GenericModel.swift */; };
 		851942202C18A2A900733F77 /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519421F2C18A2A900733F77 /* GenericViewModel.swift */; };
 		852220822BC0C1EA008F11CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852220812BC0C1EA008F11CE /* HomeHeaderView.swift */; };
+		852F52812C355A27000BADBB /* StartExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F52802C355A27000BADBB /* StartExerciseVC.swift */; };
+		852F52832C355A3C000BADBB /* StartExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F52822C355A3C000BADBB /* StartExerciseScreen.swift */; };
 		85403D312C17134D00A20CCF /* GenericExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403D302C17134D00A20CCF /* GenericExerciseVC.swift */; };
 		85403D332C17178800A20CCF /* GenericExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85403D322C17178800A20CCF /* GenericExerciseScreen.swift */; };
 		85610F8A2C34D75100991757 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 85610F892C34D75100991757 /* SideMenu */; };
@@ -130,6 +132,8 @@
 		8519421C2C189E1F00733F77 /* GenericModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModel.swift; sourceTree = "<group>"; };
 		8519421F2C18A2A900733F77 /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		852220812BC0C1EA008F11CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		852F52802C355A27000BADBB /* StartExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExerciseVC.swift; sourceTree = "<group>"; };
+		852F52822C355A3C000BADBB /* StartExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExerciseScreen.swift; sourceTree = "<group>"; };
 		85403D302C17134D00A20CCF /* GenericExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExerciseVC.swift; sourceTree = "<group>"; };
 		85403D322C17178800A20CCF /* GenericExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExerciseScreen.swift; sourceTree = "<group>"; };
 		85610F8C2C34D85D00991757 /* SideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideVC.swift; sourceTree = "<group>"; };
@@ -366,6 +370,15 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		852F527F2C3559E2000BADBB /* StartExercise */ = {
+			isa = PBXGroup;
+			children = (
+				852F52802C355A27000BADBB /* StartExerciseVC.swift */,
+				852F52822C355A3C000BADBB /* StartExerciseScreen.swift */,
+			);
+			path = StartExercise;
+			sourceTree = "<group>";
+		};
 		85403D2F2C1712FF00A20CCF /* Generic */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +492,7 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				852F527F2C3559E2000BADBB /* StartExercise */,
 				85610F8B2C34D81C00991757 /* SideMenu */,
 				E86C0B672C09644500DEA1C3 /* Extension */,
 				E86C0B5F2C09621F00DEA1C3 /* Lições */,
@@ -896,6 +910,7 @@
 				E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */,
 				E89B84E82BDC759D00035E26 /* NewsHearderView.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
+				852F52812C355A27000BADBB /* StartExerciseVC.swift in Sources */,
 				63A993662BF4089200429C35 /* ExerciseCell.swift in Sources */,
 				E84C80D52BD3277200F6DEC8 /* NewsScreen.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
@@ -913,6 +928,7 @@
 				63A993532BF400D900429C35 /* RegisterScreen.swift in Sources */,
 				E86C0B532C094D6300DEA1C3 /* HomeModel.swift in Sources */,
 				E86C0B572C09594C00DEA1C3 /* LicaoVC.swift in Sources */,
+				852F52832C355A3C000BADBB /* StartExerciseScreen.swift in Sources */,
 				63A993512BF4005E00429C35 /* RegisterVC.swift in Sources */,
 				E84C80DA2BD3DEDC00F6DEC8 /* NewsTableViewScreen.swift in Sources */,
 				85403D332C17178800A20CCF /* GenericExerciseScreen.swift in Sources */,
