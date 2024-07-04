@@ -395,13 +395,6 @@
 			path = StartExercise;
 			sourceTree = "<group>";
 		};
-		852F52842C36A645000BADBB /* AdvancedConfigs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AdvancedConfigs;
-			sourceTree = "<group>";
-		};
 		852F528A2C36A9C7000BADBB /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,7 +578,6 @@
 			isa = PBXGroup;
 			children = (
 				852F528A2C36A9C7000BADBB /* EditProfile */,
-				852F52842C36A645000BADBB /* AdvancedConfigs */,
 				852F527F2C3559E2000BADBB /* StartExercise */,
 				85610F8B2C34D81C00991757 /* SideMenu */,
 				E86C0B672C09644500DEA1C3 /* Extension */,
