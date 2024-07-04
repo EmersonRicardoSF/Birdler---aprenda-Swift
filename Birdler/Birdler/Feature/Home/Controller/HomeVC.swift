@@ -4,7 +4,7 @@
 //
 //  Created by Pedro Ribeiro on 04/04/2024.
 //
-
+import SideMenu
 import UIKit
 
 class HomeVC: UIViewController {
@@ -114,21 +114,29 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeVC: HomeScreenProtocol {
-    func testNavigation() {
-        let vc: GenericExerciseVC = GenericExerciseVC()
-        navigationController?.pushViewController(vc, animated: true)
+    func customNavigation() {
+      
     }
     
     func tappedEnviarButton() {
         
     }
     
-    func customNavigation() {
-        
+    
+    func testNavigation() {
+        // Defina o menu
+        let menu = SideMenuNavigationController(rootViewController: SideVC())
+
+        // Apresentar o menu
+        present(menu, animated: true, completion: nil)
+    }
+    
+//    func testNavigation() {
+//        let vc: SideVC = SideVC()
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     
-}
 
 struct sectionStudy {
     

@@ -1,47 +1,44 @@
-//
-//  SceneDelegate.swift
-//  Birdler
-//
-//  Created by Emerson Ricardo Saia Filho on 29/03/24.
-//
-
 import UIKit
+import SideMenu
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     var usuarioLogado = UserDefaults.standard.bool(forKey: "UsuarioLogado")
-
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let appearanceNav = UINavigationBar.appearance()
         appearanceNav.tintColor = .white
         
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        guard let windowScene = scene as? UIWindowScene else { return }
         
-        switch usuarioLogado {
+        let window = UIWindow(windowScene: windowScene)
+        window.overrideUserInterfaceStyle = .dark
         
-        case true:
-            let window = UIWindow(windowScene: windowScene)
-            let vc: TabBarVC = TabBarVC()
-            window.overrideUserInterfaceStyle = .dark
+        if usuarioLogado {
+            let vc = TabBarVC()
             window.rootViewController = vc
-            window.makeKeyAndVisible()
-            self.window = window
-        
-        case false:
-            let window = UIWindow(windowScene: windowScene)
-            let vc: LoginVC = LoginVC()
+        } else {
+            let vc = LoginVC()
             let navVC = UINavigationController(rootViewController: vc)
-            window.overrideUserInterfaceStyle = .dark
             window.rootViewController = navVC
-            window.makeKeyAndVisible()
-            self.window = window
         }
-    
+        
+        window.makeKeyAndVisible()
+        self.window = window
+        
+
+        // Define the menus
+        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: SideVC())
+        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
+
+        // Setup gestures: the left and/or right menus must be set up (above) for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
+        if let rootView = window.rootViewController?.view {
+            SideMenuManager.default.addPanGestureToPresent(toView: rootView)
+            SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: rootView)
+        }
     }
-    
-   
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -70,7 +67,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-    
-    
 }
-
