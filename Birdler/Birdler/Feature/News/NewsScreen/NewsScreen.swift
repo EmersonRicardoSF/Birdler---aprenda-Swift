@@ -37,28 +37,28 @@ class NewsScreen: UIView {
     }()
     
     lazy var docAppleDevButton: UIButton = {
-        let button: UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Documentação Apple Developer", for: .normal)
-        button.titleLabel?.font = UIFont.poppinsFont(type: .regular, size: 13)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(opendoc), for: .touchUpInside)
+        let btn: UIButton = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Documentação Apple Developer", for: .normal)
+        btn.titleLabel?.font = UIFont.poppinsFont(type: .regular, size: 13)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .white
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 8
+        btn.addTarget(self, action: #selector(opendoc), for: .touchUpInside)
         
-        return button
+        return btn
         
     }()
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = .none
-        tableView.register(NewsHearderView.self, forHeaderFooterViewReuseIdentifier: NewsHearderView.identifier)
-        return tableView
+        let tv = UITableView(frame: .zero, style: .insetGrouped)
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
+        tv.backgroundColor = .clear
+        tv.separatorStyle = .none
+        tv.register(NewsHearderView.self, forHeaderFooterViewReuseIdentifier: NewsHearderView.identifer)
+        return tv
         
     }()
     
@@ -69,6 +69,7 @@ class NewsScreen: UIView {
     
     @objc func tappedDocAppleDevButton() {
         print("Indo para a Web")
+//        self.delegate?.tappedDocAppleDevButton()
         
     }
     
@@ -83,6 +84,7 @@ class NewsScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
         tableView.delegate = delegate
         tableView.dataSource = dataSource
@@ -96,6 +98,7 @@ class NewsScreen: UIView {
         addSubview(tableView)
         
     }
+
     
     func configConstrains(){
         NSLayoutConstraint.activate([
@@ -108,7 +111,8 @@ class NewsScreen: UIView {
             docAppleDevButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 64),
             docAppleDevButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
             docAppleDevButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -22),
-          
+//            docAppleDevButton.heightAnchor.constraint(equalToConstant: 24),
+
             docAppleDevImageView.centerYAnchor.constraint(equalTo: docAppleDevButton.centerYAnchor),
             docAppleDevImageView.leadingAnchor.constraint(equalTo: docAppleDevButton.leadingAnchor, constant: 32),
             
@@ -121,3 +125,4 @@ class NewsScreen: UIView {
     }
     
 }
+

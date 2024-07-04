@@ -15,6 +15,7 @@ class SideVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        sideScreen?.delegate(delegate: self)
        
     }
     
@@ -23,4 +24,14 @@ class SideVC: UIViewController {
         view = sideScreen
     }
 
+}
+
+extension SideVC: SideScreenProtocol {
+    func customNavigation() {
+        let vc: EditProfileVC = EditProfileVC()
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
