@@ -64,7 +64,7 @@ class StartExerciseScreen: UIView {
         button.isEnabled = true
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .systemOrange
+        button.backgroundColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1.0)
         button.addTarget(self, action: #selector(tappedVariadosButton), for: .touchUpInside)
         
         return button
@@ -84,7 +84,7 @@ class StartExerciseScreen: UIView {
         button.isEnabled = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .systemOrange.withAlphaComponent(0.5)
+        button.backgroundColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 0.5)
         button.addTarget(self, action: #selector(tappedUikitButton), for: .touchUpInside)
         
         return button
@@ -104,7 +104,7 @@ class StartExerciseScreen: UIView {
         button.isEnabled = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .systemOrange.withAlphaComponent(0.5)
+        button.backgroundColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 0.5)
         button.addTarget(self, action: #selector(tappedSwiftuiButton), for: .touchUpInside)
         
         return button
