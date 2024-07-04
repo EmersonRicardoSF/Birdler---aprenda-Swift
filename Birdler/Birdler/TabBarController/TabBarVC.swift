@@ -20,7 +20,7 @@ class TabBarVC: UITabBarController {
         let vc2 = UINavigationController(rootViewController: StartExerciseVC())
         let vc3 = UINavigationController(rootViewController: NewsVC())
         setViewControllers([vc1, vc2, vc3], animated: false)
-        tabBar.tintColor = .systemOrange
+        tabBar.tintColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1.0)
         tabBar.unselectedItemTintColor = .lightGray.withAlphaComponent(0.5)
         tabBar.backgroundColor = .black.withAlphaComponent(0.99)
         
