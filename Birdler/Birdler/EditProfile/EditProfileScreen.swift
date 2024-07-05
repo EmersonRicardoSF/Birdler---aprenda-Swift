@@ -42,12 +42,23 @@ class EditProfileScreen: UIView {
     func getGradientLayer(bounds : CGRect) -> CAGradientLayer{
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [UIColor(red: 0.47, green: 0.05, blue: 0.98, alpha: 1).cgColor, UIColor(red: 0.99, green: 0.55, blue: 0.22, alpha: 1).cgColor]
+        gradient.colors = [
+            UIColor(red: 0x15/255.0, green: 0x75/255.0, blue: 0xF6/255.0, alpha: 1.0).cgColor,  // Azul Xcode (posição 10%)
+            UIColor(red: 0x6A/255.0, green: 0x0D/255.0, blue: 0xAD/255.0, alpha: 1.0).cgColor,  // Roxo (posição 37%)
+            UIColor(red: 0x5A/255.0, green: 0x0D/255.0, blue: 0xAE/255.0, alpha: 1.0).cgColor,  // Subton de Roxo (posição 58%)
+            UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1.0).cgColor   // Swift Orange (posição 87%)
+        ]
+        gradient.locations = [
+            NSNumber(value: 0.10),  // Posição 10%
+            NSNumber(value: 0.37),  // Posição 37%
+            NSNumber(value: 0.58),  // Posição 58%
+            NSNumber(value: 0.87)   // Posição 87%
+        ]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+
         
         return gradient
-        
     }
     
     func gradientColor(bounds: CGRect, gradientLayer :CAGradientLayer) -> UIColor? {
@@ -147,51 +158,6 @@ class EditProfileScreen: UIView {
         
     }()
     
-    lazy var emailLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.text = "Email"
-        label.textColor = .black
-        
-        return label
-        
-    }()
-    
-    lazy var emailTextField: UITextField = {
-        let textField = UITextField()
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.autocorrectionType = .no
-        textField.frame = CGRect(x: 0, y: 0, width: 331, height: 125)
-        textField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2).cgColor
-        textField.keyboardType = .alphabet
-        textField.attributedPlaceholder = NSAttributedString(string: "ex: maria@gmail.com", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
-        textField.isSecureTextEntry = false
-        textField.font = UIFont.boldSystemFont(ofSize: 15)
-        textField.layer.masksToBounds = false
-        textField.autocapitalizationType = .none
-        textField.textColor = .darkGray
-        
-        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 3, height: 28))
-        textField.leftView = leftPaddingView
-        textField.leftViewMode = .always
-        
-        return textField
-        
-    }()
-    
-    lazy var lineViewEmail: UILabel = {
-        
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 10)
-        label.text = "___________________________________________________"
-        label.textColor = .lightGray
-        return label
-        
-    }()
-    
     lazy var iconPassword: UIImageView = {
         
         let image = UIImageView()
@@ -206,7 +172,7 @@ class EditProfileScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.text = "Digite sua senha"
+        label.text = "Alterar senha"
         label.textColor = .black
         
         return label
@@ -260,7 +226,7 @@ class EditProfileScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.text = "Digite sua senha novamente"
+        label.text = "Confirme nova senha"
         label.textColor = .black
         return label
         
@@ -302,7 +268,7 @@ class EditProfileScreen: UIView {
     lazy var cadastrarButton: UIButton = {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Cadastrar", for: .normal)
+        button.setTitle("Salvar alterações", for: .normal)
         button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -310,6 +276,17 @@ class EditProfileScreen: UIView {
         button.addTarget(self, action: #selector(tappedCadastrarButton), for: .touchUpInside)
         
         return button
+        
+    }()
+    
+    lazy var deleteAccountLabel: UILabel = {
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.urbanistFont(type: .bold, size: 16)
+        label.text = "Deletar conta"
+        label.textColor = .white.withAlphaComponent(0.5)
+        return label
         
     }()
     
@@ -323,6 +300,8 @@ class EditProfileScreen: UIView {
         print("Criou a conta")
         let _: HomeVC = HomeVC()
         delegate?.tappedCadastrarButton()
+        
+        
         
     }
     
@@ -343,6 +322,7 @@ class EditProfileScreen: UIView {
         addSubview(backgroundImageView)
         addSubview(logoLabel)
         addSubview(viewRegister)
+        addSubview(deleteAccountLabel)
         
         
         viewRegister.addSubview(iconUser)
@@ -351,9 +331,6 @@ class EditProfileScreen: UIView {
         viewRegister.addSubview(lineView)
         
         viewRegister.addSubview(iconEmail)
-        viewRegister.addSubview(emailLabel)
-        viewRegister.addSubview(emailTextField)
-        viewRegister.addSubview(lineViewEmail)
         
         viewRegister.addSubview(iconPassword)
         viewRegister.addSubview(passwordlLabel)
@@ -366,6 +343,7 @@ class EditProfileScreen: UIView {
         viewRegister.addSubview(lineViewPasswordAgain)
         
         viewRegister.addSubview(cadastrarButton)
+        
         
         DispatchQueue.main.async {
             
@@ -392,15 +370,15 @@ class EditProfileScreen: UIView {
             logoLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             logoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            viewRegister.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 28),
+            viewRegister.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 60),
             viewRegister.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewRegister.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewRegister.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            iconUser.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 12),
+            iconUser.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 32),
             iconUser.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 45),
             
-            userLabel.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 12),
+            userLabel.topAnchor.constraint(equalTo: viewRegister.topAnchor, constant: 32),
             userLabel.leadingAnchor.constraint(equalTo: iconUser.leadingAnchor, constant: 35),
             
             userTextField.topAnchor.constraint(equalTo: userLabel.bottomAnchor, constant: 5),
@@ -413,20 +391,10 @@ class EditProfileScreen: UIView {
             iconEmail.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 25),
             iconEmail.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 49),
             
-            emailLabel.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 10),
-            emailLabel.leadingAnchor.constraint(equalTo: iconEmail.leadingAnchor, constant: 35),
-            
-            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 5),
-            emailTextField.leadingAnchor.constraint(equalTo: iconEmail.leadingAnchor, constant: 35),
-            
-            lineViewEmail.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant:3),
-            lineViewEmail.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
-            lineViewEmail.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
-            
-            iconPassword.topAnchor.constraint(equalTo: lineViewEmail.bottomAnchor, constant: 17),
+            iconPassword.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 17),
             iconPassword.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 51),
             
-            passwordlLabel.topAnchor.constraint(equalTo: lineViewEmail.bottomAnchor, constant: 10),
+            passwordlLabel.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 10),
             passwordlLabel.leadingAnchor.constraint(equalTo: iconPassword.leadingAnchor, constant: 35),
             
             passwordTextField.topAnchor.constraint(equalTo: passwordlLabel.bottomAnchor, constant: 5),
@@ -449,10 +417,13 @@ class EditProfileScreen: UIView {
             lineViewPasswordAgain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewPasswordAgain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-            cadastrarButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 20),
+            cadastrarButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 40),
             cadastrarButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
             cadastrarButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -35),
             cadastrarButton.heightAnchor.constraint(equalToConstant: 45),
+            
+            deleteAccountLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
+            deleteAccountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
         ])
     }

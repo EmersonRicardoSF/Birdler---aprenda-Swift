@@ -37,7 +37,7 @@ class GenericExerciseScreen: UIView {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .left
-        label.textColor = .systemOrange
+        label.textColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1)
         return label
     }()
     
@@ -100,13 +100,13 @@ class GenericExerciseScreen: UIView {
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = UIColor(red: 0x15/255.0, green: 0x75/255.0, blue: 0xF6/255.0, alpha: 1.0)
         button.setTitle("Próxima Pergunta", for: .normal)
         button.addTarget(self, action: #selector(nextQuestionButtonTapped), for: .touchUpInside)
         
         // Use UIButton.Configuration para configurar a aparência e o layout do botão
         var config = UIButton.Configuration.plain()
-        config.baseBackgroundColor = .systemBlue
+        config.baseBackgroundColor = UIColor(red: 0x15/255.0, green: 0x75/255.0, blue: 0xF6/255.0, alpha: 1.0)
         config.titlePadding = 16
         config.cornerStyle = .capsule // Define o estilo do canto como cápsula
         button.configuration = config
