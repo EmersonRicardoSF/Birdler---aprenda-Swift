@@ -9,7 +9,7 @@ import UIKit
 
 class NewsHearderView: UITableViewHeaderFooterView {
 
-    static let identifer = "NewsHearderView"
+    static let identifier = "NewsHearderView"
     
     lazy var nameLabel: UILabel = {
    
@@ -17,7 +17,7 @@ class NewsHearderView: UITableViewHeaderFooterView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Novidades"
         label.textColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1.0)
-        label.font = UIFont.poppinsFont(type: .bold , size: 32)
+        label.font = UIFont.poppinsFont(type: .bold , size: 24)
         return label
         
     }()

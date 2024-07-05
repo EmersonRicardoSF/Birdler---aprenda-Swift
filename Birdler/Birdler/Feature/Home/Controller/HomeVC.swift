@@ -19,7 +19,7 @@ class HomeVC: UIViewController {
         view = homeScreen
         homeScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         homeScreen?.delegate(delegate: self)
-        configNavigation()
+//        configNavigation()
         loadHome()
     }
     
@@ -36,20 +36,20 @@ class HomeVC: UIViewController {
         }
     }
     
-    // MARK: IMPORTANTE (configura a navBar)
-    func configNavigation() {
-        navigationItem.title = "Birdler"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        let appearance = UINavigationBarAppearance()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .secondarySystemBackground
-        appearance.configureWithTransparentBackground()
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        self.navigationItem.hidesBackButton = true
-    }
+//    // MARK: IMPORTANTE (configura a navBar)
+//    func configNavigation() {
+//        navigationItem.title = "Birdler"
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        let appearance = UINavigationBarAppearance()
+//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        appearance.backgroundColor = .secondarySystemBackground
+//        appearance.configureWithTransparentBackground()
+//        navigationController?.navigationBar.standardAppearance = appearance
+//        navigationController?.navigationBar.compactAppearance = appearance
+//        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+//        self.navigationItem.hidesBackButton = true
+//    }
     
 }
 

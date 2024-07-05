@@ -26,18 +26,29 @@ class HomeScreen: UIView {
         return image
     }()
     
-    lazy var tableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .insetGrouped)
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.showsVerticalScrollIndicator = false
-        tv.backgroundColor = .clear
-        tv.separatorStyle = .none
-        tv.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifier)
-        tv.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+    lazy var greetingLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.urbanistFont(type: .bold, size: 16)
+        label.text = "Olá, Nayla."
         
-        return tv
+        return label
+        
     }()
-  
+    
+    
+    lazy var tableView: UITableView = {
+        let tableview = UITableView(frame: .zero, style: .insetGrouped)
+        tableview.translatesAutoresizingMaskIntoConstraints = false
+        tableview.showsVerticalScrollIndicator = false
+        tableview.backgroundColor = .clear
+        tableview.separatorStyle = .none
+        tableview.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.identifier)
+        tableview.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        
+        return tableview
+    }()
+    
     public func configProtocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
@@ -46,15 +57,13 @@ class HomeScreen: UIView {
     lazy var TestButton: UIButton = {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Teste", for: .normal)
-        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
-        button.setTitleColor(.white, for: .normal)
+        button.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        button.tintColor = .white
         button.backgroundColor = .clear
         button.isHidden = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 7.5
         button.addTarget(self, action: #selector(tappedTestButton), for: .touchUpInside)
-    
+        
         return button
         
     }()
@@ -78,6 +87,7 @@ class HomeScreen: UIView {
     
     private func addElements() {
         addSubview(imageBackGround)
+        addSubview(greetingLabel)
         addSubview(tableView)
         addSubview(TestButton)
         
@@ -91,16 +101,18 @@ class HomeScreen: UIView {
             imageBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageBackGround.bottomAnchor.constraint(equalTo: bottomAnchor),
             
+            greetingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            greetingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            
+            TestButton.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            TestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            
+            tableView.topAnchor.constraint(equalTo: greetingLabel.topAnchor, constant: 20),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            TestButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            TestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
         ])
     }
     
 }
-
-// MARK: Para sempre acompanhar o dark mode e o light mode, existem três cores para cada tipo .systemBackground & .secondarySystemBackground & .terniaryBackground

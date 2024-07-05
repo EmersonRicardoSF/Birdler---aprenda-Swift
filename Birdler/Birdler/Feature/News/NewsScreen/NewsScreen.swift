@@ -27,6 +27,16 @@ class NewsScreen: UIView {
         
     }()
     
+    lazy var greetingLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.urbanistFont(type: .bold, size: 16)
+        label.text = "Olá, Nayla."
+        
+        return label
+        
+    }()
+    
     lazy var docAppleDevImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -37,40 +47,35 @@ class NewsScreen: UIView {
     }()
     
     lazy var docAppleDevButton: UIButton = {
-        let btn: UIButton = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Documentação Apple Developer", for: .normal)
-        btn.titleLabel?.font = UIFont.poppinsFont(type: .regular, size: 13)
-        btn.setTitleColor(.black, for: .normal)
-        btn.backgroundColor = .white
-        btn.clipsToBounds = true
-        btn.layer.cornerRadius = 8
-        btn.addTarget(self, action: #selector(opendoc), for: .touchUpInside)
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Documentação Apple Developer", for: .normal)
+        button.titleLabel?.font = UIFont.poppinsFont(type: .regular, size: 13)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
-        return btn
+        return button
         
     }()
     
     lazy var tableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .insetGrouped)
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
-        tv.backgroundColor = .clear
-        tv.separatorStyle = .none
-        tv.register(NewsHearderView.self, forHeaderFooterViewReuseIdentifier: NewsHearderView.identifer)
-        return tv
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.identifier)
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.register(NewsHearderView.self, forHeaderFooterViewReuseIdentifier: NewsHearderView.identifier)
+        return tableView
         
     }()
     
     
-    @objc func opendoc() {
+    @objc func buttonTapped() {
         print("Indo para a Web")
-    }
-    
-    @objc func tappedDocAppleDevButton() {
-        print("Indo para a Web")
-//        self.delegate?.tappedDocAppleDevButton()
-        
+        self.delegate?.tappedDocAppleDevButton()
     }
     
     override init(frame: CGRect) {
@@ -93,9 +98,10 @@ class NewsScreen: UIView {
     
     func addElements(){
         addSubview(backgroundImageView)
-        backgroundImageView.addSubview(docAppleDevButton)
-        backgroundImageView.addSubview(docAppleDevImageView)
+        addSubview(greetingLabel)
         addSubview(tableView)
+        addSubview(docAppleDevButton)
+        docAppleDevButton.addSubview(docAppleDevImageView)
         
     }
 
@@ -108,17 +114,19 @@ class NewsScreen: UIView {
             backgroundImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
+            greetingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            greetingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            
             docAppleDevButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 64),
-            docAppleDevButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
-            docAppleDevButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -22),
-//            docAppleDevButton.heightAnchor.constraint(equalToConstant: 24),
+            docAppleDevButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 38),
+            docAppleDevButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -38),
 
             docAppleDevImageView.centerYAnchor.constraint(equalTo: docAppleDevButton.centerYAnchor),
-            docAppleDevImageView.leadingAnchor.constraint(equalTo: docAppleDevButton.leadingAnchor, constant: 32),
+            docAppleDevImageView.leadingAnchor.constraint(equalTo: docAppleDevButton.leadingAnchor, constant: 26),
             
-            tableView.topAnchor.constraint(equalTo: docAppleDevButton.topAnchor, constant: 44),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            tableView.topAnchor.constraint(equalTo: docAppleDevButton.topAnchor, constant: 54),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24),
         
         ])
