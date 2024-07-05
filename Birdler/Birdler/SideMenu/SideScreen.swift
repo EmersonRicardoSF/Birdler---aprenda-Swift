@@ -8,7 +8,10 @@
 import UIKit
 
 protocol SideScreenProtocol: AnyObject {
-    func customNavigation()
+    func editProfileNavigation()
+    func logoutNavigation()
+    func termsOfUseNavigation()
+    func privacyNavigation()
 }
 
 class SideScreen: UIView {
@@ -68,7 +71,7 @@ class SideScreen: UIView {
     }()
     
     @objc func tappedEditProfileButton() {
-        delegate?.customNavigation()
+        delegate?.editProfileNavigation()
     }
     
     lazy var logoutButton: UIButton = {
@@ -88,7 +91,7 @@ class SideScreen: UIView {
     }()
     
     @objc func tappedLogoutButton() {
-        
+        delegate?.logoutNavigation()
     }
     
     lazy var termsOfUseButton: UIButton = {

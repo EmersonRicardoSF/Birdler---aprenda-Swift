@@ -19,8 +19,8 @@
 import UIKit
 
 protocol EditProfileScreenProtocol: AnyObject {
-    func tappedCadastrarButton()
-    func tappedProfileImageButton()
+    func EditProfileNavigation()
+    func DeleteAcountNavigation()
 }
 
 class EditProfileScreen: UIView {
@@ -265,7 +265,7 @@ class EditProfileScreen: UIView {
         
     }()
     
-    lazy var cadastrarButton: UIButton = {
+    lazy var editProfileButton: UIButton = {
         let button: UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Salvar alterações", for: .normal)
@@ -273,33 +273,34 @@ class EditProfileScreen: UIView {
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.addTarget(self, action: #selector(tappedCadastrarButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedEditProfileButton), for: .touchUpInside)
         
         return button
         
     }()
     
-    lazy var deleteAccountLabel: UILabel = {
+    lazy var deleteAccountButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Deletar conta", for: .normal)
+        button.setTitleColor(.white.withAlphaComponent(0.5), for: .normal)
+        button.tintColor = .white.withAlphaComponent(0.5)
+        button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 16)
+        button.backgroundColor = .clear
+        button.isHidden = false
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tappedDeleteAcountButton), for: .touchUpInside)
         
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.urbanistFont(type: .bold, size: 16)
-        label.text = "Deletar conta"
-        label.textColor = .white.withAlphaComponent(0.5)
-        return label
+        return button
         
     }()
     
-    @objc func tappedProfileImageButton(_ sender: UIButton) {
-        delegate?.tappedProfileImageButton()
-        print("Add Photo Profile")
+    @objc func tappedDeleteAcountButton(_ sender: UIButton) {
         
+        delegate?.DeleteAcountNavigation()
     }
     
-    @objc func tappedCadastrarButton(_ sender: UIButton) {
-        print("Criou a conta")
-        let _: HomeVC = HomeVC()
-        delegate?.tappedCadastrarButton()
+    @objc func tappedEditProfileButton(_ sender: UIButton) {
         
         
         
@@ -322,7 +323,7 @@ class EditProfileScreen: UIView {
         addSubview(backgroundImageView)
         addSubview(logoLabel)
         addSubview(viewRegister)
-        addSubview(deleteAccountLabel)
+        addSubview(deleteAccountButton)
         
         
         viewRegister.addSubview(iconUser)
@@ -342,7 +343,7 @@ class EditProfileScreen: UIView {
         viewRegister.addSubview(passwordAgainTextField)
         viewRegister.addSubview(lineViewPasswordAgain)
         
-        viewRegister.addSubview(cadastrarButton)
+        viewRegister.addSubview(editProfileButton)
         
         
         DispatchQueue.main.async {
@@ -353,8 +354,8 @@ class EditProfileScreen: UIView {
         }
         
         DispatchQueue.main.async {
-            let gradient = self.getGradientLayer(bounds: self.cadastrarButton.bounds)
-            self.cadastrarButton.backgroundColor = self.gradientColor(bounds: self.cadastrarButton.bounds, gradientLayer: gradient)
+            let gradient = self.getGradientLayer(bounds: self.editProfileButton.bounds)
+            self.editProfileButton.backgroundColor = self.gradientColor(bounds: self.editProfileButton.bounds, gradientLayer: gradient)
             
         }
     }
@@ -417,13 +418,13 @@ class EditProfileScreen: UIView {
             lineViewPasswordAgain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 50),
             lineViewPasswordAgain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -5),
             
-            cadastrarButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 40),
-            cadastrarButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
-            cadastrarButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -35),
-            cadastrarButton.heightAnchor.constraint(equalToConstant: 45),
+            editProfileButton.topAnchor.constraint(equalTo: lineViewPasswordAgain.bottomAnchor, constant: 40),
+            editProfileButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 45),
+            editProfileButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -35),
+            editProfileButton.heightAnchor.constraint(equalToConstant: 45),
             
-            deleteAccountLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
-            deleteAccountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            deleteAccountButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+            deleteAccountButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
             
         ])
     }

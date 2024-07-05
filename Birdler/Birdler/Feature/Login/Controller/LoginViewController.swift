@@ -33,6 +33,11 @@ class LoginVC: UIViewController {
 
 extension LoginVC: LoginScreenProtocol {
     
+    func ContinueWhitouLoginNavigation() {
+        let vc: TabBarVC = TabBarVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tappedRecuperarSenhaButton() {
         print("Recuperar Senha")
         let vc: RecoverVC = RecoverVC()

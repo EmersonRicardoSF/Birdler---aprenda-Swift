@@ -101,10 +101,10 @@ class HomeScreen: UIView {
             imageBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageBackGround.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            greetingLabel.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            greetingLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             greetingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             
-            TestButton.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            TestButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             TestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             
             tableView.topAnchor.constraint(equalTo: greetingLabel.topAnchor, constant: 20),

@@ -11,6 +11,7 @@ protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
     func tappedRecuperarSenhaButton()
     func tappedCriarCadastroButton()
+    func ContinueWhitouLoginNavigation()
     
 }
 
@@ -184,6 +185,25 @@ class LoginScreen: UIView {
         
     }()
     
+    lazy var continueWithoutLoginButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.setTitle("Continuar sem login", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.dmsansFont(type: .bold, size: 16)
+        button.setTitleColor(.white, for: .normal)
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tappedContinueWhitoutLoginButton), for: .touchUpInside)
+        
+        return button
+        
+    }()
+    
+    @objc func tappedContinueWhitoutLoginButton(_ sender: UIButton) {
+        print("Botão funcionando")
+        delegate?.ContinueWhitouLoginNavigation()
+        
+    }
+    
     @objc func tappedLoginButton(_ sender: UIButton) {
         print("Botão funcionando")
         delegate?.tappedLoginButton()
@@ -224,6 +244,7 @@ class LoginScreen: UIView {
         addSubview(recuperarSenhaButton)
         addSubview(loginButton)
         addSubview(criarCadastroButton)
+        addSubview(continueWithoutLoginButton)
         
         DispatchQueue.main.async {
             let gradient = self.getGradientLayer(bounds: self.loginLabel.bounds)
@@ -279,6 +300,11 @@ class LoginScreen: UIView {
             criarCadastroButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             criarCadastroButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
             criarCadastroButton.heightAnchor.constraint(equalToConstant: 45),
+            
+            continueWithoutLoginButton.topAnchor.constraint(equalTo: criarCadastroButton.bottomAnchor, constant: 20),
+            continueWithoutLoginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            continueWithoutLoginButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
+            continueWithoutLoginButton.heightAnchor.constraint(equalToConstant: 45),
             
         ])
     }
