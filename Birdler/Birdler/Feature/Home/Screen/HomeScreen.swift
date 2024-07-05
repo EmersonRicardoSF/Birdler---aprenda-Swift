@@ -106,8 +106,7 @@ class HomeScreen: UIView {
             
             TestButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             TestButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
-            
-            tableView.topAnchor.constraint(equalTo: greetingLabel.topAnchor, constant: 20),
+                        tableView.topAnchor.constraint(equalTo: greetingLabel.topAnchor, constant: 20),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
