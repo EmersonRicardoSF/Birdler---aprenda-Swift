@@ -9,7 +9,7 @@ import Firebase
 import FirebaseAuth
 
 class LoginVC: UIViewController {
-
+    
     var loginScreen: LoginScreen?
     
     override func loadView() {
@@ -34,8 +34,14 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol {
     
     func ContinueWhitouLoginNavigation() {
-        let vc: TabBarVC = TabBarVC()
-        navigationController?.pushViewController(vc, animated: true)
+        let vc3: TabBarVC = TabBarVC()
+        vc3.modalPresentationStyle = .currentContext
+        
+        let nav = UINavigationController(rootViewController: vc3)
+        nav.modalPresentationStyle = .currentContext
+        present(nav, animated: true)
+        
+        
     }
     
     func tappedRecuperarSenhaButton() {
