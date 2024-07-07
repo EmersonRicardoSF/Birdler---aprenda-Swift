@@ -2,7 +2,7 @@ import UIKit
 
 protocol GenericExerciseScreenProtocol: AnyObject {
     func customNavigation()
-  
+    
 }
 
 class GenericExerciseScreen: UIView {
@@ -14,11 +14,23 @@ class GenericExerciseScreen: UIView {
     }
     
     var correctAnswer: String = ""
+    var remainingAttempts: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "remainingAttempts")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "remainingAttempts")
+            updateLivesLabel()
+        }
+    }
+    var maxAttempts: Int = 3
+    var lifeTimer: Timer?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
         configConstraints()
+        startLifeTimer()
     }
     
     required init?(coder: NSCoder) {
@@ -38,6 +50,16 @@ class GenericExerciseScreen: UIView {
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .left
         label.textColor = UIColor(red: 0xF0/255.0, green: 0x51/255.0, blue: 0x38/255.0, alpha: 1)
+        return label
+    }()
+    
+    lazy var livesLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.dmsansFont(type: .bold, size: 14)
+        label.textColor = .white
+        label.textAlignment = .right
+        label.text = "♥️ \(remainingAttempts)"
         return label
     }()
     
@@ -86,12 +108,24 @@ class GenericExerciseScreen: UIView {
     @objc func tappedButton(_ sender: UIButton) {
         guard let title = sender.currentTitle else { return }
         
-        for button in buttons {
-            if let buttonTitle = button.currentTitle {
-                button.backgroundColor = buttonTitle == correctAnswer ? .systemGreen : .systemRed
+        if title == correctAnswer {
+            sender.backgroundColor = .systemGreen
+        } else {
+            remainingAttempts -= 1
+            updateLivesLabel()
+            
+            if remainingAttempts <= 0 {
+                remainingAttempts = 0 // Garantir que as vidas não fiquem negativas
+                showAlertForNoAttemptsLeft()
             }
+            
+            sender.backgroundColor = .systemRed
         }
+        
+        updateButtonsState()
     }
+    
+    
     
     private lazy var nextQuestionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -115,8 +149,14 @@ class GenericExerciseScreen: UIView {
     }()
     
     @objc private func nextQuestionButtonTapped() {
-        delegate?.customNavigation()
+        if remainingAttempts > 0 {
+            delegate?.customNavigation()
+            resetButtonsState()
+        } else {
+            showAlertForNoAttemptsLeft()
+        }
     }
+        
     
     func configureView(with question: Config.Question) {
         titleLabel.text = question.titleLabel.text
@@ -133,6 +173,72 @@ class GenericExerciseScreen: UIView {
         }
     }
     
+    private func checkAndRestoreLives() {
+        let lastRestoredDate = UserDefaults.standard.object(forKey: "lastRestoredDate") as? Date ?? Date()
+        let timeIntervalSinceLastRestore = Date().timeIntervalSince(lastRestoredDate)
+        let minutesSinceLastRestore = Int(timeIntervalSinceLastRestore / 60)
+        
+        if minutesSinceLastRestore > 0 {
+            remainingAttempts = min(maxAttempts, remainingAttempts + minutesSinceLastRestore)
+            UserDefaults.standard.set(Date(), forKey: "lastRestoredDate")
+        }
+        
+        if remainingAttempts > 0 {
+            nextQuestionButton.isEnabled = true
+        } else {
+            nextQuestionButton.isEnabled = false
+        }
+        
+        updateLivesLabel()
+    }
+    
+    func startLifeTimer() {
+        lifeTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(addLife), userInfo: nil, repeats: true)
+        checkAndRestoreLives()
+    }
+    
+    //VOLTE UM ANTES DESSE
+
+    @objc func addLife() {
+        if remainingAttempts < maxAttempts {
+            remainingAttempts += 1
+
+            if remainingAttempts > 0 {
+                nextQuestionButton.isEnabled = true // Reativar o botão "Próxima Pergunta" quando as vidas forem restauradas
+            }
+
+            UserDefaults.standard.set(Date(), forKey: "lastRestoredDate")
+        }
+    }
+    
+    private func showAlertForNoAttemptsLeft() {
+        let alert = UIAlertController(title: "Fim das tentativas", message: "Você usou todas as suas tentativas. Aguarde até que as vidas sejam restauradas.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        if let viewController = self.window?.rootViewController {
+            viewController.present(alert, animated: true, completion: nil)
+        }
+        
+        nextQuestionButton.isEnabled = false // Desativar o botão "Próxima Pergunta"
+    }
+    
+    private func updateButtonsState() {
+        for button in buttons {
+            button.isEnabled = false
+        }
+    }
+    
+    private func resetButtonsState() {
+        for button in buttons {
+            button.isEnabled = true
+            button.backgroundColor = UIColor.gray
+        }
+    }
+    
+    private func updateLivesLabel() {
+        livesLabel.text = "♥️ \(remainingAttempts)"
+    }
+    
     private func addElements() {
         addSubview(imageBackGround)
         addSubview(titleLabel)
@@ -141,6 +247,7 @@ class GenericExerciseScreen: UIView {
         addSubview(exerciseButtonMiddle)
         addSubview(exerciseButtonRight)
         addSubview(nextQuestionButton)
+        addSubview(livesLabel)
     }
     
     private func configConstraints() {
@@ -164,6 +271,9 @@ class GenericExerciseScreen: UIView {
             
             nextQuestionButton.topAnchor.constraint(equalTo: exerciseButtonRight.bottomAnchor, constant: 40),
             nextQuestionButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            livesLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            livesLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
 }
