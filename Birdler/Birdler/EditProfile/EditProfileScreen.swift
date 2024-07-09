@@ -3,24 +3,12 @@
 //  Birdler
 //
 //  Created by Pedro Ribeiro on 04/07/2024.
-//
-//
-//import UIKit
-//
-//class EditProfileScreen: UIView {
-
-//
-//  RegisterScreen.swift
-//  Birdler
-//
-//  Created by Vitor Ernane Guedes on 14/05/24.
-//
 
 import UIKit
 
 protocol EditProfileScreenProtocol: AnyObject {
     func EditProfileNavigation()
-    func DeleteAcountNavigation()
+    func DeleteAccountNavigation()
 }
 
 class EditProfileScreen: UIView {
@@ -289,15 +277,15 @@ class EditProfileScreen: UIView {
         button.backgroundColor = .clear
         button.isHidden = false
         button.clipsToBounds = true
-        button.addTarget(self, action: #selector(tappedDeleteAcountButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedDeleteAccountButton), for: .touchUpInside)
         
         return button
         
     }()
     
-    @objc func tappedDeleteAcountButton(_ sender: UIButton) {
+    @objc func tappedDeleteAccountButton(_ sender: UIButton) {
         
-        delegate?.DeleteAcountNavigation()
+        delegate?.DeleteAccountNavigation()
     }
     
     @objc func tappedEditProfileButton(_ sender: UIButton) {

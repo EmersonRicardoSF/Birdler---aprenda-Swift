@@ -27,21 +27,20 @@ class LoginVC: UIViewController {
     @objc private func textFieldDidChange() {
         let isEmailEmpty = loginScreen?.usuarioTextField.text?.isEmpty ?? true
         let isPasswordEmpty = loginScreen?.passwordTextField.text?.isEmpty ?? true
-        loginScreen?.loginButton.isEnabled = !isEmailEmpty && !isPasswordEmpty
+        let isLoginEnabled = !isEmailEmpty && !isPasswordEmpty
+        loginScreen?.loginButton.isEnabled = isLoginEnabled
     }
 }
 
 extension LoginVC: LoginScreenProtocol {
     
-    func ContinueWhitouLoginNavigation() {
+    func ContinueWhitoutLoginNavigation() {
         let vc3: TabBarVC = TabBarVC()
         vc3.modalPresentationStyle = .currentContext
         
         let nav = UINavigationController(rootViewController: vc3)
         nav.modalPresentationStyle = .currentContext
         present(nav, animated: true)
-        
-        
     }
     
     func tappedRecuperarSenhaButton() {
@@ -67,13 +66,12 @@ extension LoginVC: LoginScreenProtocol {
         Auth.auth().signIn(withEmail: email, password: senha) { [weak self] success, error in
             if let error = error {
                 print("Erro ao logar: \(error.localizedDescription)")
-                // Aqui você pode mostrar um alerta ao usuário informando o erro
                 let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self?.present(alert, animated: true)
             } else {
                 print("Sucesso! O usuário está logado")
-                UserDefaults.standard.set(true, forKey: "UsuarioLogado")
+                UserDefaults.standard.set(true, forKey: "Usuario Logado")
                 let vc: TabBarVC = TabBarVC()
                 vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true)

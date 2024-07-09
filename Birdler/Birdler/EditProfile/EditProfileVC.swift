@@ -78,7 +78,7 @@ extension EditProfileVC: EditProfileScreenProtocol {
         
     }
     
-    func DeleteAcountNavigation() {
+    func DeleteAccountNavigation() {
         let alert = UIAlertController(title: "Apagar conta", message: "Digite sua senha para deletar sua conta. Ao apagar todos os dados serão perdidos:", preferredStyle: .alert)
         alert.addTextField { textField in
             textField.placeholder = "Senha"

@@ -19,7 +19,6 @@ class HomeVC: UIViewController {
         view = homeScreen
         homeScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         homeScreen?.delegate(delegate: self)
-//        configNavigation()
         loadHome()
     }
     
@@ -35,21 +34,6 @@ class HomeVC: UIViewController {
             }
         }
     }
-    
-//    // MARK: IMPORTANTE (configura a navBar)
-//    func configNavigation() {
-//        navigationItem.title = "Birdler"
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-//        let appearance = UINavigationBarAppearance()
-//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-//        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//        appearance.backgroundColor = .secondarySystemBackground
-//        appearance.configureWithTransparentBackground()
-//        navigationController?.navigationBar.standardAppearance = appearance
-//        navigationController?.navigationBar.compactAppearance = appearance
-//        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-//        self.navigationItem.hidesBackButton = true
-//    }
     
 }
 
@@ -79,10 +63,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        return 50
-    //        // MARK: COLOCAR 50 DEPOIS DE CONFIGURADO
-    //    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HomeHeaderView.identifier)
@@ -124,16 +104,12 @@ extension HomeVC: HomeScreenProtocol {
     
     
     func testNavigation() {
-        // Defina o menu
         let menu = SideMenuNavigationController(rootViewController: SideVC())
 
-        // Apresentar o menu
         present(menu, animated: true, completion: nil)
     }
     
-//    func testNavigation() {
-//        let vc: SideVC = SideVC()
-//        navigationController?.pushViewController(vc, animated: true)
+
     }
     
     
