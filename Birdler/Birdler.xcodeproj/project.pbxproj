@@ -37,6 +37,10 @@
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
 		859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012102BBF623D0046283C /* HomeTableViewCell.swift */; };
 		859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012132BBF63920046283C /* HomeTableViewCellScreen.swift */; };
+		85B9334C2C3D486F006E0A1C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9334B2C3D486F006E0A1C /* Service.swift */; };
+		85B9334E2C3D4924006E0A1C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9334D2C3D4924006E0A1C /* NewsModel.swift */; };
+		85B933512C3D571C006E0A1C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 85B933502C3D571C006E0A1C /* SDWebImage */; };
+		85B933532C3D571C006E0A1C /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85B933522C3D571C006E0A1C /* SDWebImageMapKit */; };
 		85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */; };
 		85F3A9A92C317DA60055A6FF /* Arquitetura MVVM.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */; };
 		85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9AA2C317E510055A6FF /* URLSession.html */; };
@@ -157,6 +161,8 @@
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		859012102BBF623D0046283C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		859012132BBF63920046283C /* HomeTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellScreen.swift; sourceTree = "<group>"; };
+		85B9334B2C3D486F006E0A1C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		85B9334D2C3D4924006E0A1C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Arquitetura MVC.html"; sourceTree = "<group>"; };
 		85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Arquitetura MVVM.html"; sourceTree = "<group>"; };
 		85F3A9AA2C317E510055A6FF /* URLSession.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = URLSession.html; sourceTree = "<group>"; };
@@ -253,6 +259,8 @@
 				BE8B712D2C11FEDF000DD200 /* FirebaseAuth in Frameworks */,
 				BE8B71222C11FEB5000DD200 /* FirebaseAnalytics in Frameworks */,
 				BE8B71242C11FEB5000DD200 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				85B933532C3D571C006E0A1C /* SDWebImageMapKit in Frameworks */,
+				85B933512C3D571C006E0A1C /* SDWebImage in Frameworks */,
 				BE8B712A2C11FEB5000DD200 /* FirebaseAppCheck in Frameworks */,
 				BE8B71282C11FEB5000DD200 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -407,6 +415,8 @@
 		852F52972C36ADAA000BADBB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				85B9334A2C3D483E006E0A1C /* Model */,
+				85B933492C3D480A006E0A1C /* Service */,
 				852F529D2C36AE00000BADBB /* Controller */,
 				852F529C2C36ADF6000BADBB /* NewsScreen */,
 				852F52982C36ADBE000BADBB /* Cell */,
@@ -555,6 +565,22 @@
 				859012102BBF623D0046283C /* HomeTableViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		85B933492C3D480A006E0A1C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				85B9334B2C3D486F006E0A1C /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		85B9334A2C3D483E006E0A1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85B9334D2C3D4924006E0A1C /* NewsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A31367132BB7889F00F0CF5A = {
@@ -831,6 +857,8 @@
 				BE8B712C2C11FEDF000DD200 /* FirebaseAuth */,
 				BE8B712F2C1290FB000DD200 /* IQKeyboardManagerSwift */,
 				85610F892C34D75100991757 /* SideMenu */,
+				85B933502C3D571C006E0A1C /* SDWebImage */,
+				85B933522C3D571C006E0A1C /* SDWebImageMapKit */,
 			);
 			productName = Birdler;
 			productReference = A313671C2BB7889F00F0CF5A /* Birdler.app */;
@@ -864,6 +892,7 @@
 				BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				BE8B712E2C1290FB000DD200 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				85610F882C34D75100991757 /* XCRemoteSwiftPackageReference "SideMenu" */,
+				85B9334F2C3D571C006E0A1C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = A313671D2BB7889F00F0CF5A /* Products */;
 			projectDirPath = "";
@@ -969,6 +998,7 @@
 				E86C0B692C09648500DEA1C3 /* NSAttributedString+Extension.swift in Sources */,
 				851942202C18A2A900733F77 /* GenericViewModel.swift in Sources */,
 				E89B84E62BDC63E100035E26 /* UiViewControler+Extension.swift in Sources */,
+				85B9334C2C3D486F006E0A1C /* Service.swift in Sources */,
 				E86C0B5A2C09598C00DEA1C3 /* LicaoScreen.swift in Sources */,
 				8590120A2BBF58850046283C /* HomeVC.swift in Sources */,
 				E8C4040F2BB799F800226BDC /* LoginViewController.swift in Sources */,
@@ -984,6 +1014,7 @@
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				852F52A12C36AE53000BADBB /* NewsScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
+				85B9334E2C3D4924006E0A1C /* NewsModel.swift in Sources */,
 				E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */,
 				852F528C2C36A9E9000BADBB /* EditProfileVC.swift in Sources */,
 				859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */,
@@ -1225,6 +1256,14 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		85B9334F2C3D571C006E0A1C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.4;
+			};
+		};
 		BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1248,6 +1287,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85610F882C34D75100991757 /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		85B933502C3D571C006E0A1C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B9334F2C3D571C006E0A1C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		85B933522C3D571C006E0A1C /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B9334F2C3D571C006E0A1C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 		BE8B71212C11FEB5000DD200 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

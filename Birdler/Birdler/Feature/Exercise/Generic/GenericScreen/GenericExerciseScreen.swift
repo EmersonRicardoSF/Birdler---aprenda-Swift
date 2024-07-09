@@ -176,10 +176,10 @@ class GenericExerciseScreen: UIView {
     private func checkAndRestoreLives() {
         let lastRestoredDate = UserDefaults.standard.object(forKey: "lastRestoredDate") as? Date ?? Date()
         let timeIntervalSinceLastRestore = Date().timeIntervalSince(lastRestoredDate)
-        let minutesSinceLastRestore = Int(timeIntervalSinceLastRestore / 60)
+        let hoursSinceLastRestore = Int(timeIntervalSinceLastRestore / 3600)
         
-        if minutesSinceLastRestore > 0 {
-            remainingAttempts = min(maxAttempts, remainingAttempts + minutesSinceLastRestore)
+        if hoursSinceLastRestore > 0 {
+            remainingAttempts = min(maxAttempts, remainingAttempts + hoursSinceLastRestore)
             UserDefaults.standard.set(Date(), forKey: "lastRestoredDate")
         }
         
@@ -193,11 +193,9 @@ class GenericExerciseScreen: UIView {
     }
     
     func startLifeTimer() {
-        lifeTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(addLife), userInfo: nil, repeats: true)
+        lifeTimer = Timer.scheduledTimer(timeInterval: 3600, target: self, selector: #selector(addLife), userInfo: nil, repeats: true)
         checkAndRestoreLives()
     }
-    
-    //VOLTE UM ANTES DESSE
 
     @objc func addLife() {
         if remainingAttempts < maxAttempts {
