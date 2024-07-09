@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        code {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Protocolos de Delegação no UIKit</h1>
+
+    <p>No UIKit, os protocolos de delegação são uma forma fundamental de comunicação entre diferentes partes de um aplicativo. Eles permitem que um objeto (o delegante) delegue a responsabilidade de implementar certas funcionalidades para outro objeto (o delegado). Isso promove a separação de responsabilidades e melhora a modularidade do código.</p>
+
+    <h2>O que é Delegação?</h2>
+
+    <p>Delegação é um padrão de design em que um objeto delega algumas de suas responsabilidades para outro objeto. Em Swift, isso é frequentemente implementado usando protocolos, que definem um conjunto de métodos que o delegado deve ou pode implementar.</p>
+
+    <h2>Como Funciona a Delegação no UIKit?</h2>
+
+    <p>No UIKit, muitos componentes de interface do usuário, como tabelas (<code>UITableView</code>), coleções (<code>UICollectionView</code>) e controles de texto (<code>UITextField</code>, <code>UITextView</code>), usam delegação para lidar com eventos e fornecer dados. A seguir, vamos detalhar o uso da delegação com alguns exemplos comuns.</p>
+
+    <h3>Exemplo de Delegação com UITableView</h3>
+
+    <p><code>UITableView</code> usa dois protocolos principais: <code>UITableViewDataSource</code> e <code>UITableViewDelegate</code>. O <code>UITableViewDataSource</code> é responsável por fornecer os dados para a tabela, enquanto o <code>UITableViewDelegate</code> lida com a interação do usuário com a tabela.</p>
+
+    <h4>Definindo a Tabela</h4>
+
+    <pre><code>
+import UIKit
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    let tableView = UITableView()
+    let data = ["Item 1", "Item 2", "Item 3"]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.frame = self.view.bounds
+        self.view.addSubview(tableView)
+    }
+
+    // MARK: - UITableViewDataSource Methods
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = data[indexPath.row]
+        return cell
+    }
+
+    // MARK: - UITableViewDelegate Methods
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected \(data[indexPath.row])")
+    }
+}
+    </code></pre>
+
+    <h3>Exemplo de Delegação com UITextField</h3>
+
+    <p><code>UITextField</code> usa o protocolo <code>UITextFieldDelegate</code> para lidar com eventos de edição de texto, como início e término da edição, mudanças de texto, etc.</p>
+
+    <h4>Definindo o Campo de Texto</h4>
+
+    <pre><code>
+import UIKit
+
+class ViewController: UIViewController, UITextFieldDelegate {
+
+    let textField = UITextField()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        textField.delegate = self
+        textField.frame = CGRect(x: 20, y: 100, width: 280, height: 40)
+        textField.borderStyle = .roundedRect
+        self.view.addSubview(textField)
+    }
+
+    // MARK: - UITextFieldDelegate Methods
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("Should begin editing")
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("Did end editing")
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("Should change characters")
+        return true
+    }
+}
+    </code></pre>
+
+    <h3>Criando um Protocolo de Delegação Personalizado</h3>
+
+    <p>Você também pode criar seus próprios protocolos de delegação. Aqui está um exemplo simples de como criar e usar um protocolo de delegação personalizado.</p>
+
+    <h4>Definindo o Protocolo</h4>
+
+    <pre><code>
+protocol CustomViewDelegate: AnyObject {
+    func buttonWasTapped()
+}
+    </code></pre>
+
+    <h4>Implementando o Protocolo no Delegado</h4>
+
+    <pre><code>
+class ViewController: UIViewController, CustomViewDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let customView = CustomView()
+        customView.delegate = self
+        customView.frame = self.view.bounds
+        self.view.addSubview(customView)
+    }
+    
+    // MARK: - CustomViewDelegate Method
+    
+    func buttonWasTapped() {
+        print("Button was tapped in custom view")
+    }
+}
+    </code></pre>
+
+    <h4>Usando o Protocolo no Delegante</h4>
+
+    <pre><code>
+class CustomView: UIView {
+    
+    weak var delegate: CustomViewDelegate?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        let button = UIButton(type: .system)
+        button.setTitle("Tap me", for: .normal)
+        button.frame = CGRect(x: 50, y: 50, width: 100, height: 50)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        self.addSubview(button)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func buttonTapped() {
+        delegate?.buttonWasTapped()
+    }
+}
+    </code></pre>
+
+    <h2>Conclusão</h2>
+
+    <p>Os protocolos de delegação são uma ferramenta poderosa no desenvolvimento de aplicativos iOS com UIKit, permitindo a comunicação eficiente entre diferentes partes do aplicativo. Eles promovem a separação de responsabilidades e tornam o código mais modular e fácil de manter. Compreender e usar adequadamente os protocolos de delegação é essencial para desenvolver aplicativos robustos e bem estruturados.</p>
+</body>
+</html>

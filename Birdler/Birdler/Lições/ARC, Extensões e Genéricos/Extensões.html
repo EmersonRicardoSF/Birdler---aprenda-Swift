@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p>As extensões em Swift permitem adicionar novas funcionalidades a uma classe, estrutura, enumeração ou protocolo existente. No contexto do UIKit, podemos usar extensões para adicionar métodos de conveniência, personalizar a aparência e comportamento de componentes da interface do usuário e organizar melhor o código.</p>
+
+    <h2>Exemplos de Extensões no UIKit</h2>
+
+    <h3>1. Extensão para UIColor</h3>
+    <p>Adicionando cores personalizadas ao UIColor para reutilização fácil.</p>
+    <pre><code>
+import UIKit
+
+extension UIColor {
+    static let customRed = UIColor(red: 0.8, green: 0.0, blue: 0.0, alpha: 1.0)
+    static let customGreen = UIColor(red: 0.0, green: 0.8, blue: 0.0, alpha: 1.0)
+    static let customBlue = UIColor(red: 0.0, green: 0.0, blue: 0.8, alpha: 1.0)
+}
+    </code></pre>
+
+    <h3>2. Extensão para UIView</h3>
+    <p>Adicionando métodos de conveniência para manipulação de layout.</p>
+    <pre><code>
+import UIKit
+
+extension UIView {
+    func setCornerRadius(_ radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+
+    func setBorderColor(_ color: UIColor, width: CGFloat) {
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
+    }
+}
+    </code></pre>
+
+    <h3>3. Extensão para UIImage</h3>
+    <p>Adicionando funcionalidades para redimensionamento e arredondamento de imagens.</p>
+    <pre><code>
+import UIKit
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        draw(in: CGRect(origin: .zero, size: size))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage
+    }
+
+    func roundedImage() -> UIImage? {
+        let minEdge = min(size.width, size.height)
+        let squareSize = CGSize(width: minEdge, height: minEdge)
+        let origin = CGPoint(x: (size.width - minEdge) / 2, y: (size.height - minEdge) / 2)
+
+        UIGraphicsBeginImageContextWithOptions(squareSize, false, 0.0)
+        UIBezierPath(roundedRect: CGRect(origin: .zero, size: squareSize), cornerRadius: minEdge / 2).addClip()
+        draw(at: CGPoint(x: -origin.x, y: -origin.y))
+        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return roundedImage
+    }
+}
+    </code></pre>
+
+    <h3>4. Extensão para UIViewController</h3>
+    <p>Adicionando métodos de conveniência para apresentar alertas.</p>
+    <pre><code>
+import UIKit
+
+extension UIViewController {
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}
+    </code></pre>
+
+    <h2>Conclusão</h2>
+    <p>As extensões são uma maneira poderosa de aumentar a funcionalidade das classes do UIKit sem a necessidade de subclassificação. Elas ajudam a manter o código modular, reutilizável e organizado. É importante usá-las de maneira sensata para evitar sobrecarregar uma única classe com muitas responsabilidades.</p>
+</body>
+</html>

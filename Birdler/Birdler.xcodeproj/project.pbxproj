@@ -52,6 +52,19 @@
 		A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31367232BB7889F00F0CF5A /* ViewController.swift */; };
 		A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31367282BB788A000F0CF5A /* Assets.xcassets */; };
 		A313672C2BB788A000F0CF5A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A313672B2BB788A000F0CF5A /* Base */; };
+		A338E4592C3D9F5C00082311 /* Propriedades.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4582C3D9F5C00082311 /* Propriedades.html */; };
+		A338E45B2C3D9F7300082311 /* Métodos.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E45A2C3D9F7300082311 /* Métodos.html */; };
+		A338E45E2C3DA0F400082311 /* Enums.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E45D2C3DA0F400082311 /* Enums.html */; };
+		A338E4602C3DA11200082311 /* Protocolos de Delegação.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E45F2C3DA11200082311 /* Protocolos de Delegação.html */; };
+		A338E4632C3DA1E400082311 /* Gerenciamento de memória (ARC).html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4622C3DA1E400082311 /* Gerenciamento de memória (ARC).html */; };
+		A338E4652C3DA1F800082311 /* Extensões.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4642C3DA1F800082311 /* Extensões.html */; };
+		A338E4672C3DA20900082311 /* Genéricos.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4662C3DA20900082311 /* Genéricos.html */; };
+		A338E46A2C3DA24900082311 /* Manipulação de Strings e Coleções.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4692C3DA24900082311 /* Manipulação de Strings e Coleções.html */; };
+		A338E46D2C3DB69D00082311 /* UserDefaults.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E46C2C3DB69D00082311 /* UserDefaults.html */; };
+		A338E46F2C3DB6AB00082311 /* Keychain.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E46E2C3DB6AB00082311 /* Keychain.html */; };
+		A338E4712C3DB6B700082311 /* Core Data.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4702C3DB6B700082311 /* Core Data.html */; };
+		A338E4732C3DB6C800082311 /* SQLite.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4722C3DB6C800082311 /* SQLite.html */; };
+		A338E4752C3DB6D700082311 /* Realm.html in Resources */ = {isa = PBXBuildFile; fileRef = A338E4742C3DB6D700082311 /* Realm.html */; };
 		A3BC6B222C3377D80041A387 /* Navegação no Xcode.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B212C3377D80041A387 /* Navegação no Xcode.html */; };
 		A3BC6B242C3387AF0041A387 /* Criar e configurar um projeto.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B232C3387AF0041A387 /* Criar e configurar um projeto.html */; };
 		A3BC6B262C3387E20041A387 /* Interface Builder para criar layouts visuais.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BC6B252C3387E20041A387 /* Interface Builder para criar layouts visuais.html */; };
@@ -176,6 +189,19 @@
 		A31367282BB788A000F0CF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A313672B2BB788A000F0CF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A313672D2BB788A000F0CF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A338E4582C3D9F5C00082311 /* Propriedades.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Propriedades.html; sourceTree = "<group>"; };
+		A338E45A2C3D9F7300082311 /* Métodos.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Métodos.html"; sourceTree = "<group>"; };
+		A338E45D2C3DA0F400082311 /* Enums.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Enums.html; sourceTree = "<group>"; };
+		A338E45F2C3DA11200082311 /* Protocolos de Delegação.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Protocolos de Delegação.html"; sourceTree = "<group>"; };
+		A338E4622C3DA1E400082311 /* Gerenciamento de memória (ARC).html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Gerenciamento de memória (ARC).html"; sourceTree = "<group>"; };
+		A338E4642C3DA1F800082311 /* Extensões.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Extensões.html"; sourceTree = "<group>"; };
+		A338E4662C3DA20900082311 /* Genéricos.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Genéricos.html"; sourceTree = "<group>"; };
+		A338E4692C3DA24900082311 /* Manipulação de Strings e Coleções.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Manipulação de Strings e Coleções.html"; sourceTree = "<group>"; };
+		A338E46C2C3DB69D00082311 /* UserDefaults.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = UserDefaults.html; sourceTree = "<group>"; };
+		A338E46E2C3DB6AB00082311 /* Keychain.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Keychain.html; sourceTree = "<group>"; };
+		A338E4702C3DB6B700082311 /* Core Data.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Core Data.html"; sourceTree = "<group>"; };
+		A338E4722C3DB6C800082311 /* SQLite.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = SQLite.html; sourceTree = "<group>"; };
+		A338E4742C3DB6D700082311 /* Realm.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Realm.html; sourceTree = "<group>"; };
 		A3BC6B212C3377D80041A387 /* Navegação no Xcode.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Navegação no Xcode.html"; sourceTree = "<group>"; };
 		A3BC6B232C3387AF0041A387 /* Criar e configurar um projeto.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Criar e configurar um projeto.html"; sourceTree = "<group>"; };
 		A3BC6B252C3387E20041A387 /* Interface Builder para criar layouts visuais.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Interface Builder para criar layouts visuais.html"; sourceTree = "<group>"; };
@@ -623,6 +649,59 @@
 			path = Birdler;
 			sourceTree = "<group>";
 		};
+		A338E4572C3D9F1900082311 /* Propriedades e Métodos */ = {
+			isa = PBXGroup;
+			children = (
+				A338E4582C3D9F5C00082311 /* Propriedades.html */,
+				A338E45A2C3D9F7300082311 /* Métodos.html */,
+			);
+			name = "Propriedades e Métodos";
+			path = "Propriedades e Métodos";
+			sourceTree = "<group>";
+		};
+		A338E45C2C3DA0D100082311 /* Enums e Protocolos de Delegação */ = {
+			isa = PBXGroup;
+			children = (
+				A338E45D2C3DA0F400082311 /* Enums.html */,
+				A338E45F2C3DA11200082311 /* Protocolos de Delegação.html */,
+			);
+			name = "Enums e Protocolos de Delegação";
+			path = "Enums e Protocolos de Delegação";
+			sourceTree = "<group>";
+		};
+		A338E4612C3DA1A800082311 /* ARC, Extensões e Genéricos */ = {
+			isa = PBXGroup;
+			children = (
+				A338E4622C3DA1E400082311 /* Gerenciamento de memória (ARC).html */,
+				A338E4642C3DA1F800082311 /* Extensões.html */,
+				A338E4662C3DA20900082311 /* Genéricos.html */,
+			);
+			name = "ARC, Extensões e Genéricos";
+			path = "ARC, Extensões e Genéricos";
+			sourceTree = "<group>";
+		};
+		A338E4682C3DA21600082311 /* Manipulação de Strings e Coleções */ = {
+			isa = PBXGroup;
+			children = (
+				A338E4692C3DA24900082311 /* Manipulação de Strings e Coleções.html */,
+			);
+			name = "Manipulação de Strings e Coleções";
+			path = "Manipulação de Strings e Coleções";
+			sourceTree = "<group>";
+		};
+		A338E46B2C3DB67B00082311 /* Persistência de dados */ = {
+			isa = PBXGroup;
+			children = (
+				A338E46C2C3DB69D00082311 /* UserDefaults.html */,
+				A338E46E2C3DB6AB00082311 /* Keychain.html */,
+				A338E4702C3DB6B700082311 /* Core Data.html */,
+				A338E4722C3DB6C800082311 /* SQLite.html */,
+				A338E4742C3DB6D700082311 /* Realm.html */,
+			);
+			name = "Persistência de dados";
+			path = "Persistência de dados";
+			sourceTree = "<group>";
+		};
 		A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,7 +799,12 @@
 				E86C0B602C09624A00DEA1C3 /* Sintaxe Básica */,
 				E86C11D02C35332000A9EF47 /* Controle de Fluxo */,
 				E86C11D72C35498D00A9EF47 /* Funções, Estruturas e classes */,
+				A338E4572C3D9F1900082311 /* Propriedades e Métodos */,
+				A338E45C2C3DA0D100082311 /* Enums e Protocolos de Delegação */,
+				A338E4612C3DA1A800082311 /* ARC, Extensões e Genéricos */,
+				A338E4682C3DA21600082311 /* Manipulação de Strings e Coleções */,
 				A3BC6B1E2C3376F40041A387 /* Desenvolvimento IOS Basico */,
+				A338E46B2C3DB67B00082311 /* Persistência de dados */,
 				E84946912C34BD6900CF9A39 /* Fundamentos do Desenvolvimento iOS */,
 			);
 			name = "Lições";
@@ -912,6 +996,8 @@
 				E86C0B5E2C09607400DEA1C3 /* CSSWrapper.css in Resources */,
 				E84946952C34BDE100CF9A39 /* Tipos de variáveis e constantes.html in Resources */,
 				E8C4044E2BBBFD1E00226BDC /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				A338E46A2C3DA24900082311 /* Manipulação de Strings e Coleções.html in Resources */,
+				A338E4592C3D9F5C00082311 /* Propriedades.html in Resources */,
 				E86C11D22C35336800A9EF47 /* Condicionais if, else if, else.html in Resources */,
 				E86C0B502C094C3400DEA1C3 /* Home.json in Resources */,
 				E8C4045D2BBBFD1E00226BDC /* Urbanist-SemiBoldItalic.ttf in Resources */,
@@ -921,9 +1007,12 @@
 				E8C404292BB8015300226BDC /* DMSans-Regular.ttf in Resources */,
 				A31367292BB788A000F0CF5A /* Assets.xcassets in Resources */,
 				A3BC6B2E2C33883C0041A387 /* UITableView e UICollectionView.html in Resources */,
+				A338E46D2C3DB69D00082311 /* UserDefaults.html in Resources */,
 				E8C404532BBBFD1E00226BDC /* Urbanist-MediumItalic.ttf in Resources */,
 				E86C11D42C353C0500A9EF47 /* Switch.html in Resources */,
+				A338E46F2C3DB6AB00082311 /* Keychain.html in Resources */,
 				A3BC6B282C3387F60041A387 /* Storyboards vs. XIBs vs. Programmatic UI.html in Resources */,
+				A338E4652C3DA1F800082311 /* Extensões.html in Resources */,
 				E8C404352BB8015300226BDC /* DMSans-Italic.ttf in Resources */,
 				E8C4042E2BB8015300226BDC /* DMSans-MediumItalic.ttf in Resources */,
 				63CA80B32C00B947000764D7 /* GoogleService-Info.plist in Resources */,
@@ -933,14 +1022,18 @@
 				E8C4045A2BBBFD1E00226BDC /* Urbanist-ThinItalic.ttf in Resources */,
 				85F3A9AD2C317ED00055A6FF /* Consumir APIs RESTful (GET, POST, PUT, DELETE).html in Resources */,
 				85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */,
+				A338E4712C3DB6B700082311 /* Core Data.html in Resources */,
+				A338E4632C3DA1E400082311 /* Gerenciamento de memória (ARC).html in Resources */,
 				E8C404522BBBFD1E00226BDC /* Urbanist-Bold.ttf in Resources */,
 				E8C4045E2BBBFD1E00226BDC /* Urbanist-Italic.ttf in Resources */,
 				E84946932C34BDB600CF9A39 /* Constantes.html in Resources */,
 				E8C404272BB8015300226BDC /* DMSans-Bold.ttf in Resources */,
+				A338E4672C3DA20900082311 /* Genéricos.html in Resources */,
 				E8C404302BB8015300226BDC /* DMSans-Medium.ttf in Resources */,
 				E86C0B5C2C09606D00DEA1C3 /* HTMLWrapper-Slim.html in Resources */,
 				E8C404592BBBFD1E00226BDC /* Urbanist-SemiBold.ttf in Resources */,
 				A3BC6B262C3387E20041A387 /* Interface Builder para criar layouts visuais.html in Resources */,
+				A338E4752C3DB6D700082311 /* Realm.html in Resources */,
 				A3BC6B302C3388530041A387 /* Gestão de ciclo de vida de View Controllers.html in Resources */,
 				E8C404512BBBFD1E00226BDC /* Urbanist-BlackItalic.ttf in Resources */,
 				E86C0B662C09626F00DEA1C3 /* Variáveis.html in Resources */,
@@ -957,11 +1050,14 @@
 				851942122C189A4C00733F77 /* Exercise.json in Resources */,
 				E8C4044D2BBBFD1E00226BDC /* Urbanist-ExtraLight.ttf in Resources */,
 				E8C404342BB8015300226BDC /* DMSans-BlackItalic.ttf in Resources */,
+				A338E45B2C3D9F7300082311 /* Métodos.html in Resources */,
 				E8C4042A2BB8015300226BDC /* DMSans-SemiBold.ttf in Resources */,
 				A313672C2BB788A000F0CF5A /* Base in Resources */,
+				A338E4602C3DA11200082311 /* Protocolos de Delegação.html in Resources */,
 				E8C4045C2BBBFD1E00226BDC /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 				A3BC6B242C3387AF0041A387 /* Criar e configurar um projeto.html in Resources */,
 				E8C404332BB8015300226BDC /* DMSans-ExtraBoldItalic.ttf in Resources */,
+				A338E4732C3DB6C800082311 /* SQLite.html in Resources */,
 				E8C4042C2BB8015300226BDC /* DMSans-ThinItalic.ttf in Resources */,
 				E8C404362BB8015300226BDC /* DMSans-ExtraLightItalic.ttf in Resources */,
 				E84C59D62BC68853001226FB /* Poppins-SemiBold.ttf in Resources */,
@@ -974,6 +1070,7 @@
 				E8C404372BB8015300226BDC /* DMSans-Black.ttf in Resources */,
 				E8C4042B2BB8015300226BDC /* DMSans-SemiBoldItalic.ttf in Resources */,
 				E8C404582BBBFD1E00226BDC /* Urbanist-BoldItalic.ttf in Resources */,
+				A338E45E2C3DA0F400082311 /* Enums.html in Resources */,
 				E86C11CE2C35320200A9EF47 /* Operadores - Aritméticos,Comparação,Lógicos..html in Resources */,
 				85F3A9B12C317FBF0055A6FF /* Bibliotecas de terceiros com Alamofire.html in Resources */,
 			);

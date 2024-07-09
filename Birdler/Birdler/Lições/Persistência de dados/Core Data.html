@@ -1,0 +1,78 @@
+<body>
+
+<p>O Core Data é um framework poderoso para gerenciar modelos de dados em aplicativos iOS. Ele oferece um armazenamento persistente e uma camada de objeto de alto nível, facilitando o trabalho com dados estruturados.</p>
+
+<h2>Conceitos Principais</h2>
+
+<p>O Core Data utiliza os seguintes conceitos principais:</p>
+
+<ul>
+  <li><strong>NSManagedObjectModel</strong>: Define a estrutura dos dados, incluindo entidades e seus atributos.</li>
+  <li><strong>NSManagedObjectContext</strong>: Gerencia objetos em tempo de execução, incluindo inserção, exclusão e atualização de objetos.</li>
+  <li><strong>NSPersistentStoreCoordinator</strong>: Coordena os objetos com o armazenamento persistente.</li>
+  <li><strong>NSPersistentContainer</strong>: A partir do iOS 10, fornece uma configuração simplificada e encapsulada do stack do Core Data.</li>
+</ul>
+
+<h2>Exemplo de Uso</h2>
+
+<p>Aqui está um exemplo simples de como configurar e usar o Core Data para salvar e recuperar dados em um aplicativo iOS:</p>
+
+<pre><code>import UIKit
+import CoreData
+
+// Configurar o Core Data stack
+lazy var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "NomeDoModelo")
+    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        if let error = error as NSError? {
+            fatalError("Erro ao carregar o Core Data stack: \(error), \(error.userInfo)")
+        }
+    })
+    return container
+}()
+
+// Função para salvar dados no Core Data
+func salvarDados() {
+    let context = persistentContainer.viewContext
+    if let entity = NSEntityDescription.entity(forEntityName: "NomeDaEntidade", in: context) {
+        let objeto = NSManagedObject(entity: entity, insertInto: context)
+        objeto.setValue("ValorDoAtributo", forKeyPath: "nomeDoAtributo")
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Erro ao salvar dados: \(error), \(error.userInfo)")
+        }
+    }
+}
+
+// Função para recuperar dados do Core Data
+func recuperarDados() {
+    let context = persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NomeDaEntidade")
+    
+    do {
+        let resultados = try context.fetch(fetchRequest)
+        for caso in resultados as! [NSManagedObject] {
+            if let valor = caso.value(forKey: "nomeDoAtributo") as? String {
+                print("Valor recuperado: \(valor)")
+            }
+        }
+    } catch let error as NSError {
+        print("Erro ao recuperar dados: \(error), \(error.userInfo)")
+    }
+}
+
+// Exemplo de uso
+salvarDados()
+recuperarDados()
+</code></pre>
+
+<p>Neste exemplo, configuramos o stack do Core Data usando um container persistente, salvamos dados em uma entidade chamada "NomeDaEntidade" com um atributo "nomeDoAtributo", e recuperamos esses dados posteriormente.</p>
+
+<h2>Considerações</h2>
+
+<p>O Core Data é uma ferramenta poderosa para gerenciar dados em aplicativos iOS, oferecendo persistência, facilidade de uso e uma camada de abstração sobre o armazenamento de dados. É ideal para aplicativos que precisam armazenar e manipular informações estruturadas de forma eficiente.</p>
+
+</body>
+</html>
