@@ -1,0 +1,57 @@
+<body>
+
+<p>No desenvolvimento iOS, UserDefaults (ou User Defaults) é uma interface para interagir com as preferências do usuário no aplicativo. É comumente usado para armazenar pequenas quantidades de dados, como configurações ou preferências do usuário.</p>
+
+<h2>Como Funciona</h2>
+
+<p>UserDefaults armazena dados persistentemente entre as execuções do aplicativo. Aqui estão alguns pontos-chave sobre como funciona:</p>
+
+<ul>
+  <li><strong>Chave-Valor</strong>: Os dados são armazenados usando um sistema de chave-valor.</li>
+  <li><strong>Persistência</strong>: Os dados são armazenados localmente no dispositivo do usuário.</li>
+  <li><strong>Acesso Simples</strong>: UserDefaults oferece métodos simples para salvar e recuperar dados.</li>
+  <li><strong>Uso Comum</strong>: É frequentemente usado para salvar configurações do usuário, preferências ou estados de aplicativos simples.</li>
+</ul>
+
+<h2>Exemplo de Uso</h2>
+
+<p>Aqui está um exemplo simples de como usar UserDefaults em Swift para salvar e recuperar um valor:</p>
+
+<pre><code>import UIKit
+
+// Salvando um valor
+UserDefaults.standard.set("John Doe", forKey: "userName")
+
+// Recuperando um valor
+if let userName = UserDefaults.standard.string(forKey: "userName") {
+    print("Usuário logado como: \(userName)")
+} else {
+    print("Nenhum usuário encontrado.")
+}
+</code></pre>
+
+<p>Neste exemplo, "John Doe" é salvo com a chave "userName" nos UserDefaults. Quando o aplicativo é reiniciado, o valor associado à chave "userName" pode ser recuperado.</p>
+
+<h2>Métodos e Propriedades Principais</h2>
+
+<p>User Defaults oferece vários métodos e propriedades para gerenciar dados. Aqui estão alguns dos mais utilizados:</p>
+
+<ul>
+  <li><code>set(_:forKey:)</code>: Salva um valor para a chave especificada.</li>
+  <li><code>object(forKey:)</code>: Recupera um objeto para a chave especificada.</li>
+  <li><code>string(forKey:)</code>: Recupera uma string para a chave especificada.</li>
+  <li><code>integer(forKey:)</code>: Recupera um número inteiro para a chave especificada.</li>
+  <li><code>float(forKey:)</code>: Recupera um número de ponto flutuante para a chave especificada.</li>
+  <li><code>double(forKey:)</code>: Recupera um número de ponto flutuante de precisão dupla para a chave especificada.</li>
+  <li><code>bool(forKey:)</code>: Recupera um valor booleano para a chave especificada.</li>
+  <li><code>removeObject(forKey:)</code>: Remove o objeto associado à chave especificada.</li>
+  <li><code>synchronize()</code>: Força a sincronização dos dados com disco (não mais necessário em versões recentes do iOS).</li>
+</ul>
+
+<h2>Considerações</h2>
+
+<p>UserDefaults é adequado para armazenar pequenas quantidades de dados não sensíveis, como preferências do usuário. No entanto, para dados mais complexos, sensíveis ou que requerem consultas sofisticadas, considere usar CoreData, armazenamento seguro ou outra solução adequada.</p>
+
+</body>
+</html>
+
