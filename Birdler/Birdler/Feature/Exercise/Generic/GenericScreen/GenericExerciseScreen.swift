@@ -2,7 +2,6 @@ import UIKit
 
 protocol GenericExerciseScreenProtocol: AnyObject {
     func customNavigation()
-    
 }
 
 class GenericExerciseScreen: UIView {
@@ -81,8 +80,6 @@ class GenericExerciseScreen: UIView {
         return [exerciseButtonLeft, exerciseButtonMiddle, exerciseButtonRight]
     }
     
-    
-    
     private func createButton(selector: Selector) -> UIButton {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -95,11 +92,10 @@ class GenericExerciseScreen: UIView {
         button.setTitle("Your Title", for: .normal)
         button.addTarget(self, action: selector, for: .touchUpInside)
         
-        // Use UIButton.Configuration para configurar a aparência e o layout do botão
         var config = UIButton.Configuration.plain()
         config.baseBackgroundColor = .gray
         config.titlePadding = 16
-        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
+        config.cornerStyle = .capsule
         button.configuration = config
         
         return button
@@ -115,7 +111,7 @@ class GenericExerciseScreen: UIView {
             updateLivesLabel()
             
             if remainingAttempts <= 0 {
-                remainingAttempts = 0 // Garantir que as vidas não fiquem negativas
+                remainingAttempts = 0
                 showAlertForNoAttemptsLeft()
             }
             
@@ -124,8 +120,6 @@ class GenericExerciseScreen: UIView {
         
         updateButtonsState()
     }
-    
-    
     
     private lazy var nextQuestionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -138,11 +132,10 @@ class GenericExerciseScreen: UIView {
         button.setTitle("Próxima Pergunta", for: .normal)
         button.addTarget(self, action: #selector(nextQuestionButtonTapped), for: .touchUpInside)
         
-        // Use UIButton.Configuration para configurar a aparência e o layout do botão
         var config = UIButton.Configuration.plain()
         config.baseBackgroundColor = UIColor(red: 0x15/255.0, green: 0x75/255.0, blue: 0xF6/255.0, alpha: 1.0)
         config.titlePadding = 16
-        config.cornerStyle = .capsule // Define o estilo do canto como cápsula
+        config.cornerStyle = .capsule
         button.configuration = config
         
         return button
@@ -156,7 +149,6 @@ class GenericExerciseScreen: UIView {
             showAlertForNoAttemptsLeft()
         }
     }
-        
     
     func configureView(with question: Config.Question) {
         titleLabel.text = question.titleLabel.text
@@ -197,16 +189,9 @@ class GenericExerciseScreen: UIView {
         checkAndRestoreLives()
     }
     
-    //VOLTE UM ANTES DESSE
-
     @objc func addLife() {
         if remainingAttempts < maxAttempts {
             remainingAttempts += 1
-
-            if remainingAttempts > 0 {
-                nextQuestionButton.isEnabled = true // Reativar o botão "Próxima Pergunta" quando as vidas forem restauradas
-            }
-
             UserDefaults.standard.set(Date(), forKey: "lastRestoredDate")
         }
     }
@@ -219,7 +204,7 @@ class GenericExerciseScreen: UIView {
             viewController.present(alert, animated: true, completion: nil)
         }
         
-        nextQuestionButton.isEnabled = false // Desativar o botão "Próxima Pergunta"
+        nextQuestionButton.isEnabled = false
     }
     
     private func updateButtonsState() {
@@ -277,4 +262,3 @@ class GenericExerciseScreen: UIView {
         ])
     }
 }
-
