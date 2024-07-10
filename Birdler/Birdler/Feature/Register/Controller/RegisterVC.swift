@@ -1,6 +1,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -17,11 +18,32 @@ class RegisterVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func registrarUsuario() {
-        Auth.auth().createUser(withEmail: registerScreen?.emailTextField.text ?? "", password: registerScreen?.passwordTextField.text ?? "") { sucesso, error in
+        guard let email = registerScreen?.emailTextField.text,
+              let password = registerScreen?.passwordTextField.text,
+              let nome = registerScreen?.userTextField.text else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { sucesso, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 print("Usuário foi cadastrado..")
+                
+                // Adiciona o nome do usuário no Firestore
+                if let userID = Auth.auth().currentUser?.uid {
+                    let db = Firestore.firestore()
+                    db.collection("users").document(userID).setData([
+                        "nome": nome,
+                        "email": email
+                    ]) { error in
+                        if let error = error {
+                            print("Erro ao salvar o nome do usuário: \(error.localizedDescription)")
+                        } else {
+                            print("Nome do usuário salvo com sucesso.")
+                        }
+                    }
+                }
             }
         }
     }

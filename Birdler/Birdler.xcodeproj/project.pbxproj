@@ -41,6 +41,7 @@
 		85B9334E2C3D4924006E0A1C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9334D2C3D4924006E0A1C /* NewsModel.swift */; };
 		85B933512C3D571C006E0A1C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 85B933502C3D571C006E0A1C /* SDWebImage */; };
 		85B933532C3D571C006E0A1C /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85B933522C3D571C006E0A1C /* SDWebImageMapKit */; };
+		85E9D8702C3F3CB600E462AC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 85E9D86F2C3F3CB600E462AC /* FirebaseFirestore */; };
 		85F3A9A72C317C380055A6FF /* Arquitetura MVC.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */; };
 		85F3A9A92C317DA60055A6FF /* Arquitetura MVVM.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9A82C317DA60055A6FF /* Arquitetura MVVM.html */; };
 		85F3A9AB2C317E510055A6FF /* URLSession.html in Resources */ = {isa = PBXBuildFile; fileRef = 85F3A9AA2C317E510055A6FF /* URLSession.html */; };
@@ -288,6 +289,7 @@
 				85B933532C3D571C006E0A1C /* SDWebImageMapKit in Frameworks */,
 				85B933512C3D571C006E0A1C /* SDWebImage in Frameworks */,
 				BE8B712A2C11FEB5000DD200 /* FirebaseAppCheck in Frameworks */,
+				85E9D8702C3F3CB600E462AC /* FirebaseFirestore in Frameworks */,
 				BE8B71282C11FEB5000DD200 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,6 +945,7 @@
 				85610F892C34D75100991757 /* SideMenu */,
 				85B933502C3D571C006E0A1C /* SDWebImage */,
 				85B933522C3D571C006E0A1C /* SDWebImageMapKit */,
+				85E9D86F2C3F3CB600E462AC /* FirebaseFirestore */,
 			);
 			productName = Birdler;
 			productReference = A313671C2BB7889F00F0CF5A /* Birdler.app */;
@@ -1394,6 +1397,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85B9334F2C3D571C006E0A1C /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
+		};
+		85E9D86F2C3F3CB600E462AC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE8B71202C11FEB5000DD200 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		BE8B71212C11FEB5000DD200 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
