@@ -107,7 +107,7 @@ extension EditProfileVC: EditProfileScreenProtocol {
             case .success:
                 DispatchQueue.main.async {
                     print("Update successful")
-                    self.showAlert(title: "Foi", message: "Amem")
+                    self.showAlert(title: "Sucesso", message: "Dados alterados")
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
