@@ -63,7 +63,8 @@ extension SideVC: SideScreenProtocol {
     func editProfileNavigation() {
         let vc: EditProfileVC = EditProfileVC()
         
-        navigationController?.pushViewController(vc, animated: true)
+       navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: true)
     }
     
     func logoutNavigation() {

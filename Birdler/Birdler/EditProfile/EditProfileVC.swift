@@ -16,30 +16,15 @@ class EditProfileVC: UIViewController {
         view = editProfileScreen
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        //showNameChangedAlertAndNavigateToHomeVC()
-    }
-    
-    func updateUserProfile(name: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func updateUserProfile(name: String, completion: (Result<Void, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Nenhum usuário logado"])))
             return
         }
         
         let db = Firestore.firestore()
-        db.collection("users").document(user.uid).updateData(["nome": name]) { error in
-            if let error = error {
-                print("Firestore update error: \(error.localizedDescription)")
-                completion(.failure(error))
-            } else {
-                print("Profile updated successfully")
-                DispatchQueue.main.async {
-                    self.showNameChangedAlertAndNavigateToHomeVC()
-                }
-                completion(.success(()))
-            }
-        }
+        db.collection("users").document(user.uid).updateData(["nome": name])
+        completion(.success(()))
     }
 
     func showNameChangedAlertAndNavigateToHomeVC() {
@@ -117,6 +102,7 @@ extension EditProfileVC: EditProfileScreenProtocol {
         print("Calling updateUserProfile with name: \(name)")
         
         updateUserProfile(name: name) { result in
+            print(#function)
             switch result {
             case .success:
                 DispatchQueue.main.async {

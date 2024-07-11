@@ -91,6 +91,7 @@ class RegisterScreen: UIView {
         button.backgroundColor = .clear
         button.layer.cornerRadius = profileImageViewWidth / 2
         button.layer.masksToBounds = true
+        button.isHidden = true
         button.addTarget(self, action: #selector(tappedProfileImageButton), for: .touchUpInside)
         
         return button
@@ -104,6 +105,7 @@ class RegisterScreen: UIView {
         image.layer.cornerRadius = profileImageViewWidth / 2
         image.layer.masksToBounds = true
         image.contentMode = .scaleAspectFit
+        image.isHidden = true
         image.tintColor = .lightGray
         return image
         
