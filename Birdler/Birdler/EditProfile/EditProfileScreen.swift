@@ -89,7 +89,7 @@ class EditProfileScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.urbanistFont(type: .bold, size: 16)
         label.textAlignment = .center
-        label.text = "Ao clicar em salvar alterações, retorne à Home e seus dados estará atualizado."
+        label.text = "Ao clicar em salvar alterações, retorne à Home e seus dados estarão atualizados."
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textColor = .lightGray
