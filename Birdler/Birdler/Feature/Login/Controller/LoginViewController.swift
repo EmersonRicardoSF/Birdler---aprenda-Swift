@@ -1,9 +1,3 @@
-// LoginViewController.swift
-// Birdler
-//
-// Created by Nayla on 30/3/2024.
-//
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -35,17 +29,17 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol {
     
     func ContinueWhitoutLoginNavigation() {
-        let vc3: TabBarVC = TabBarVC()
-        vc3.modalPresentationStyle = .currentContext
+        let tabBarVC = TabBarVC()
+        tabBarVC.modalPresentationStyle = .fullScreen // Ajuste de apresentação
         
-        let nav = UINavigationController(rootViewController: vc3)
-        nav.modalPresentationStyle = .currentContext
-        present(nav, animated: true)
+        let navController = UINavigationController(rootViewController: tabBarVC)
+        navController.modalPresentationStyle = .fullScreen // Ajuste de apresentação
+        present(navController, animated: true, completion: nil)
     }
     
     func tappedRecuperarSenhaButton() {
         print("Recuperar Senha")
-        let vc: RecoverVC = RecoverVC()
+        let vc = RecoverVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -56,25 +50,25 @@ extension LoginVC: LoginScreenProtocol {
         logarUsuario(email: email, senha: senha)
     }
     
-    func tappedCriarCadastroButton(){
+    func tappedCriarCadastroButton() {
         print("Criar Cadastro")
-        let vc: RegisterVC = RegisterVC()
+        let vc = RegisterVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func logarUsuario(email: String, senha: String) {
-        Auth.auth().signIn(withEmail: email, password: senha) { [weak self] success, error in
+        Auth.auth().signIn(withEmail: email, password: senha) { [weak self] result, error in
             if let error = error {
                 print("Erro ao logar: \(error.localizedDescription)")
                 let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self?.present(alert, animated: true)
+                self?.present(alert, animated: true, completion: nil)
             } else {
                 print("Sucesso! O usuário está logado")
-                UserDefaults.standard.set(true, forKey: "Usuario Logado")
-                let vc: TabBarVC = TabBarVC()
-                vc.modalPresentationStyle = .fullScreen
-                self?.present(vc, animated: true)
+                UserDefaults.standard.set(true, forKey: "UsuarioLogado")
+                let tabBarVC = TabBarVC()
+                tabBarVC.modalPresentationStyle = .fullScreen
+                self?.present(tabBarVC, animated: true, completion: nil)
             }
         }
     }

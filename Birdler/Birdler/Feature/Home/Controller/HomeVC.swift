@@ -42,8 +42,20 @@ class HomeVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchUserName()
+    }
+    
     func fetchUserName() {
-        guard let userID = Auth.auth().currentUser?.uid else { return }
+        // Verifique se o usuário está logado
+        guard let userID = Auth.auth().currentUser?.uid else {
+            // Se o usuário não estiver logado, exiba apenas "Olá"
+            DispatchQueue.main.async {
+                self.homeScreen?.greetingLabel.text = "Olá"
+            }
+            return
+        }
+        
         let db = Firestore.firestore()
         let userRef = db.collection("users").document(userID)
         
@@ -51,13 +63,15 @@ class HomeVC: UIViewController {
             if let document = document, document.exists {
                 let data = document.data()
                 let nome = data?["nome"] as? String ?? "Usuário"
-                self.homeScreen?.greetingLabel.text = "Olá, \(nome)."
+                DispatchQueue.main.async {
+                    self.homeScreen?.greetingLabel.text = "Olá, \(nome)."
+                }
             } else {
                 print("Documento não encontrado ou erro ao recuperar: \(error?.localizedDescription ?? "Erro desconhecido")")
             }
         }
     }
-}
+    }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
