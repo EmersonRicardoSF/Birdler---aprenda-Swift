@@ -1,0 +1,227 @@
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loops</h1>
+        <p>Os loops são usados para executar repetidamente um bloco de código até que uma condição específica seja satisfeita. Em Swift, existem três tipos principais de loops: for-in, while e repeat-while.</p>
+
+        <div class="section">
+            <h2>For-in Loop</h2>
+            <p>O loop for-in é usado para iterar sobre sequências como intervalos de números, arrays, dicionários, strings e outras coleções.</p>
+            
+            <h3>Iterando sobre um Intervalo de Números</h3>
+            <p><strong>Descrição:</strong> Itera sobre um intervalo de números especificado.</p>
+            <pre><code>for i in 1...5 {
+    print(i)
+}
+// Saída:
+// 1
+// 2
+// 3
+// 4
+// 5</code></pre>
+
+            <h3>Iterando sobre um Array</h3>
+            <p><strong>Descrição:</strong> Itera sobre cada elemento em um array.</p>
+            <pre><code>let frutas = ["Maçã", "Banana", "Laranja"]
+
+for fruta in frutas {
+    print(fruta)
+}
+// Saída:
+// Maçã
+// Banana
+// Laranja</code></pre>
+
+            <h3>Iterando sobre um Dicionário</h3>
+            <p><strong>Descrição:</strong> Itera sobre cada par chave-valor em um dicionário.</p>
+            <pre><code>let capitais = ["Brasil": "Brasília", "Japão": "Tóquio"]
+
+for (pais, capital) in capitais {
+    print("A capital do \(pais) é \(capital).")
+}
+// Saída:
+// A capital do Brasil é Brasília.
+// A capital do Japão é Tóquio.</code></pre>
+
+            <h3>Iterando sobre uma String</h3>
+            <p><strong>Descrição:</strong> Itera sobre cada caractere em uma string.</p>
+            <pre><code>let palavra = "Swift"
+
+for letra in palavra {
+    print(letra)
+}
+// Saída:
+// S
+// w
+// i
+// f
+// t</code></pre>
+
+            <h3>Usando Índices</h3>
+            <p><strong>Descrição:</strong> Itera sobre índices de uma coleção.</p>
+            <pre><code>let numeros = [10, 20, 30, 40, 50]
+
+for (indice, valor) in numeros.enumerated() {
+    print("Índice \(indice): \(valor)")
+}
+// Saída:
+// Índice 0: 10
+// Índice 1: 20
+// Índice 2: 30
+// Índice 3: 40
+// Índice 4: 50</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>While Loop</h2>
+            <p>O loop while executa um bloco de código enquanto uma condição específica for verdadeira.</p>
+            
+            <h3>Estrutura Básica do while</h3>
+            <p><strong>Descrição:</strong> Verifica a condição antes de executar o bloco de código.</p>
+            <pre><code>var contador = 0
+
+while contador < 5 {
+    print(contador)
+    contador += 1
+}
+// Saída:
+// 0
+// 1
+// 2
+// 3
+// 4</code></pre>
+
+            <h3>Exemplo de Loop Infinito</h3>
+            <p><strong>Descrição:</strong> Tome cuidado para não criar loops infinitos acidentalmente.</p>
+            <pre><code>var contador = 0
+
+while true {
+    print(contador)
+    contador += 1
+    if contador >= 5 {
+        break
+    }
+}
+// Saída:
+// 0
+// 1
+// 2
+// 3
+// 4</code></pre>
+
+            <h3>Controle de Loop com continue</h3>
+            <p><strong>Descrição:</strong> Pula a iteração atual e continua com a próxima.</p>
+            <pre><code>var contador = 0
+
+while contador < 10 {
+    contador += 1
+    if contador % 2 == 0 {
+        continue
+    }
+    print(contador)
+}
+// Saída:
+// 1
+// 3
+// 5
+// 7
+// 9</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Repeat-While Loop</h2>
+            <p>O loop repeat-while é semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez, pois a condição é verificada após a execução do bloco.</p>
+
+            <h3>Estrutura Básica do repeat-while</h3>
+            <p><strong>Descrição:</strong> Executa o bloco de código uma vez antes de verificar a condição.</p>
+            <pre><code>var contador = 0
+
+repeat {
+    print(contador)
+    contador += 1
+} while contador < 5
+// Saída:
+// 0
+// 1
+// 2
+// 3
+// 4</code></pre>
+
+            <h3>Comparação entre while e repeat-while</h3>
+            <p><strong>while Loop:</strong></p>
+            <pre><code>var contador = 0
+
+while contador < 5 {
+    print(contador)
+    contador += 1
+}
+// Saída:
+// 0
+// 1
+// 2
+// 3
+// 4</code></pre>
+
+            <p><strong>repeat-while Loop:</strong></p>
+            <pre><code>var contador = 0
+
+repeat {
+    print(contador)
+    contador += 1
+} while contador < 5
+// Saída:
+// 0
+// 1
+// 2
+// 3
+// 4</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Boas Práticas ao Usar Loops</h2>
+            <ul>
+                <li>
+                    <strong>Evitar Loops Infinitos:</strong> Certifique-se de que a condição do loop eventualmente se tornará falsa.
+                    <pre><code>var contador = 0
+
+while true {
+    print(contador)
+    contador += 1
+    if contador >= 5 {
+        break  // Evita o loop infinito
+    }
+}</code></pre>
+                </li>
+                <li>
+                    <strong>Usar for-in para Iterar sobre Coleções:</strong> Prefira for-in para iterar sobre arrays, dicionários, strings e outras coleções, pois é mais legível e seguro.
+                    <pre><code>let frutas = ["Maçã", "Banana", "Laranja"]
+
+for fruta in frutas {
+    print(fruta)
+}</code></pre>
+                </li>
+                <li>
+                    <strong>Utilizar while para Condições Dinâmicas:</strong> Use while quando a quantidade de iterações não for conhecida antecipadamente e depender de uma condição dinâmica.
+                    <pre><code>var contador = 0
+
+while contador < 5 {
+    print(contador)
+    contador += 1
+}</code></pre>
+                </li>
+                <li>
+                    <strong>Garantir Execução com repeat-while:</strong> Use repeat-while quando precisar que o bloco de código seja executado pelo menos uma vez, independentemente da condição.
+                    <pre><code>var contador = 0
+
+repeat {
+    print(contador)
+    contador += 1
+} while contador < 5</code></pre>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

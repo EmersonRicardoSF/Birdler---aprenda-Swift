@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é uma API RESTful?</title>
+</head>
+<body>
+    <h1>O que é uma API RESTful?</h1>
+    <p>Uma API RESTful é uma maneira padronizada de acessar dados e funcionalidades em um servidor usando a internet. Pense nisso como um menu em um restaurante, onde você faz pedidos específicos e recebe respostas de acordo. Cada pedido que você faz é uma solicitação HTTP (GET, POST, PUT ou DELETE).</p>
+
+    <h2>Tipos de Solicitações</h2>
+    <ul>
+        <li><strong>GET:</strong> Pede dados do servidor. É como perguntar "Qual é o clima hoje?".</li>
+        <li><strong>POST:</strong> Envia novos dados para o servidor. É como enviar uma nova mensagem.</li>
+        <li><strong>PUT:</strong> Atualiza dados existentes no servidor. É como corrigir um erro em uma mensagem que você já enviou.</li>
+        <li><strong>DELETE:</strong> Remove dados do servidor. É como pedir para apagar uma mensagem enviada.</li>
+    </ul>
+
+    <h2>Como Consumir APIs RESTful em Swift</h2>
+    <p>Vamos ver exemplos de como fazer cada tipo de solicitação em Swift usando URLSession.</p>
+
+    <h3>1. GET</h3>
+    <p>Para buscar dados do servidor, como informações de clima:</p>
+    <pre>
+<code>
+import Foundation
+
+if let url = URL(string: "https://api.clima.com/hoje") {
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        if let data = data {
+            let dataString = String(data: data, encoding: .utf8)
+            print("Dados recebidos: \(dataString ?? "Nenhum dado")")
+        }
+    }
+    task.resume()
+}
+</code>
+    </pre>
+
+    <h3>2. POST</h3>
+    <p>Para enviar novos dados ao servidor, como criar uma nova tarefa:</p>
+    <pre>
+<code>
+import Foundation
+
+if let url = URL(string: "https://api.tarefas.com/nova") {
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    let newTask = ["title": "Estudar Swift", "completed": false] as [String : Any]
+    request.httpBody = try? JSONSerialization.data(withJSONObject: newTask)
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if let data = data {
+            let dataString = String(data: data, encoding: .utf8)
+            print("Resposta: \(dataString ?? "Nenhuma resposta")")
+        }
+    }
+    task.resume()
+}
+</code>
+    </pre>
+
+    <h3>3. PUT</h3>
+    <p>Para atualizar dados existentes no servidor, como corrigir uma tarefa:</p>
+    <pre>
+<code>
+import Foundation
+
+if let url = URL(string: "https://api.tarefas.com/atualizar/1") {
+    var request = URLRequest(url: url)
+    request.httpMethod = "PUT"
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    let updatedTask = ["title": "Estudar Swift Avançado", "completed": true] as [String : Any]
+    request.httpBody = try? JSONSerialization.data(withJSONObject: updatedTask)
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if let data = data {
+            let dataString = String(data: data, encoding: .utf8)
+            print("Resposta: \(dataString ?? "Nenhuma resposta")")
+        }
+    }
+    task.resume()
+}
+</code>
+    </pre>
+
+    <h3>4. DELETE</h3>
+    <p>Para remover dados do servidor, como deletar uma tarefa:</p>
+    <pre>
+<code>
+import Foundation
+
+if let url = URL(string: "https://api.tarefas.com/deletar/1") {
+    var request = URLRequest(url: url)
+    request.httpMethod = "DELETE"
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if let data = data {
+            let dataString = String(data: data, encoding: .utf8)
+            print("Resposta: \(dataString ?? "Nenhuma resposta")")
+        }
+    }
+    task.resume()
+}
+</code>
+    </pre>
+
+    <h2>Conclusão</h2>
+    <p>Consumir APIs RESTful em Swift é essencial para fazer aplicativos que se comunicam com a internet. Com as solicitações GET, POST, PUT e DELETE, você pode buscar, criar, atualizar e deletar dados em servidores, integrando funcionalidades online de forma eficiente no seu aplicativo.</p>
+</body>
+</html>
+

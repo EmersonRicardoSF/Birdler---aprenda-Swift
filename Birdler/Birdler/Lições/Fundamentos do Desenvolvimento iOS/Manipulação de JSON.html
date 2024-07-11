@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JSON?</title>
+</head>
+<body>
+    <h1>O que é JSON?</h1>
+    <p>JSON é um formato de dados usado para trocar informações entre um servidor e um aplicativo. Ele usa uma estrutura simples de chave-valor para representar dados. Aqui está um exemplo de JSON que representa uma lista de compras:</p>
+    <pre>
+<code>
+{
+    "frutas": ["Maçã", "Banana", "Laranja"],
+    "vegetais": ["Alface", "Tomate", "Cenoura"],
+    "quantidade": 6
+}
+</code>
+    </pre>
+
+    <h2>Como Manipular JSON em Swift</h2>
+    <p>Para trabalhar com JSON em Swift, você usa o JSONSerialization e as estruturas Codable para converter JSON em objetos Swift e vice-versa. Vamos ver alguns exemplos práticos.</p>
+
+    <h3>Lendo (Decodificando) JSON</h3>
+    <p>Imagine que você recebeu um JSON de um servidor e quer transformá-lo em um objeto Swift:</p>
+    <pre>
+<code>
+import Foundation
+
+let jsonString = """
+{
+    "frutas": ["Maçã", "Banana", "Laranja"],
+    "vegetais": ["Alface", "Tomate", "Cenoura"],
+    "quantidade": 6
+}
+"""
+
+// Converte a string JSON em dados
+if let jsonData = jsonString.data(using: .utf8) {
+    
+    // Define uma estrutura para corresponder ao JSON
+    struct ListaDeCompras: Codable {
+        let frutas: [String]
+        let vegetais: [String]
+        let quantidade: Int
+    }
+    
+    // Tenta decodificar os dados JSON para a estrutura
+    do {
+        let lista = try JSONDecoder().decode(ListaDeCompras.self, from: jsonData)
+        print("Frutas: \(lista.frutas)")
+        print("Vegetais: \(lista.vegetais)")
+        print("Quantidade: \(lista.quantidade)")
+    } catch {
+        print("Erro ao decodificar JSON: \(error)")
+    }
+}
+</code>
+    </pre>
+
+    <h3>Escrevendo (Codificando) JSON</h3>
+    <p>Se você tem um objeto Swift e quer convertê-lo para JSON para enviar a um servidor:</p>
+    <pre>
+<code>
+import Foundation
+
+// Define a estrutura
+struct ListaDeCompras: Codable {
+    let frutas: [String]
+    let vegetais: [String]
+    let quantidade: Int
+}
+
+// Cria uma instância da estrutura
+let lista = ListaDeCompras(frutas: ["Maçã", "Banana", "Laranja"], vegetais: ["Alface", "Tomate", "Cenoura"], quantidade: 6)
+
+// Tenta codificar a estrutura para JSON
+do {
+    let jsonData = try JSONEncoder().encode(lista)
+    
+    // Converte os dados JSON em uma string para exibição
+    if let jsonString = String(data: jsonData, encoding: .utf8) {
+        print("JSON: \(jsonString)")
+    }
+} catch {
+    print("Erro ao codificar JSON: \(error)")
+}
+</code>
+    </pre>
+
+    <h2>Por Que Isso é Útil?</h2>
+    <p>Manipular JSON em Swift é extremamente útil porque muitas APIs (interfaces de programação de aplicativos) usam JSON para enviar e receber dados. Se você estiver criando um aplicativo que se comunica com um servidor para obter dados de clima, redes sociais, ou qualquer outra coisa, você provavelmente usará JSON.</p>
+
+    <h2>Conclusão</h2>
+    <p>Manipular JSON em Swift é uma habilidade essencial para qualquer desenvolvedor que trabalha com aplicativos conectados à internet. Usando Codable, JSONDecoder e JSONEncoder, você pode facilmente converter entre JSON e objetos Swift, tornando seu código mais organizado e fácil de entender.</p>
+</body>
+</html>
+

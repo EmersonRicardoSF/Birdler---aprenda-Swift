@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Bem Vindo(a)",
+        "sections": [
+            "Boas Vindas",
+        ]
+    },
+    
+    {
+        "name": "Sintaxe Básica",
+        "sections": [
+            "Variáveis",
+            "Constantes",
+            "Tipos de variáveis e constantes",
+            "Operadores - Aritméticos,Comparação,Lógicos."
+        ]
+    },
+    
+    {
+        "name": "Controle de Fluxo",
+        "sections": [
+            "Condicionais if, else if, else",
+            "Switch",
+            "Loop"
+        ]
+    },
+    
+    {
+        "name": "Funções, Estruturas e Classes",
+        "sections": [
+            "Funções",
+            "Estruturas e Classes"
+        ]
+    },
+    
+    {
+        "name": "Propriedades e Métodos",
+        "sections": [
+            "Propriedades",
+            "Métodos"
+        ]
+    },
+    
+    {
+        "name": "Enums e Protocolos de Delegação.",
+        "sections": [
+            "Enums",
+            "Protocolos de Delegação",
+        ]
+    },
+    
+    {
+        "name": "ARC, Extensões e Genéricos",
+        "sections": [
+            "Gerenciamento de memória (ARC)",
+            "Extensões",
+            "Genéricos"
+            
+        ]
+    },
+    {
+        
+        "name": "Manipulação de Strings e Coleções",
+        "sections": [
+            "Manipulação de Strings e Coleções"
+            
+        ]
+    },
+    
+    {
+        "name": "Desenvolvimento IOS Básico",
+        "sections": [
+            "Navegação no Xcode",
+            "Criar e configurar um projeto",
+            "Interface Builder para criar layouts visuais",
+            "Storyboards vs. XIBs vs. Programmatic UI",
+            "UIView, UILabel, UIButton, UIImageView, etc.",
+            "Auto Layout e Constraints",
+            "UITableView e UICollectionView",
+            "Gestão de ciclo de vida de View Controllers"
+            
+        ]
+    },
+    
+    {
+        "name": "Arquitetura de Aplicativos e implementação",
+        "sections": [
+            "Arquitetura MVC",
+            "Arquitetura MVVM"
+        ]
+    },
+    {
+        "name": "Persistência de Dados:",
+        "sections": [
+            
+            
+            "UserDefaults",
+            "Keychain",
+            "Core Data",
+            "SQLite",
+            "Realm"
+        ]
+    },
+    {
+        "name": "Networking",
+        "sections": [
+            "URLSession",
+            "Consumir APIs RESTful (GET, POST, PUT, DELETE)",
+            "Manipulação de JSON",
+            "Bibliotecas de terceiros com Alamofire",
+            
+            
+        ]
+    },
+]
+ 

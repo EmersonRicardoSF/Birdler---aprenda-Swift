@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+
+<p>No desenvolvimento iOS com UIKit, as propriedades são atributos de objetos que definem características como aparência, comportamento e estado. Aqui estão alguns conceitos principais relacionados às propriedades no UIKit:</p>
+
+<h2>Propriedades de Interface (UI Properties)</h2>
+
+<p>As propriedades de interface são usadas para configurar e controlar a aparência e o comportamento dos elementos da interface do usuário. Aqui estão alguns exemplos comuns:</p>
+
+<ol>
+  <li><strong>UIView</strong>
+    <ul>
+      <li><code>backgroundColor</code>: Define a cor de fundo da view.</li>
+      <li><code>frame</code> e <code>bounds</code>: Controlam a posição e o tamanho da view.</li>
+      <li><code>alpha</code>: Define a opacidade da view.</li>
+      <li><code>isHidden</code>: Indica se a view está visível ou não.</li>
+    </ul>
+  </li>
+  
+  <li><strong>UILabel</strong>
+    <ul>
+      <li><code>text</code>: Define o texto exibido pelo label.</li>
+      <li><code>textColor</code>: Define a cor do texto.</li>
+      <li><code>font</code>: Define a fonte do texto.</li>
+      <li><code>numberOfLines</code>: Especifica o número máximo de linhas que o label pode exibir.</li>
+    </ul>
+  </li>
+
+  <li><strong>UIButton</strong>
+    <ul>
+      <li><code>titleLabel</code>: Propriedades relacionadas ao título do botão, como texto, cor e fonte.</li>
+      <li><code>backgroundColor</code>: Cor de fundo do botão.</li>
+      <li><code>isEnabled</code>: Indica se o botão está habilitado para interação.</li>
+    </ul>
+  </li>
+
+  <li><strong>UITextField</strong>
+    <ul>
+      <li><code>text</code>: O texto atual no campo de texto.</li>
+      <li><code>placeholder</code>: Texto exibido quando o campo de texto está vazio.</li>
+      <li><code>keyboardType</code>: Tipo de teclado exibido.</li>
+      <li><code>delegate</code>: Delegado responsável por gerenciar eventos e mudanças no campo de texto.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Propriedades de Controle (Control Properties)</h2>
+
+<p>Algumas classes no UIKit são usadas para controle e gestão de eventos:</p>
+
+<ul>
+  <li><strong>UIControl</strong>
+    <ul>
+      <li><code>isEnabled</code>: Indica se o controle está habilitado para interação.</li>
+      <li><code>isSelected</code>: Estado de seleção do controle.</li>
+      <li><code>isHighlighted</code>: Indica se o controle está destacado.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Propriedades de Tabela e Coleção (Table and Collection Properties)</h2>
+
+<ul>
+  <li><strong>UITableView</strong>
+    <ul>
+      <li><code>dataSource</code>: Define o objeto responsável por fornecer dados para a tabela.</li>
+      <li><code>delegate</code>: Gerencia a interação do usuário com a tabela.</li>
+    </ul>
+  </li>
+
+  <li><strong>UICollectionView</strong>
+    <ul>
+      <li><code>dataSource</code>: Fornece dados para a coleção.</li>
+      <li><code>delegate</code>: Gerencia o layout e a interação com a coleção.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Propriedades de Layout (Layout Properties)</h2>
+
+<ul>
+  <li><strong>NSLayoutConstraint</strong> (Autolayout)
+    <ul>
+      <li><code>constant</code>: Define a constante de um constraint.</li>
+      <li><code>priority</code>: Prioridade do constraint.</li>
+      <li><code>isActive</code>: Indica se o constraint está ativo.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Exemplo de Uso</h2>
+
+<p>Aqui está um exemplo simples de criação de uma <code>UILabel</code> e configuração de algumas de suas propriedades:</p>
+
+<pre><code>import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let label = UILabel()
+        label.text = "Hello, World!"
+        label.textColor = .blue
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textAlignment = .center
+        label.frame = CGRect(x: 50, y: 100, width: 200, height: 30)
+        self.view.addSubview(label)
+    }
+}</code></pre>
+
+</body>
+</html>

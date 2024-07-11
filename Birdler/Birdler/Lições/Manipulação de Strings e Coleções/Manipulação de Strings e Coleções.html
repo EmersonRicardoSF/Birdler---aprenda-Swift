@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <p>Manipulação de strings e coleções no contexto do UIKit, é um framework da Apple para construir interfaces gráficas no iOS. Vamos abordar alguns exemplos sobre manipulação de strings e coleções (arrays e dicionários) usando Swift, a linguagem de programação utilizada no desenvolvimento iOS com UIKit.</p>
+    
+    <h2>Manipulação de Strings em Swift</h2>
+    
+    <h3>Concatenar Strings:</h3>
+    <pre><code>
+let string1 = "Olá"
+let string2 = "Mundo"
+let resultado = "\(string1) \(string2)"
+print(resultado)  // Output: Olá Mundo
+    </code></pre>
+    
+    <h3>Fatiar Strings:</h3>
+    <pre><code>
+let texto = "Manipulação de Strings"
+let startIndex = texto.startIndex
+let endIndex = texto.index(startIndex, offsetBy: 11)
+let substring = String(texto[startIndex..<endIndex])
+print(substring)  // Output: Manipulação
+    </code></pre>
+    
+    <h3>Substituir Substrings:</h3>
+    <pre><code>
+var texto = "Bom dia, Mundo!"
+if let range = texto.range(of: "Mundo") {
+    texto.replaceSubrange(range, with: "Swift")
+}
+print(texto)  // Output: Bom dia, Swift!
+    </code></pre>
+    
+    <h3>Dividir Strings:</h3>
+    <pre><code>
+let texto = "apple,banana,orange"
+let frutas = texto.split(separator: ",")
+print(frutas)  // Output: ["apple", "banana", "orange"]
+    </code></pre>
+    
+    <h2>Manipulação de Coleções em Swift</h2>
+    
+    <h3>Arrays:</h3>
+    <h4>Inicializar e Acessar Elementos:</h4>
+    <pre><code>
+var frutas = ["maçã", "banana", "laranja"]
+print(frutas[0])  // Output: maçã
+    </code></pre>
+    
+    <h4>Adicionar e Remover Elementos:</h4>
+    <pre><code>
+frutas.append("uva")
+print(frutas)  // Output: ["maçã", "banana", "laranja", "uva"]
+
+frutas.remove(at: 1)
+print(frutas)  // Output: ["maçã", "laranja", "uva"]
+    </code></pre>
+    
+    <h3>Dicionários:</h3>
+    <h4>Inicializar e Acessar Valores:</h4>
+    <pre><code>
+var capitais = ["Brasil": "Brasília", "França": "Paris"]
+print(capitais["Brasil"]!)  // Output: Brasília
+    </code></pre>
+    
+    <h4>Adicionar e Remover Pares Chave-Valor:</h4>
+    <pre><code>
+capitais["Itália"] = "Roma"
+print(capitais)  // Output: ["Brasil": "Brasília", "França": "Paris", "Itália": "Roma"]
+
+capitais.removeValue(forKey: "França")
+print(capitais)  // Output: ["Brasil": "Brasília", "Itália": "Roma"]
+    </code></pre>
+    
+    <h2>Exemplo Prático com UIKit</h2>
+    <p>Vamos combinar esses conceitos com um exemplo prático no UIKit. Suponha que temos um <code>UILabel</code> em nossa interface e queremos manipular o texto desse label.</p>
+    
+    <h3>Atualizando o Texto de um UILabel:</h3>
+    <pre><code>
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var myLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        // Inicializando o texto
+        myLabel.text = "Olá Mundo!"
+       
+        // Manipulando o texto
+        if let texto = myLabel.text {
+            let novoTexto = texto.replacingOccurrences(of: "Mundo", with: "Swift")
+            myLabel.text = novoTexto  // Output: Olá Swift!
+        }
+       
+        // Exemplo com array
+        let frutas = ["maçã", "banana", "laranja"]
+        myLabel.text = frutas.joined(separator: ", ")  // Output: maçã, banana, laranja
+    }
+}
+    </code></pre>
+</body>
+</html>

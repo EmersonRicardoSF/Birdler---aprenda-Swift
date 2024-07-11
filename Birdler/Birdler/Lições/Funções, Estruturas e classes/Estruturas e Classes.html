@@ -1,0 +1,315 @@
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Estruturas (struct) e Classes (class) em Swift</h1>
+
+        <div class="section">
+            <h2>Estruturas (struct)</h2>
+            <p>Uma estrutura é um tipo de dado que pode encapsular propriedades (dados) e métodos (funções) relacionados. Estruturas são tipos de valor, o que significa que quando você cria uma instância de uma estrutura e a atribui a uma variável ou constante, ou a passa para uma função, você está sempre fazendo uma cópia.</p>
+
+            <h3>Definindo uma Estrutura</h3>
+            <p><strong>Sintaxe Básica:</strong></p>
+            <pre><code>struct NomeDaEstrutura {
+    // Propriedades
+    var propriedade1: Tipo1
+    var propriedade2: Tipo2
+    
+    // Métodos
+    func nomeDoMetodo() {
+        // Código do método
+    }
+}</code></pre>
+
+            <p><strong>Exemplo de Estrutura:</strong></p>
+            <pre><code>struct Pessoa {
+    var nome: String
+    var idade: Int
+    
+    func saudacao() {
+        print("Olá, meu nome é \(nome) e eu tenho \(idade) anos.")
+    }
+}
+
+let pessoa1 = Pessoa(nome: "João", idade: 30)
+pessoa1.saudacao()
+// Saída: Olá, meu nome é João e eu tenho 30 anos.</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Propriedades de Instância e de Tipo</h2>
+            <h3>Propriedades de Instância:</h3>
+            <p>Cada instância da estrutura tem suas próprias cópias dessas propriedades.</p>
+            <pre><code>struct Retangulo {
+    var largura: Double
+    var altura: Double
+}
+
+let ret1 = Retangulo(largura: 10.0, altura: 5.0)
+let ret2 = Retangulo(largura: 7.0, altura: 3.0)</code></pre>
+
+            <h3>Propriedades de Tipo:</h3>
+            <p>Pertencem à estrutura em si, e não a qualquer instância individual.</p>
+            <pre><code>struct Contador {
+    static var totalContadores = 0
+    var valor: Int = 0
+    
+    init() {
+        Contador.totalContadores += 1
+    }
+}
+
+let contador1 = Contador()
+let contador2 = Contador()
+print(Contador.totalContadores)  // Saída: 2</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Métodos de Instância e de Tipo</h2>
+            <h3>Métodos de Instância:</h3>
+            <p>Operam em instâncias da estrutura.</p>
+            <pre><code>struct Circulo {
+    var raio: Double
+    
+    func area() -> Double {
+        return 3.14159 * raio * raio
+    }
+}
+
+let circulo1 = Circulo(raio: 5.0)
+print(circulo1.area())  // Saída: 78.53975</code></pre>
+
+            <h3>Métodos de Tipo:</h3>
+            <p>Operam na estrutura em si.</p>
+            <pre><code>struct Matematica {
+    static func quadrado(numero: Int) -> Int {
+        return numero * numero
+    }
+}
+
+let resultado = Matematica.quadrado(numero: 4)
+print(resultado)  // Saída: 16</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Classes (class)</h2>
+            <p>Uma classe é um tipo de dado que pode encapsular propriedades (dados) e métodos (funções) relacionados, semelhante às estruturas. No entanto, classes são tipos de referência, o que significa que quando você cria uma instância de uma classe e a atribui a uma variável ou constante, ou a passa para uma função, você está manipulando uma referência à mesma instância, não uma cópia.</p>
+
+            <h3>Definindo uma Classe</h3>
+            <p><strong>Sintaxe Básica:</strong></p>
+            <pre><code>class NomeDaClasse {
+    // Propriedades
+    var propriedade1: Tipo1
+    var propriedade2: Tipo2
+    
+    // Inicializadores
+    init(propriedade1: Tipo1, propriedade2: Tipo2) {
+        self.propriedade1 = propriedade1
+        self.propriedade2 = propriedade2
+    }
+    
+    // Métodos
+    func nomeDoMetodo() {
+        // Código do método
+    }
+}</code></pre>
+
+            <p><strong>Exemplo de Classe:</strong></p>
+            <pre><code>class Pessoa {
+    var nome: String
+    var idade: Int
+    
+    init(nome: String, idade: Int) {
+        self.nome = nome
+        self.idade = idade
+    }
+    
+    func saudacao() {
+        print("Olá, meu nome é \(nome) e eu tenho \(idade) anos.")
+    }
+}
+
+let pessoa1 = Pessoa(nome: "Ana", idade: 25)
+pessoa1.saudacao()
+// Saída: Olá, meu nome é Ana e eu tenho 25 anos.</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Propriedades de Instância e de Tipo</h2>
+            <h3>Propriedades de Instância:</h3>
+            <p>Cada instância da classe tem suas próprias cópias dessas propriedades.</p>
+            <pre><code>class Retangulo {
+    var largura: Double
+    var altura: Double
+    
+    init(largura: Double, altura: Double) {
+        self.largura = largura
+        self.altura = altura
+    }
+}
+
+let ret1 = Retangulo(largura: 10.0, altura: 5.0)
+let ret2 = Retangulo(largura: 7.0, altura: 3.0)</code></pre>
+
+            <h3>Propriedades de Tipo:</h3>
+            <p>Pertencem à classe em si, e não a qualquer instância individual.</p>
+            <pre><code>class Contador {
+    static var totalContadores = 0
+    var valor: Int = 0
+    
+    init() {
+        Contador.totalContadores += 1
+    }
+}
+
+let contador1 = Contador()
+let contador2 = Contador()
+print(Contador.totalContadores)  // Saída: 2</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Métodos de Instância e de Tipo</h2>
+            <h3>Métodos de Instância:</h3>
+            <p>Operam em instâncias da classe.</p>
+            <pre><code>class Circulo {
+    var raio: Double
+    
+    init(raio: Double) {
+        self.raio = raio
+    }
+    
+    func area() -> Double {
+        return 3.14159 * raio * raio
+    }
+}
+
+let circulo1 = Circulo(raio: 5.0)
+print(circulo1.area())  // Saída: 78.53975</code></pre>
+
+            <h3>Métodos de Tipo:</h3>
+            <p>Operam na classe em si.</p>
+            <pre><code>class Matematica {
+    static func quadrado(numero: Int) -> Int {
+        return numero * numero
+    }
+}
+
+let resultado = Matematica.quadrado(numero: 4)
+print(resultado)  // Saída: 16</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Herança em Classes</h2>
+            <p>Classes podem herdar propriedades e métodos de outras classes. Isso permite a reutilização de código e a criação de hierarquias de classes.</p>
+            
+            <h3>Definindo Herança</h3>
+            <p><strong>Classe Base:</strong></p>
+            <pre><code>class Animal {
+    var nome: String
+    
+    init(nome: String) {
+        self.nome = nome
+    }
+    
+    func fazerSom() {
+        print("\(nome) faz um som.")
+    }
+}</code></pre>
+
+            <p><strong>Classe Derivada:</strong></p>
+            <pre><code>class Cachorro: Animal {
+    func abanarRabo() {
+        print("\(nome) está abanando o rabo.")
+    }
+    
+    override func fazerSom() {
+        print("\(nome) late.")
+    }
+}
+
+let cachorro = Cachorro(nome: "Rex")
+cachorro.fazerSom()  // Saída: Rex late.
+cachorro.abanarRabo()  // Saída: Rex está abanando o rabo.</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Comparação entre Estruturas e Classes</h2>
+            <ul>
+                <li><strong>Tipo de Valor vs Tipo de Referência:</strong>
+                    <ul>
+                        <li><strong>Estruturas:</strong> São tipos de valor. Atribuir uma estrutura a uma nova variável ou passá-la para uma função cria uma cópia.</li>
+                        <li><strong>Classes:</strong> São tipos de referência. Atribuir uma classe a uma nova variável ou passá-la para uma função cria uma referência à mesma instância.</li>
+                    </ul>
+                </li>
+                <li><strong>Herança:</strong>
+                    <ul>
+                        <li><strong>Estruturas:</strong> Não suportam herança.</li>
+                        <li><strong>Classes:</strong> Suportam herança.</li>
+                    </ul>
+                </li>
+                <li><strong>Destrutores:</strong>
+                    <ul>
+                        <li><strong>Estruturas:</strong> Não têm destrutores.</li>
+                        <li><strong>Classes:</strong> Podem ter um destrutor (deinit) para limpar recursos quando uma instância é desalocada.</li>
+                    </ul>
+                </li>
+                <li><strong>Mutabilidade:</strong>
+                    <ul>
+                        <li><strong>Estruturas:</strong> Para mutar propriedades de uma estrutura dentro de métodos de instância, o método deve ser marcado como <code>mutating</code>.</li>
+                        <li><strong>Classes:</strong> Métodos de instância em classes podem mutar propriedades sem a necessidade de uma marcação especial.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos Completos</h2>
+            
+            <h3>Estrutura Completa</h3>
+            <pre><code>struct Livro {
+    var titulo: String
+    var autor: String
+    var paginas: Int
+    
+    func descricao() -> String {
+        return "\(titulo) por \(autor), com \(paginas) páginas."
+    }
+}
+
+let livro1 = Livro(titulo: "Swift Programming", autor: "Apple", paginas: 400)
+print(livro1.descricao())
+// Saída: Swift Programming por Apple, com 400 páginas.</code></pre>
+
+            <h3>Classe Completa</h3>
+            <pre><code>class Carro {
+    var marca: String
+    var ano: Int
+    
+    init(marca: String, ano: Int) {
+        self.marca = marca
+        self.ano = ano
+    }
+    
+    func descricao() -> String {
+        return "Carro marca \(marca), ano \(ano)."
+    }
+}
+
+let carro1 = Carro(marca: "Toyota", ano: 2020)
+print(carro1.descricao())
+// Saída: Carro marca Toyota, ano 2020.</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Boas Práticas</h2>
+            <ul>
+                <li><strong>Use Estruturas para Tipos de Dados Simples:</strong> Use estruturas para tipos de dados simples e imutáveis, onde a cópia de valores é aceitável.</li>
+                <li><strong>Use Classes para Objetos Complexos:</strong> Use classes para objetos complexos que requerem herança, mutabilidade e gerenciamento de recursos.</li>
+                <li><strong>Marque Métodos Mutantes em Estruturas:</strong> Use a palavra-chave <code>mutating</code> para métodos que alteram propriedades em estruturas.</li>
+                <li><strong>Gerencie Recursos em Classes:</strong> Utilize o destrutor (<code>deinit</code>) para liberar recursos alocados por instâncias de classes.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

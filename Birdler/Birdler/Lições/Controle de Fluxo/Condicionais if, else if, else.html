@@ -1,0 +1,50 @@
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Fluxo</h1>
+        <p>O controle de fluxo em programação é usado para determinar o caminho que um programa deve seguir durante sua execução. Em Swift, isso é feito usando condicionais e loops.</p>
+
+        <div class="section">
+            <h2>Condicionais: if, else if, else</h2>
+            <p>As condicionais permitem que você execute diferentes blocos de código com base em certas condições.</p>
+            
+            <h3>Estrutura do if</h3>
+            <p><strong>Descrição:</strong> Avalia uma condição e executa o bloco de código associado se a condição for verdadeira.</p>
+            <pre><code>let idade = 18
+
+if idade >= 18 {
+    print("Você é maior de idade.")
+}</code></pre>
+            <p>Aqui, o bloco de código dentro do <code>if</code> será executado porque a condição <code>idade >= 18</code> é verdadeira.</p>
+
+            <h3>Estrutura do else</h3>
+            <p><strong>Descrição:</strong> Executa um bloco de código se todas as condições anteriores (if e else if) forem falsas.</p>
+            <pre><code>let idade = 16
+
+if idade >= 18 {
+    print("Você é maior de idade.")
+} else {
+    print("Você é menor de idade.")
+}</code></pre>
+            <p>Neste caso, como <code>idade &lt; 18</code>, o bloco de código dentro do <code>else</code> será executado.</p>
+
+            <h3>Estrutura do else if</h3>
+            <p><strong>Descrição:</strong> Avalia uma segunda condição se a condição anterior (if) for falsa.</p>
+            <pre><code>let pontuacao = 85
+
+if pontuacao >= 90 {
+    print("Nota A")
+} else if pontuacao >= 80 {
+    print("Nota B")
+} else if pontuacao >= 70 {
+    print("Nota C")
+} else {
+    print("Nota D")
+}</code></pre>
+            <p>Aqui, a condição <code>pontuacao &gt;= 80</code> é verdadeira, então o bloco de código associado ao <code>else if</code> será executado.</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+</head>
+<body>
+    <div class="container">
+        <h1>Operadores Aritméticos</h1>
+        <p>Os operadores aritméticos são usados para realizar operações matemáticas básicas. Vamos explorar cada um deles em detalhes.</p>
+        
+        <div class="section">
+            <h2>Adição (+)</h2>
+            <p>Descrição: Soma dois números.</p>
+            <pre><code>let a = 5
+let b = 3
+let soma = a + b  // Resultado: 8</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Subtração (-)</h2>
+            <p>Descrição: Subtrai o segundo número do primeiro.</p>
+            <pre><code>let a = 10
+let b = 2
+let subtracao = a - b  // Resultado: 8</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Multiplicação (*)</h2>
+            <p>Descrição: Multiplica dois números.</p>
+            <pre><code>let a = 4
+let b = 2
+let multiplicacao = a * b  // Resultado: 8</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Divisão (/)</h2>
+            <p>Descrição: Divide o primeiro número pelo segundo. Em divisões inteiras, o resultado é truncado.</p>
+            <pre><code>let a = 20
+let b = 4
+let divisao = a / b  // Resultado: 5</code></pre>
+            <p>Divisão com Double:</p>
+            <pre><code>let x: Double = 20.0
+let y: Double = 4.0
+let divisaoDouble = x / y  // Resultado: 5.0</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Módulo (%)</h2>
+            <p>Descrição: Retorna o resto da divisão do primeiro número pelo segundo.</p>
+            <pre><code>let a = 7
+let b = 3
+let modulo = a % b  // Resultado: 1</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos Combinados de Operadores Aritméticos</h2>
+            <pre><code>let x = 15
+let y = 4
+
+let soma = x + y  // 19
+let diferenca = x - y  // 11
+let produto = x * y  // 60
+let quociente = x / y  // 3 (divisão inteira)
+let resto = x % y  // 3</code></pre>
+        </div>
+
+        <h1>Operadores de Comparação</h1>
+        <p>Os operadores de comparação são usados para comparar dois valores e retornar um valor booleano (true ou false). Vamos detalhar cada um deles.</p>
+
+        <div class="section">
+            <h2>Igual a (==)</h2>
+            <p>Descrição: Verifica se dois valores são iguais.</p>
+            <pre><code>let a = 5
+let b = 5
+let isEqual = (a == b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Diferente de (!=)</h2>
+            <p>Descrição: Verifica se dois valores são diferentes.</p>
+            <pre><code>let a = 5
+let b = 3
+let isNotEqual = (a != b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Maior que (&gt;)</h2>
+            <p>Descrição: Verifica se o primeiro valor é maior que o segundo.</p>
+            <pre><code>let a = 7
+let b = 5
+let isGreater = (a &gt; b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Menor que (&lt;)</h2>
+            <p>Descrição: Verifica se o primeiro valor é menor que o segundo.</p>
+            <pre><code>let a = 3
+let b = 5
+let isLesser = (a &lt; b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Maior ou igual a (&gt;=)</h2>
+            <p>Descrição: Verifica se o primeiro valor é maior ou igual ao segundo.</p>
+            <pre><code>let a = 6
+let b = 6
+let isGreaterOrEqual = (a &gt;= b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Menor ou igual a (&lt;=)</h2>
+            <p>Descrição: Verifica se o primeiro valor é menor ou igual ao segundo.</p>
+            <pre><code>let a = 4
+let b = 5
+let isLesserOrEqual = (a &lt;= b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos Combinados de Operadores de Comparação</h2>
+            <pre><code>let x = 10
+let y = 20
+
+let igual = (x == y)  // false
+let diferente = (x != y)  // true
+let maior = (x &gt; y)  // false
+let menor = (x &lt; y)  // true
+let maiorOuIgual = (x &gt;= y)  // false
+let menorOuIgual = (x &lt;= y)  // true</code></pre>
+        </div>
+
+        <h1>Operadores Lógicos</h1>
+        <p>Os operadores lógicos são usados para combinar múltiplas condições booleanas. Vamos explorar cada um deles.</p>
+
+        <div class="section">
+            <h2>AND lógico (&&)</h2>
+            <p>Descrição: Retorna true se ambas as condições forem verdadeiras.</p>
+            <pre><code>let a = true
+let b = false
+let andResult = (a && b)  // false</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>OR lógico (||)</h2>
+            <p>Descrição: Retorna true se pelo menos uma das condições for verdadeira.</p>
+            <pre><code>let a = true
+let b = false
+let orResult = (a || b)  // true</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>NOT lógico (!)</h2>
+            <p>Descrição: Inverte o valor booleano.</p>
+            <pre><code>let a = true
+let notResult = !a  // false</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Exemplos Combinados de Operadores Lógicos</h2>
+            <pre><code>let idade = 22
+let temCarteiraDeMotorista = true
+
+let podeDirigir = (idade &gt;= 18) && temCarteiraDeMotorista  // true
+
+if podeDirigir {
+    print("Pode dirigir")
+} else {
+    print("Não pode dirigir")
+}
+
+let estaChovendo = false
+let temGuardaChuva = true
+
+let vaiSair = (estaChovendo && temGuardaChuva) || !estaChovendo  // true
+
+if vaiSair {
+    print("Vai sair de casa")
+} else {
+    print("Não vai sair de casa")
+}</code></pre>
+        </div>
+
+        <h2>Exemplos Práticos Combinados</h2>
+        <div class="section">
+            <h3>Operações Aritméticas e Comparação</h3>
+            <pre><code>let numero1 = 15
+let numero2 = 4
+
+let soma = numero1 + numero2  // 19
+let diferenca = numero1 - numero2  // 11
+let produto = numero1 * numero2  // 60
+let quociente = numero1 / numero2  // 3
+let resto = numero1 % numero2  // 3
+
+let isEqual = (soma == diferenca)  // false
+let isNotEqual = (produto != quociente)  // true
+let isGreater = (soma &gt; produto)  // false
+let isLesser = (diferenca &lt; quociente)  // false</code></pre>
+        </div>
+
+        <div class="section">
+            <h3>Operadores Lógicos em Condicionais</h3>
+            <pre><code>let idade = 22
+let temCarteiraDeMotorista = true
+
+let podeDirigir = (idade &gt;= 18) && temCarteiraDeMotorista  // true
+
+if podeDirigir {
+    print("Pode dirigir")
+} else {
+    print("Não pode dirigir")
+}
+
+let estaChovendo = false
+let temGuardaChuva = true
+
+let vaiSair = (estaChovendo && temGuardaChuva) || !estaChovendo  // true
+
+if vaiSair {
+    print("Vai sair de casa")
+} else {
+    print("Não vai sair de casa")</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Resumo dos Operadores</h2>
+            <ul>
+                <li>
+                    <strong>Aritméticos:</strong>
+                    <ul>
+                        <li>Adição (+)</li>
+                        <li>Subtração (-)</li>
+                        <li>Multiplicação (*)</li>
+                        <li>Divisão (/)</li>
+                        <li>Módulo (%)
+                    </ul>
+                </li>
+                <li>
+                    <strong>Comparação:</strong>
+                    <ul>
+                        <li>Igual a (==)</li>
+                        <li>Diferente de (!=)</li>
+                        <li>Maior que (&gt;)</li>
+                        <li>Menor que (&lt;)</li>
+                        <li>Maior ou igual a (&gt;=)</li>
+                        <li>Menor ou igual a (&lt;=)
+                    </ul>
+                </li>
+                <li>
+                    <strong>Lógicos:</strong>
+                    <ul>
+                        <li>AND lógico (&&)</li>
+                        <li>OR lógico (||)</li>
+                        <li>NOT lógico (!)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

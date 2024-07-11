@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: [FONTSIZE]%;
+    background: transparent; /* Fundo transparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os itens ao início */
+    min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura total da tela */
+}
+
+.container {
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 800px; /* Limita a largura máxima do container para melhorar a centralização */
+    margin-top: calc(3 * 1em); /* Adiciona espaço equivalente a três linhas vazias */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 0.75em; /* Diminui o tamanho dos títulos em 25% */
+    margin-top: 1em; /* Adiciona uma linha de espaço antes dos títulos */
+}
+
+h1 {
+    font-size: 1.5em; /* Ajusta o tamanho do título */
+}
+
+h2 {
+    font-size: 1.25em; /* Ajusta o tamanho do título */
+}
+
+h3 {
+    font-size: 1em; /* Ajusta o tamanho do título */
+}
+
+h4 {
+    font-size: 0.75em; /* Ajusta o tamanho do título */
+}
+
+h5 {
+    font-size: 0.5em; /* Ajusta o tamanho do título */
+}
+
+h6 {
+    font-size: 0.25em; /* Ajusta o tamanho do título */
+}
+
+img {
+    width: [IMAGEWIDTH];
+    height: auto;
+}
+
+p.mainImage {
+    margin-bottom: 30px; /* Aumentei o margin-bottom */
+}
+
+div.container p {
+    margin-left: 30px; /* Aumentei as margens */
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: 1em; /* Adiciona uma linha de espaço antes dos parágrafos após os títulos */
+}
+
+a {
+    text-decoration: none;
+}
+
+/*native HTML-solutions for screen-readers tags don't work here, only this tricky one*/
+a.voiceOver {
+    font-size: 1px;
+}
+
+/*
+    Getting nice syntax highlighting is tricky!
+    We mark the whole thing as being black with white text
+    then use paragraphs inside preformatted text to apply
+    margins. We also have a zero-height paragraph at​⬤
