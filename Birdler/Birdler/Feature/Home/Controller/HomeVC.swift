@@ -14,19 +14,12 @@ class HomeVC: UIViewController {
         view = homeScreen
         homeScreen?.configProtocolsTableView(delegate: self, dataSource: self)
         homeScreen?.delegate(delegate: self)
-        checkUserLoggedIn()
-    }
-    
-    func checkUserLoggedIn() {
-        if Auth.auth().currentUser == nil {
-            // Redireciona para a tela de login se o usuário não estiver logado
-            let loginVC = LoginVC()
-            loginVC.modalPresentationStyle = .fullScreen
-            present(loginVC, animated: true, completion: nil)
-        } else {
-            loadHome()
-            fetchUserName()
-        }
+        // Registro da célula personalizada
+          homeScreen?.tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+          
+          // Configuração para altura automática da célula
+          homeScreen?.tableView.rowHeight = UITableView.automaticDimension
+          homeScreen?.tableView.estimatedRowHeight = 44
     }
     
     func loadHome() {
@@ -43,6 +36,7 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        loadHome()
         fetchUserName()
     }
     

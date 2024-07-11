@@ -23,6 +23,7 @@ class HomeScreen: UIView {
     
     lazy var imageBackGround: UIImageView = {
         let image = UIImageView(image: UIImage(named: "background"))
+        image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
@@ -30,7 +31,7 @@ class HomeScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.urbanistFont(type: .bold, size: 16)
-        label.text = "Olá, Nayla."
+        label.text = "Olá, "
         
         return label
         

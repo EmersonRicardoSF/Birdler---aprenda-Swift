@@ -58,7 +58,7 @@ class LoginScreen: UIView {
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
-        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
         
     }()
@@ -160,7 +160,7 @@ class LoginScreen: UIView {
         button.setTitle("Entrar", for: .normal)
         button.titleLabel?.font = UIFont.urbanistFont(type: .bold, size: 19)
         button.setTitleColor(.white, for: .normal)
-        button.isEnabled = false
+        button.isEnabled = true
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
@@ -187,8 +187,8 @@ class LoginScreen: UIView {
     
     lazy var continueWithoutLoginButton: UIButton = {
         let button: UIButton = UIButton()
-        button.setTitle("Continuar sem login", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Continuar sem login", for: .normal)
         button.titleLabel?.font = UIFont.dmsansFont(type: .bold, size: 16)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -262,10 +262,10 @@ class LoginScreen: UIView {
     private func configConstrains() {
         NSLayoutConstraint.activate([
             
-            backgroundImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            backgroundImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            backgroundImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),

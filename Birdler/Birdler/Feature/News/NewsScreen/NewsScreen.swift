@@ -28,7 +28,7 @@ class NewsScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.urbanistFont(type: .bold, size: 16)
-        label.text = "Olá, Nayla."
+        label.text = "Olá, "
         return label
     }()
     

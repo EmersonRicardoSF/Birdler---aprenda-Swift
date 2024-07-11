@@ -7,6 +7,8 @@
 
 import UIKit
 import SafariServices
+import FirebaseAuth
+import FirebaseFirestore
 
 class NewsVC: UIViewController {
 
@@ -32,6 +34,33 @@ class NewsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchNews()
+        fetchUserName()
+    }
+    
+    func fetchUserName() {
+        // Verifique se o usuário está logado
+        guard let userID = Auth.auth().currentUser?.uid else {
+            // Se o usuário não estiver logado, exiba apenas "Olá"
+            DispatchQueue.main.async {
+                self.newsScreen?.greetingLabel.text = "Olá"
+            }
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(userID)
+        
+        userRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                let nome = data?["nome"] as? String ?? "Usuário"
+                DispatchQueue.main.async {
+                    self.newsScreen?.greetingLabel.text = "Olá, \(nome)."
+                }
+            } else {
+                print("Documento não encontrado ou erro ao recuperar: \(error?.localizedDescription ?? "Erro desconhecido")")
+            }
+        }
     }
     
     private func fetchNews() {

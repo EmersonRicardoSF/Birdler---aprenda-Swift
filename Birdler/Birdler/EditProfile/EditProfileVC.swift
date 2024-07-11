@@ -16,6 +16,11 @@ class EditProfileVC: UIViewController {
         view = editProfileScreen
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //showNameChangedAlertAndNavigateToHomeVC()
+    }
+    
     func updateUserProfile(name: String, completion: @escaping (Result<Void, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Nenhum usuário logado"])))
@@ -29,9 +34,23 @@ class EditProfileVC: UIViewController {
                 completion(.failure(error))
             } else {
                 print("Profile updated successfully")
+                DispatchQueue.main.async {
+                    self.showNameChangedAlertAndNavigateToHomeVC()
+                }
                 completion(.success(()))
             }
         }
+    }
+
+    func showNameChangedAlertAndNavigateToHomeVC() {
+        let alert = UIAlertController(title: "Nome alterado", message: "Seu nome foi alterado com sucesso.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            let homeVC = HomeVC()
+            homeVC.modalTransitionStyle = .crossDissolve
+            homeVC.modalPresentationStyle = .fullScreen
+            self.present(homeVC, animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func deleteAccount(withPassword password: String, completion: @escaping (Result<Void, Error>) -> Void) {
@@ -88,19 +107,27 @@ class EditProfileVC: UIViewController {
 
 extension EditProfileVC: EditProfileScreenProtocol {
     func EditProfileNavigation() {
+        print("EditProfileNavigation called")
+        
         guard let name = editProfileScreen?.userTextField.text, !name.isEmpty else {
             showAlert(title: "Erro", message: "Nome não pode estar vazio")
             return
         }
         
+        print("Calling updateUserProfile with name: \(name)")
+        
         updateUserProfile(name: name) { result in
             switch result {
             case .success:
-                self.showAlert(title: "Sucesso", message: "Perfil atualizado com sucesso") {
-                    self.navigateToLogin()
+                DispatchQueue.main.async {
+                    print("Update successful")
+                    self.showAlert(title: "Foi", message: "Amem")
                 }
             case .failure(let error):
-                self.showAlert(title: "Erro", message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    print("Update failed with error: \(error.localizedDescription)")
+                    self.showAlert(title: "Erro", message: error.localizedDescription)
+                }
             }
         }
     }
@@ -123,10 +150,14 @@ extension EditProfileVC: EditProfileScreenProtocol {
             self.deleteAccount(withPassword: password) { result in
                 switch result {
                 case .success:
-                    self.resetLoginState()
-                    self.navigateToLogin()
+                    DispatchQueue.main.async {
+                        self.resetLoginState()
+                        self.navigateToLogin()
+                    }
                 case .failure(let error):
-                    self.showAlert(title: "Erro", message: error.localizedDescription)
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Erro", message: error.localizedDescription)
+                    }
                 }
             }
         }))

@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
 }
 
 extension LoginVC: LoginScreenProtocol {
-    
+   
     func ContinueWhitoutLoginNavigation() {
         let tabBarVC = TabBarVC()
         tabBarVC.modalPresentationStyle = .fullScreen // Ajuste de apresentação

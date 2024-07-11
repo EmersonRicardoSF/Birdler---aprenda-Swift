@@ -15,6 +15,7 @@ class EditProfileScreen: UIView {
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -80,6 +81,18 @@ class EditProfileScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.text = "Nome"
         label.textColor = .black
+        return label
+    }()
+    
+    lazy var alertLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.urbanistFont(type: .bold, size: 16)
+        label.textAlignment = .center
+        label.text = "Ao clicar em salvar alterações, retorne à Home e seus dados estará atualizado."
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textColor = .lightGray
         return label
     }()
     
@@ -151,6 +164,7 @@ class EditProfileScreen: UIView {
         addSubview(logoLabel)
         addSubview(viewRegister)
         addSubview(deleteAccountButton)
+        addSubview(alertLabel)
         
         
         viewRegister.addSubview(iconUser)
@@ -202,6 +216,11 @@ class EditProfileScreen: UIView {
             
             deleteAccountButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             deleteAccountButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            
+            alertLabel.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 80),
+            alertLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            alertLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
+            alertLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
             
             
         ])

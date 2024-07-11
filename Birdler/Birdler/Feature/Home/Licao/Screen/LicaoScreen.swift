@@ -18,7 +18,7 @@ class LicaoScreen: UIView {
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "background"))
-        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
