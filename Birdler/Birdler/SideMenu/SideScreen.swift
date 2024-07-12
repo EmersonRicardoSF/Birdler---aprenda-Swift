@@ -111,7 +111,7 @@ class SideScreen: UIView {
     }()
     
     @objc func tappedTermsOfUseButton() {
-        
+        delegate?.termsOfUseNavigation()
     }
 
     lazy var privacyButton: UIButton = {
@@ -131,7 +131,7 @@ class SideScreen: UIView {
     }()
     
     @objc func tappedPrivacyButton() {
-        
+        delegate?.privacyNavigation()
     }
     
     

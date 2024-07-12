@@ -84,11 +84,11 @@ extension SideVC: SideScreenProtocol {
     }
     
     func termsOfUseNavigation() {
-        
+        self.openSafariPageWith(url: "https://doc-hosting.flycricket.io/birdler-terms-of-use/37ac2e0e-8209-407d-b2fa-218db2997d64/terms")
     }
     
     func privacyNavigation() {
-        
+        self.openSafariPageWith(url: "https://doc-hosting.flycricket.io/birdler-privacy-policy/c0033192-bd5c-493f-bb02-9742f367e22b/privacy")
     }
     
     

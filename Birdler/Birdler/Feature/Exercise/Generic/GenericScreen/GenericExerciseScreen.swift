@@ -27,6 +27,7 @@ class GenericExerciseScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initializeRemainingAttempts()
         addElements()
         configConstraints()
         startLifeTimer()
@@ -34,6 +35,14 @@ class GenericExerciseScreen: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func initializeRemainingAttempts() {
+        if UserDefaults.standard.object(forKey: "remainingAttempts") == nil {
+            remainingAttempts = maxAttempts
+        } else {
+            checkAndRestoreLives()
+        }
     }
     
     lazy var imageBackGround: UIImageView = {
@@ -175,13 +184,14 @@ class GenericExerciseScreen: UIView {
             UserDefaults.standard.set(Date(), forKey: "lastRestoredDate")
         }
         
+        updateLivesLabel()
+        
         if remainingAttempts > 0 {
             nextQuestionButton.isEnabled = true
         } else {
             nextQuestionButton.isEnabled = false
         }
-        
-        updateLivesLabel()
+        //updateLivesLabel()
     }
     
     func startLifeTimer() {

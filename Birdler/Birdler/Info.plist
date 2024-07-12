@@ -2,9 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Precisamos de acesso à sua biblioteca de fotos para permitir que você selecione uma imagem de perfil.
-</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DMSans-Black.ttf</string>
