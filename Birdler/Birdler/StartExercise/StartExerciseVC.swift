@@ -27,7 +27,7 @@ class StartExerciseVC: UIViewController {
 
 extension StartExerciseVC: StartExerciseScreenProtocol {
     func customNavigation() {
-        let vc: GenericExerciseVC = GenericExerciseVC()
+        let vc: FirstGameVC = FirstGameVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     

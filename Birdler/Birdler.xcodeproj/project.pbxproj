@@ -37,6 +37,8 @@
 		8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590120D2BBF58B10046283C /* HomeScreen.swift */; };
 		859012112BBF623D0046283C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012102BBF623D0046283C /* HomeTableViewCell.swift */; };
 		859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859012132BBF63920046283C /* HomeTableViewCellScreen.swift */; };
+		85B6F3FC2C459E04009A5BFF /* FirstGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6F3FB2C459E04009A5BFF /* FirstGameVC.swift */; };
+		85B6F3FE2C459E36009A5BFF /* FirstGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6F3FD2C459E36009A5BFF /* FirstGameScreen.swift */; };
 		85B9334C2C3D486F006E0A1C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9334B2C3D486F006E0A1C /* Service.swift */; };
 		85B9334E2C3D4924006E0A1C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9334D2C3D4924006E0A1C /* NewsModel.swift */; };
 		85B933512C3D571C006E0A1C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 85B933502C3D571C006E0A1C /* SDWebImage */; };
@@ -175,6 +177,8 @@
 		8590120D2BBF58B10046283C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		859012102BBF623D0046283C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		859012132BBF63920046283C /* HomeTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellScreen.swift; sourceTree = "<group>"; };
+		85B6F3FB2C459E04009A5BFF /* FirstGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGameVC.swift; sourceTree = "<group>"; };
+		85B6F3FD2C459E36009A5BFF /* FirstGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGameScreen.swift; sourceTree = "<group>"; };
 		85B9334B2C3D486F006E0A1C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		85B9334D2C3D4924006E0A1C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		85F3A9A62C317C380055A6FF /* Arquitetura MVC.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Arquitetura MVC.html"; sourceTree = "<group>"; };
@@ -595,6 +599,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		85B6F3FA2C459D8F009A5BFF /* FirstGame */ = {
+			isa = PBXGroup;
+			children = (
+				85B6F3FB2C459E04009A5BFF /* FirstGameVC.swift */,
+				85B6F3FD2C459E36009A5BFF /* FirstGameScreen.swift */,
+			);
+			path = FirstGame;
+			sourceTree = "<group>";
+		};
 		85B933492C3D480A006E0A1C /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +644,7 @@
 		A313671E2BB7889F00F0CF5A /* Birdler */ = {
 			isa = PBXGroup;
 			children = (
+				85B6F3FA2C459D8F009A5BFF /* FirstGame */,
 				852F528A2C36A9C7000BADBB /* EditProfile */,
 				852F527F2C3559E2000BADBB /* StartExercise */,
 				85610F8B2C34D81C00991757 /* SideMenu */,
@@ -1105,6 +1119,7 @@
 				E84C59D82BC68882001226FB /* PoppinsFont.swift in Sources */,
 				A31367242BB7889F00F0CF5A /* ViewController.swift in Sources */,
 				852F52812C355A27000BADBB /* StartExerciseVC.swift in Sources */,
+				85B6F3FC2C459E04009A5BFF /* FirstGameVC.swift in Sources */,
 				63A993662BF4089200429C35 /* ExerciseCell.swift in Sources */,
 				A31367202BB7889F00F0CF5A /* AppDelegate.swift in Sources */,
 				E86C0B6B2C0964C300DEA1C3 /* String+Extension.swift in Sources */,
@@ -1113,6 +1128,7 @@
 				63A9935C2BF4046900429C35 /* RecoverScreen.swift in Sources */,
 				859012142BBF63920046283C /* HomeTableViewCellScreen.swift in Sources */,
 				852F52A12C36AE53000BADBB /* NewsScreen.swift in Sources */,
+				85B6F3FE2C459E36009A5BFF /* FirstGameScreen.swift in Sources */,
 				8590120E2BBF58B10046283C /* HomeScreen.swift in Sources */,
 				85B9334E2C3D4924006E0A1C /* NewsModel.swift in Sources */,
 				E84C59D32BC64901001226FB /* TabBarVC.swift in Sources */,
